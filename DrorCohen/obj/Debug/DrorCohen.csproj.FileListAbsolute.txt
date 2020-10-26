@@ -18,3 +18,15 @@ C:\Users\User\Desktop\דרור\DrorCohen\DrorCohen\DrorCohen\bin\Debug\DrorCohen
 C:\Users\User\Desktop\דרור\DrorCohen\DrorCohen\DrorCohen\bin\Debug\DrorCohen.exe
 C:\Users\User\Desktop\דרור\DrorCohen\DrorCohen\DrorCohen\bin\Debug\DrorCohen.pdb
 C:\Users\User\Desktop\דרור\DrorCohen\DrorCohen\DrorCohen\obj\Debug\DrorCohen.Form1.resources
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.exe.config
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.exe
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.pdb
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csprojAssemblyReference.cache
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Form1.resources
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmPatient.resources
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmPatient1.resources
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Properties.Resources.resources
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csproj.GenerateResource.cache
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csproj.CoreCompileInputs.cache
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.exe
+C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.pdb

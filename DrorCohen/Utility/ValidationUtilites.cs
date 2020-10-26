@@ -174,7 +174,7 @@ namespace DrorCohen.Utility
         }
         public static bool IsLegalPhoneNumber(string phoneNumber)
         {
-            if (phoneNumber.Length != 10)
+            if (phoneNumber.Length == 10)
                 return false;
             foreach (char c in phoneNumber)
                 if(!(c>=0&&c<=9))

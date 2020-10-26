@@ -33,8 +33,8 @@ namespace DrorCohen.Gui
             inputAddress.Text = p.Address;
             inputPhoneNumber.Text = p.PhoneNumber;
             inputGender.Text = p.MaleOrFemale;
-            inputDateBirth.Text = p.DateOfBirth.ToString();
-            inputDateDeath.Text = p.DateOfDeath.ToString();
+            inputDateBirth.Value = Convert.ToDateTime(p.DateOfBirth);
+            inputDateDeath.Value = Convert.ToDateTime(p.DateOfDeath);
         }
         private bool UpdateObject(Patient p)
         {
@@ -101,7 +101,7 @@ namespace DrorCohen.Gui
             }
             try
             {
-                p.DateOfBirth = inputDateBirth.Text;
+                p.DateOfBirth = inputDateBirth.Value.ToString();
                 errorProvider1.SetError(inputId, "");
             }
             catch (Exception ex)
@@ -111,7 +111,7 @@ namespace DrorCohen.Gui
             }
             try
             {
-                p.DateOfDeath = inputDateDeath.Text;
+                p.DateOfDeath = inputDateDeath.Value.ToString();
                 errorProvider1.SetError(inputId, "");
             }
             catch (Exception ex)
@@ -195,7 +195,6 @@ namespace DrorCohen.Gui
             Clear();
             state = AddState.ADDNEW;
             SetButtonStates(false);
-            inputId.Text = patients.GetKey().ToString();
         }
         private void Clear()
         {
