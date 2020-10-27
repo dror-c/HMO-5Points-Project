@@ -15,8 +15,8 @@ namespace DrorCohen.Models
         private string lastName;
         private string address;
         private string phoneNumber;
-        private string dateOfBirth;//string or dateTime
-        private string dateOfDeath;//string or dateTime
+        private DateTime dateOfBirth;//string or dateTime
+        private DateTime dateOfDeath;//string or dateTime
         private string maleOrFemale;
         public string Id
         {
@@ -58,17 +58,17 @@ namespace DrorCohen.Models
         {
             set 
             {
-                if(ValidationUtilites.IsLegalPhoneNumber(value))
+                //if(ValidationUtilites.IsLegalPhoneNumber(value))
                     this.phoneNumber = value;
             }
             get { return this.phoneNumber; }
         }
-        public string DateOfBirth
+        public DateTime DateOfBirth
         {
             set { this.dateOfBirth = value; }
             get { return this.dateOfBirth; }
         }
-        public string DateOfDeath
+        public DateTime DateOfDeath
         {
             set { this.dateOfDeath = value; }
             get { return this.dateOfDeath; }
@@ -90,9 +90,9 @@ namespace DrorCohen.Models
             this.LastName = dr["LastName"].ToString();
             this.Address = dr["Address"].ToString();
             this.PhoneNumber = dr["PhoneNumber"].ToString();
-            this.DateOfBirth = dr["DateOfBirth"].ToString();
-            this.DateOfDeath = dr["DateOfDeath"].ToString();
-            this.MaleOrFemale = dr["Male/Female"].ToString();
+            this.DateOfBirth =  Convert.ToDateTime(  dr["DateOfBirth"]);
+            this.DateOfDeath = Convert.ToDateTime(dr["DateOfDeath"]);
+            this.MaleOrFemale = dr["MaleFemale"].ToString();
         }
         public void Populate(DataRow dr)
         {
@@ -103,7 +103,7 @@ namespace DrorCohen.Models
             dr["PhoneNumber"] = PhoneNumber;
             dr["DateOfBirth"] = DateOfBirth;
             dr["DateOfDeath"] = DateOfDeath;
-            dr["Male/Female"] = MaleOrFemale;
+            dr["MaleFemale"] = MaleOrFemale;
         }
     }
 }

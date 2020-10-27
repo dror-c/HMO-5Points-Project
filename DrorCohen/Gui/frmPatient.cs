@@ -33,8 +33,8 @@ namespace DrorCohen.Gui
             inputAddress.Text = p.Address;
             inputPhoneNumber.Text = p.PhoneNumber;
             inputGender.Text = p.MaleOrFemale;
-            inputDateBirth.Value = Convert.ToDateTime(p.DateOfBirth);
-            inputDateDeath.Value = Convert.ToDateTime(p.DateOfDeath);
+            inputDateBirth.Value = p.DateOfBirth;
+           inputDateDeath.Value = p.DateOfDeath;
         }
         private bool UpdateObject(Patient p)
         {
@@ -101,7 +101,7 @@ namespace DrorCohen.Gui
             }
             try
             {
-                p.DateOfBirth = inputDateBirth.Value.ToString();
+                p.DateOfBirth = inputDateBirth.Value;
                 errorProvider1.SetError(inputId, "");
             }
             catch (Exception ex)
@@ -111,7 +111,7 @@ namespace DrorCohen.Gui
             }
             try
             {
-                p.DateOfDeath = inputDateDeath.Value.ToString();
+                p.DateOfDeath = inputDateDeath.Value;
                 errorProvider1.SetError(inputId, "");
             }
             catch (Exception ex)
@@ -207,6 +207,11 @@ namespace DrorCohen.Gui
                 if (c is DateTimePicker)
                     (c as DateTimePicker).Value = DateTime.Today;
             }
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

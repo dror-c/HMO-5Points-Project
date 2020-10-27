@@ -1,6 +1,6 @@
 ﻿namespace DrorCohen
 {
-    partial class Form1
+    partial class Frmmain
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,15 @@
             this.patient.UseVisualStyleBackColor = true;
             this.patient.Click += new System.EventHandler(this.patient_Click);
             // 
-            // Form1
+            // Frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.patient);
-            this.Name = "Form1";
+            this.Name = "Frmmain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Frmmain_Load);
             this.ResumeLayout(false);
 
         }

@@ -30,3 +30,14 @@ C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.cs
 C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csproj.CoreCompileInputs.cache
 C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.exe
 C:\Users\micpe\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.pdb
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\bin\Debug\DrorCohen.exe.config
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\bin\Debug\DrorCohen.exe
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\bin\Debug\DrorCohen.pdb
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.csprojAssemblyReference.cache
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.Frmmain.resources
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.Gui.frmPatient.resources
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.Properties.Resources.resources
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.csproj.GenerateResource.cache
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.csproj.CoreCompileInputs.cache
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.exe
+C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.pdb

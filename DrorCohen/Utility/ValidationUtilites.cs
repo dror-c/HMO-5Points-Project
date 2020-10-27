@@ -177,7 +177,7 @@ namespace DrorCohen.Utility
             if (phoneNumber.Length == 10)
                 return false;
             foreach (char c in phoneNumber)
-                if(!(c>=0&&c<=9))
+                if(!(c>=0 && c<=9))
                     return false;
             return true;
         }
