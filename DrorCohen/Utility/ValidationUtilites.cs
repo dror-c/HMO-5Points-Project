@@ -91,7 +91,14 @@ namespace DrorCohen.Utility
         public static bool IsLegalName(string word)
         {
             foreach (char c in word)
-                if (IsHebrewLetter(c) == false && IsEnglishLetter(c) == false && c != '-')
+                if (IsHebrewLetter(c) == false && IsEnglishLetter(c) == false && (c != '-'||c!= ' '))
+                    return false;
+            return true;
+        }
+        public static bool IsLegalAddress(string word)
+        {
+            foreach (char c in word)
+                if (IsHebrewLetter(c) == false && IsEnglishLetter(c) == false && !(c<='9'&&c>='0') && (c != '-' || c != ' '))
                     return false;
             return true;
         }

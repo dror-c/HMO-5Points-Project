@@ -49,7 +49,7 @@ namespace DrorCohen.Models
         {
             set 
             {
-                if (ValidationUtilites.IsLegalName(value))
+                if (ValidationUtilites.IsLegalAddress(value))
                     this.address = value;
             }
             get { return this.address; }
