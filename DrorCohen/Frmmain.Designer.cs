@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.patient = new System.Windows.Forms.Button();
+            this.DoctorOrNurse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // patient
@@ -41,11 +42,22 @@
             this.patient.UseVisualStyleBackColor = true;
             this.patient.Click += new System.EventHandler(this.patient_Click);
             // 
+            // DoctorOrNurse
+            // 
+            this.DoctorOrNurse.Location = new System.Drawing.Point(84, 87);
+            this.DoctorOrNurse.Name = "DoctorOrNurse";
+            this.DoctorOrNurse.Size = new System.Drawing.Size(75, 23);
+            this.DoctorOrNurse.TabIndex = 1;
+            this.DoctorOrNurse.Text = "Doctor/Nurse";
+            this.DoctorOrNurse.UseVisualStyleBackColor = true;
+            this.DoctorOrNurse.Click += new System.EventHandler(this.DoctorOrNurse_Click);
+            // 
             // Frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.DoctorOrNurse);
             this.Controls.Add(this.patient);
             this.Name = "Frmmain";
             this.Text = "Form1";
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button patient;
+        private System.Windows.Forms.Button DoctorOrNurse;
     }
 }
 
