@@ -94,7 +94,7 @@ namespace DrorCohen.Models
             this.DateOfDeath = Convert.ToDateTime(dr["DateOfDeath"]);
             this.MaleOrFemale = dr["MaleFemale"].ToString();
         }
-        public void Populate(DataRow dr)
+        public virtual void Populate(DataRow dr)
         {
             dr["ID"] = Id;
             dr["FirstName"] = FirstName;

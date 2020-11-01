@@ -30,5 +30,13 @@ namespace DrorCohen
         {
 
         }
+
+        private void DoctorOrNurse_Click(object sender, EventArgs e)
+        {
+            frmDoctorOrNurse frmDoctorOrNurse = new frmDoctorOrNurse();
+            //frmPatient.MdiParent = this.MdiParent;
+            this.Hide();
+            frmDoctorOrNurse.ShowDialog();
+        }
     }
 }

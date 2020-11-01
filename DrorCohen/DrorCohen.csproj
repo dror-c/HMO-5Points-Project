@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DATA\DAL.cs" />
+    <Compile Include="DB\DoctorOrNurseDB.cs" />
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
@@ -53,6 +54,12 @@
     </Compile>
     <Compile Include="Frmmain.Designer.cs">
       <DependentUpon>Frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\frmDoctorOrNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmDoctorOrNurse.Designer.cs">
+      <DependentUpon>frmDoctorOrNurse.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\frmPatient.cs">
       <SubType>Form</SubType>
@@ -72,6 +79,9 @@
     <Compile Include="Utility\ValidationUtilites.cs" />
     <EmbeddedResource Include="Frmmain.resx">
       <DependentUpon>Frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmDoctorOrNurse.resx">
+      <DependentUpon>frmDoctorOrNurse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmPatient.resx">
       <DependentUpon>frmPatient.cs</DependentUpon>
