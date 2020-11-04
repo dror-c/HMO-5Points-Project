@@ -53,6 +53,10 @@
             this.prev = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.search = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lastNameSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -265,12 +269,53 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(718, 349);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(120, 23);
+            this.search.TabIndex = 33;
+            this.search.Text = "submit";
+            this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(718, 234);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 34;
+            // 
+            // lastNameSearch
+            // 
+            this.lastNameSearch.HideSelection = false;
+            this.lastNameSearch.Location = new System.Drawing.Point(718, 199);
+            this.lastNameSearch.Name = "lastNameSearch";
+            this.lastNameSearch.Size = new System.Drawing.Size(120, 20);
+            this.lastNameSearch.TabIndex = 35;
+            this.lastNameSearch.TextChanged += new System.EventHandler(this.lastNameSearch_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Location = new System.Drawing.Point(714, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 23);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Search:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(877, 461);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lastNameSearch);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.save);
             this.Controls.Add(this.prev);
             this.Controls.Add(this.next);
@@ -296,6 +341,7 @@
             this.Controls.Add(this.id);
             this.Name = "frmPatient";
             this.Text = "frmPatient";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPatient_FormClosing);
             this.Load += new System.EventHandler(this.frmPatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -329,5 +375,9 @@
         private System.Windows.Forms.Button prev;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox lastNameSearch;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button search;
+        private System.Windows.Forms.Label label1;
     }
 }

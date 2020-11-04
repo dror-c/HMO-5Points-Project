@@ -46,7 +46,7 @@
             // 
             this.DoctorOrNurse.Location = new System.Drawing.Point(84, 87);
             this.DoctorOrNurse.Name = "DoctorOrNurse";
-            this.DoctorOrNurse.Size = new System.Drawing.Size(75, 23);
+            this.DoctorOrNurse.Size = new System.Drawing.Size(88, 23);
             this.DoctorOrNurse.TabIndex = 1;
             this.DoctorOrNurse.Text = "Doctor/Nurse";
             this.DoctorOrNurse.UseVisualStyleBackColor = true;

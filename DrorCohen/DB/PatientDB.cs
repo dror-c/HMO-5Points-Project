@@ -15,6 +15,13 @@ namespace DrorCohen.DB
         {
             return new Patient(base.GetCurrentRow());
         }
+        public DataView GetDataView()
+        {
+            DAL d = DAL.GetInstance();
+            DataTable a = d.GetDisplayTable("Patient", "Select * From Patient");
+            return new DataView(table);
+
+        }
         //החזרת מפתח ראשי האחרון
         //public /*int*/ string GetKey()
         //{

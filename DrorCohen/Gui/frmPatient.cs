@@ -15,16 +15,33 @@ namespace DrorCohen.Gui
 {
     public partial class frmPatient : Form
     {
+        private Form parent;
         private AddState state;
         private PatientDB patients;
-        public frmPatient()
+        private DataView dv;
+        //public frmPatient()
+        //{
+        //    InitializeComponent();
+        //    patients = new PatientDB();
+        //    state = AddState.NAVIGATE;
+        //    Populate(patients.GetCurrentRow());
+        //    SetButtonStates(true);
+        //}
+
+        public frmPatient(Frmmain frmmain)
         {
+            this.parent = frmmain;
             InitializeComponent();
             patients = new PatientDB();
             state = AddState.NAVIGATE;
             Populate(patients.GetCurrentRow());
             SetButtonStates(true);
+            dv = patients.GetDataView();
+            listBox1.DataSource = dv;
+            listBox1.ValueMember = "ID";
+            listBox1.DisplayMember = "LastName";
         }
+
         private void Populate(Patient p)//why it should be private?
         {
             inputId.Text = p.Id;
@@ -211,7 +228,29 @@ namespace DrorCohen.Gui
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            SetButtonStates(true);
+        }
 
+        private void frmPatient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            this.Dispose();
+            parent.Show();
+        }
+
+        private void lastNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            dv.RowFilter = "LastName Like '" + lastNameSearch.Text.Trim() + "*'";
+        }
+        public void GetChoice(int choice)
+        {
+            if (patients.FindString(choice))
+                Populate(patients.GetCurrentRow());
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            GetChoice(Convert.ToInt32(listBox1.SelectedValue));
         }
     }
 }

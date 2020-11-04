@@ -20,7 +20,7 @@ namespace DrorCohen
 
         private void patient_Click(object sender, EventArgs e)
         {
-            frmPatient frmPatient = new frmPatient();
+            frmPatient frmPatient = new frmPatient(this);
             //frmPatient.MdiParent = this.MdiParent;
             this.Hide();
             frmPatient.ShowDialog();

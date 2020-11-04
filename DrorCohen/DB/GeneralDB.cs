@@ -87,14 +87,28 @@ namespace DrorCohen.DB
             }
             return false;
         }
-
+        public bool FindString(object key)
+        {
+            int r = 0;
+            foreach (DataRow dr in table.Rows)
+            {
+                if (dr[primaryKey].ToString()==(key).ToString())
+                {
+                    currentRow = r;
+                    return true;
+                }
+                else
+                    r++;
+            }
+            return false;
+        }
 
         #endregion
 
         #region GENERAL OPERATIONS
-        
+
         /// מחזיר מספר השורות בטבלה
-       
+
         /// <returns>number of rows</returns>
         public int Size()
         {
