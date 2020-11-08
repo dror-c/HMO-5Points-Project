@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorOrNurse));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.save = new System.Windows.Forms.Button();
             this.prev = new System.Windows.Forms.Button();
             this.next = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.inputId = new System.Windows.Forms.TextBox();
             this.inputFirstName = new System.Windows.Forms.TextBox();
@@ -57,7 +57,29 @@
             this.inputDepartmentID = new System.Windows.Forms.TextBox();
             this.DepartmentID = new System.Windows.Forms.Label();
             this.inputGender = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.hMODataSet = new DrorCohen.HMODataSet();
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentTableAdapter = new DrorCohen.HMODataSetTableAdapters.DepartmentTableAdapter();
+            this.tableAdapterManager = new DrorCohen.HMODataSetTableAdapters.TableAdapterManager();
+            this.departmentBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.departmentBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingNavigator)).BeginInit();
+            this.departmentBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -67,7 +89,7 @@
             // save
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
-            this.save.Location = new System.Drawing.Point(525, 317);
+            this.save.Location = new System.Drawing.Point(525, 224);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(212, 23);
             this.save.TabIndex = 55;
@@ -98,7 +120,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cancel.Location = new System.Drawing.Point(662, 197);
+            this.cancel.Location = new System.Drawing.Point(662, 145);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 52;
@@ -108,22 +130,13 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(662, 144);
+            this.Add.Location = new System.Drawing.Point(662, 92);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 51;
             this.Add.Text = "create";
             this.Add.UseVisualStyleBackColor = true;
             this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // delete
-            // 
-            this.delete.Location = new System.Drawing.Point(662, 94);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(75, 23);
-            this.delete.TabIndex = 50;
-            this.delete.Text = "delete";
-            this.delete.UseVisualStyleBackColor = true;
             // 
             // update
             // 
@@ -278,6 +291,7 @@
             // 
             // inputDepartmentID
             // 
+            this.inputDepartmentID.Enabled = false;
             this.inputDepartmentID.Location = new System.Drawing.Point(249, 386);
             this.inputDepartmentID.Name = "inputDepartmentID";
             this.inputDepartmentID.Size = new System.Drawing.Size(200, 20);
@@ -303,12 +317,175 @@
             this.inputGender.Size = new System.Drawing.Size(200, 21);
             this.inputGender.TabIndex = 60;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.departmentBindingSource;
+            this.comboBox1.DisplayMember = "DepartmentName";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(509, 386);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 61;
+            this.comboBox1.ValueMember = "DepartmentID";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // hMODataSet
+            // 
+            this.hMODataSet.DataSetName = "HMODataSet";
+            this.hMODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentBindingSource
+            // 
+            this.departmentBindingSource.DataMember = "Department";
+            this.departmentBindingSource.DataSource = this.hMODataSet;
+            // 
+            // departmentTableAdapter
+            // 
+            this.departmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ConnectionTableBetweenPatientAndDoctorAndSpecificTherapyTableAdapter = null;
+            this.tableAdapterManager.DepartmentTableAdapter = this.departmentTableAdapter;
+            this.tableAdapterManager.DoctorOrNurseTableAdapter = null;
+            this.tableAdapterManager.GenericTherapyTableAdapter = null;
+            this.tableAdapterManager.PatientTableAdapter = null;
+            this.tableAdapterManager.SpecificTherapyForPatientTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = DrorCohen.HMODataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // departmentBindingNavigator
+            // 
+            this.departmentBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.departmentBindingNavigator.BindingSource = this.departmentBindingSource;
+            this.departmentBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.departmentBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.departmentBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.departmentBindingNavigatorSaveItem});
+            this.departmentBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.departmentBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.departmentBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.departmentBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.departmentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.departmentBindingNavigator.Name = "departmentBindingNavigator";
+            this.departmentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.departmentBindingNavigator.Size = new System.Drawing.Size(989, 25);
+            this.departmentBindingNavigator.TabIndex = 62;
+            this.departmentBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // departmentBindingNavigatorSaveItem
+            // 
+            this.departmentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.departmentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("departmentBindingNavigatorSaveItem.Image")));
+            this.departmentBindingNavigatorSaveItem.Name = "departmentBindingNavigatorSaveItem";
+            this.departmentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.departmentBindingNavigatorSaveItem.Text = "Save Data";
+            this.departmentBindingNavigatorSaveItem.Click += new System.EventHandler(this.departmentBindingNavigatorSaveItem_Click);
+            // 
             // frmDoctorOrNurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(837, 487);
+            this.ClientSize = new System.Drawing.Size(989, 631);
+            this.Controls.Add(this.departmentBindingNavigator);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.inputGender);
             this.Controls.Add(this.inputDepartmentID);
             this.Controls.Add(this.DepartmentID);
@@ -319,7 +496,6 @@
             this.Controls.Add(this.next);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.delete);
             this.Controls.Add(this.update);
             this.Controls.Add(this.inputId);
             this.Controls.Add(this.inputFirstName);
@@ -339,7 +515,13 @@
             this.Name = "frmDoctorOrNurse";
             this.Text = "frmDoctorOrNurse";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDoctorOrNurse_FormClosing);
+            this.Load += new System.EventHandler(this.frmDoctorOrNurse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingNavigator)).EndInit();
+            this.departmentBindingNavigator.ResumeLayout(false);
+            this.departmentBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,7 +535,6 @@
         private System.Windows.Forms.Button next;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.TextBox inputId;
         private System.Windows.Forms.TextBox inputFirstName;
@@ -375,5 +556,23 @@
         private System.Windows.Forms.ComboBox inputDoctorOrNurse;
         private System.Windows.Forms.Label DoctorOrNurse;
         private System.Windows.Forms.ComboBox inputGender;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingNavigator departmentBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.BindingSource departmentBindingSource;
+        private HMODataSet hMODataSet;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton departmentBindingNavigatorSaveItem;
+        private HMODataSetTableAdapters.DepartmentTableAdapter departmentTableAdapter;
+        private HMODataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

@@ -162,7 +162,6 @@ namespace DrorCohen.Gui
             prev.Enabled = b;
             Add.Enabled = b;
             update.Enabled = b;
-            delete.Enabled = b;
             cancel.Enabled = !b;
             save.Enabled = !b;
             inputId.Enabled = !b;
@@ -254,6 +253,26 @@ namespace DrorCohen.Gui
             this.Hide();
             this.Dispose();
             parent.Show();
+        }
+
+        private void departmentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.departmentBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.hMODataSet);
+
+        }
+
+        private void frmDoctorOrNurse_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hMODataSet.Department' table. You can move, or remove it, as needed.
+            this.departmentTableAdapter.Fill(this.hMODataSet.Department);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            inputDepartmentID.Text = comboBox1.SelectedValue.ToString();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace DrorCohen.Gui
             listBox1.DisplayMember = "LastName";
         }
 
-        private void Populate(Patient p)//why it should be private?
+        private void Populate(Patient p)
         {
             inputId.Text = p.Id;
             inputFirstName.Text = p.FirstName;
@@ -144,7 +144,6 @@ namespace DrorCohen.Gui
             prev.Enabled = b;
             Add.Enabled = b;
             update.Enabled = b;
-            delete.Enabled = b;
             cancel.Enabled = !b;
             save.Enabled = !b;
             inputId.Enabled = !b;
@@ -163,14 +162,6 @@ namespace DrorCohen.Gui
 
         private void inputId_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-            DialogResult result1 = MessageBox.Show("Are you sure that you want to delete?"
-                , "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
 
         }
 

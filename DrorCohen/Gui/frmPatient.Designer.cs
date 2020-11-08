@@ -46,7 +46,6 @@
             this.inputFirstName = new System.Windows.Forms.TextBox();
             this.inputId = new System.Windows.Forms.TextBox();
             this.update = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.next = new System.Windows.Forms.Button();
@@ -203,19 +202,9 @@
             this.update.UseVisualStyleBackColor = true;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // delete
-            // 
-            this.delete.Location = new System.Drawing.Point(610, 79);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(75, 23);
-            this.delete.TabIndex = 27;
-            this.delete.Text = "delete";
-            this.delete.UseVisualStyleBackColor = true;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(610, 129);
+            this.Add.Location = new System.Drawing.Point(610, 79);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 23);
             this.Add.TabIndex = 28;
@@ -226,7 +215,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cancel.Location = new System.Drawing.Point(610, 182);
+            this.cancel.Location = new System.Drawing.Point(610, 132);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 29;
@@ -321,7 +310,6 @@
             this.Controls.Add(this.next);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.delete);
             this.Controls.Add(this.update);
             this.Controls.Add(this.inputId);
             this.Controls.Add(this.inputFirstName);
@@ -368,7 +356,6 @@
         private System.Windows.Forms.TextBox inputFirstName;
         private System.Windows.Forms.TextBox inputId;
         private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button next;

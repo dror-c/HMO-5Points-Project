@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DrorCohen
+namespace DrorCohen.Gui
 {
     public partial class Frmmain : Form
     {
@@ -37,6 +37,14 @@ namespace DrorCohen
             //frmPatient.MdiParent = this.MdiParent;
             this.Hide();
             frmDoctorOrNurse.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmDepartment frmDepartment = new frmDepartment(this);
+            //frmPatient.MdiParent = this.MdiParent;
+            this.Hide();
+            frmDepartment.ShowDialog();
         }
     }
 }

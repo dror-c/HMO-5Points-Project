@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DrorCohen.Gui;
 namespace DrorCohen
 {
     static class Program
@@ -16,7 +16,7 @@ namespace DrorCohen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frmmain());
+            Application.Run(new Gui.Frmmain());
         }
     }
 }
