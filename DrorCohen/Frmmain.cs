@@ -33,7 +33,7 @@ namespace DrorCohen
 
         private void DoctorOrNurse_Click(object sender, EventArgs e)
         {
-            frmDoctorOrNurse frmDoctorOrNurse = new frmDoctorOrNurse();
+            frmDoctorOrNurse frmDoctorOrNurse = new frmDoctorOrNurse(this);
             //frmPatient.MdiParent = this.MdiParent;
             this.Hide();
             frmDoctorOrNurse.ShowDialog();

@@ -338,6 +338,7 @@
             this.Controls.Add(this.id);
             this.Name = "frmDoctorOrNurse";
             this.Text = "frmDoctorOrNurse";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDoctorOrNurse_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

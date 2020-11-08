@@ -17,6 +17,8 @@ namespace DrorCohen.Gui
     {
         private AddState state;
         private DoctorOrNurseDB doctorsOrNurses;
+        private Form parent;
+
         public frmDoctorOrNurse()
         {
             InitializeComponent();
@@ -25,6 +27,17 @@ namespace DrorCohen.Gui
             Populate(doctorsOrNurses.GetCurrentRow());
             SetButtonStates(true);
         }
+
+        public frmDoctorOrNurse(Frmmain frmmain)
+        {
+            this.parent = frmmain;
+            InitializeComponent();
+            doctorsOrNurses = new DoctorOrNurseDB();
+            state = AddState.NAVIGATE;
+            Populate(doctorsOrNurses.GetCurrentRow());
+            SetButtonStates(true);
+        }
+
         private void Populate(DoctorOrNurse p)//why it should be private?
         {
             inputId.Text = p.Id;
@@ -234,6 +247,13 @@ namespace DrorCohen.Gui
         {
             doctorsOrNurses.MoveNext();
             Populate(doctorsOrNurses.GetCurrentRow());
+        }
+
+        private void frmDoctorOrNurse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            this.Dispose();
+            parent.Show();
         }
     }
 }
