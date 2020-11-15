@@ -81,7 +81,7 @@ namespace DrorCohen.Gui
         }
         private void inputId_TextChanged(object sender, EventArgs e)
         {
-
+            this.doctorOrNurseTableAdapter.FillBy(this.hMODataSet.DoctorOrNurse,inputId.Text);
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -120,6 +120,7 @@ namespace DrorCohen.Gui
         private void Add_Click(object sender, EventArgs e)
         {
             Clear();
+            inputId.Text = departments.GetKey();
             state = AddState.ADDNEW;
             SetButtonStates(false);
         }
@@ -138,6 +139,7 @@ namespace DrorCohen.Gui
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            Populate(departments.GetCurrentRow());
             SetButtonStates(true);
         }
 
@@ -146,6 +148,26 @@ namespace DrorCohen.Gui
             this.Hide();
             this.Dispose();
             parent.Show();
+        }
+
+        private void doctorOrNurseBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.doctorOrNurseBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.hMODataSet);
+
+        }
+
+        private void frmDepartment_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hMODataSet.DoctorOrNurse' table. You can move, or remove it, as needed.
+            this.doctorOrNurseTableAdapter.Fill(this.hMODataSet.DoctorOrNurse);
+
+        }
+
+        private void doctorOrNurseDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.doctorOrNurseTableAdapter.Fill(this.hMODataSet.DoctorOrNurse);
         }
     }
 }

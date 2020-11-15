@@ -24,15 +24,15 @@ namespace DrorCohen.DB
 
         }
         //החזרת מפתח ראשי האחרון
-        //public /*int*/ string GetKey()
-        //{
-        //    int x = currentRow;
-        //    GoToLast();
-        //    //int key = Convert.ToInt32(base.GetCurrentRow()[primaryKey]) + 1;
-        //    string key = Convert.ToString(Convert.ToString(base.GetCurrentRow()[primaryKey]) + 1);
-        //    currentRow = x;
-        //    return key;
-        //}
+        public /*int*/ string GetKey()
+        {
+            int x = currentRow;
+            GoToLast();
+            //int key = Convert.ToInt32(base.GetCurrentRow()[primaryKey]) + 1;
+            string key = Convert.ToString(Convert.ToInt32(base.GetCurrentRow()[primaryKey]) + 1);
+            currentRow = x;
+            return key;
+        }
         public string GetKeyName()
         {
             return "DepartmentID";

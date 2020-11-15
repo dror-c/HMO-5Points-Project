@@ -219,6 +219,7 @@ namespace DrorCohen.Gui
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            Populate(patients.GetCurrentRow());
             SetButtonStates(true);
         }
 

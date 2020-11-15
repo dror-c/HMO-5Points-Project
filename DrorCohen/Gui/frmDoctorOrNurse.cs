@@ -28,9 +28,9 @@ namespace DrorCohen.Gui
             SetButtonStates(true);
         }
 
-        public frmDoctorOrNurse(Frmmain frmmain)
+        public frmDoctorOrNurse(Form f)
         {
-            this.parent = frmmain;
+            this.parent = f;
             InitializeComponent();
             doctorsOrNurses = new DoctorOrNurseDB();
             state = AddState.NAVIGATE;
@@ -234,6 +234,7 @@ namespace DrorCohen.Gui
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            Populate(doctorsOrNurses.GetCurrentRow());
             SetButtonStates(true);
         }
         private void prev_Click(object sender, EventArgs e)
