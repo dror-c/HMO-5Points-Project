@@ -47,6 +47,7 @@
     <Compile Include="DATA\DAL.cs" />
     <Compile Include="DB\DepartmentDB.cs" />
     <Compile Include="DB\DoctorOrNurseDB.cs" />
+    <Compile Include="DB\GenericTherapyDB.cs" />
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
