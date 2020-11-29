@@ -46,5 +46,13 @@ namespace DrorCohen.Gui
             this.Hide();
             frmDepartment.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmGenericTherapy frmGenericTherapy = new frmGenericTherapy(this);
+            //frmPatient.MdiParent = this.MdiParent;
+            this.Hide();
+            frmGenericTherapy.ShowDialog();
+        }
     }
 }

@@ -161,13 +161,14 @@ namespace DrorCohen.Gui
         private void frmDepartment_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hMODataSet.DoctorOrNurse' table. You can move, or remove it, as needed.
-            this.doctorOrNurseTableAdapter.Fill(this.hMODataSet.DoctorOrNurse);
-
         }
 
         private void doctorOrNurseDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.doctorOrNurseTableAdapter.Fill(this.hMODataSet.DoctorOrNurse);
+            int rowIndex = doctorOrNurseDataGridView.CurrentCell.RowIndex;
+            string id = doctorOrNurseDataGridView.Rows[rowIndex].Cells[0].Value.ToString();
+            frmDoctorOrNurse f = new frmDoctorOrNurse(id);
+            f.Show();
         }
     }
 }

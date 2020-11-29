@@ -15,6 +15,7 @@ namespace DrorCohen.Models
         private string durationOfTherapy;
         private string typeOfTherapy;
         private string whoCanGiveTheTherapy;
+        public GenericTherapy() { }
         public GenericTherapy(DataRow dr)
         {
             this.TherapyCode = dr["TherapyCode"].ToString();

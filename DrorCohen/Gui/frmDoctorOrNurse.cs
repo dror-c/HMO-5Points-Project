@@ -18,14 +18,19 @@ namespace DrorCohen.Gui
         private AddState state;
         private DoctorOrNurseDB doctorsOrNurses;
         private Form parent;
+        private string idDoc;
+        private static bool flag;
 
-        public frmDoctorOrNurse()
+        public frmDoctorOrNurse(string id)
         {
             InitializeComponent();
+            this.idDoc = id;
             doctorsOrNurses = new DoctorOrNurseDB();
             state = AddState.NAVIGATE;
-            Populate(doctorsOrNurses.GetCurrentRow());
             SetButtonStates(true);
+            doctorsOrNurses.Find(id);
+            Populate(doctorsOrNurses.GetCurrentRow());
+            flag = true;
         }
 
         public frmDoctorOrNurse(Form f)
@@ -38,7 +43,7 @@ namespace DrorCohen.Gui
             SetButtonStates(true);
         }
 
-        private void Populate(DoctorOrNurse p)//why it should be private?
+        private void Populate(DoctorOrNurse p)
         {
             inputId.Text = p.Id;
             inputFirstName.Text = p.FirstName;
@@ -50,6 +55,7 @@ namespace DrorCohen.Gui
             inputDateDeath.Value = p.DateOfDeath;
             inputDoctorOrNurse.Text = p.IsDoctorOrNurse;
             inputDepartmentID.Text = p.DepartmentID;
+            comboId.Text = p.DepartmentID;
         }
         private bool UpdateObject(DoctorOrNurse p)
         {
@@ -251,6 +257,7 @@ namespace DrorCohen.Gui
 
         private void frmDoctorOrNurse_FormClosing(object sender, FormClosingEventArgs e)
         {
+            flag = false;
             this.Hide();
             this.Dispose();
             parent.Show();
@@ -266,6 +273,8 @@ namespace DrorCohen.Gui
 
         private void frmDoctorOrNurse_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hMODataSet.DoctorOrNurse' table. You can move, or remove it, as needed.
+            this.doctorOrNurseTableAdapter.Fill(this.hMODataSet.DoctorOrNurse);
             // TODO: This line of code loads data into the 'hMODataSet.Department' table. You can move, or remove it, as needed.
             this.departmentTableAdapter.Fill(this.hMODataSet.Department);
 
@@ -273,7 +282,13 @@ namespace DrorCohen.Gui
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            inputDepartmentID.Text = comboBox1.SelectedValue.ToString();
+            if(flag==true)
+                inputDepartmentID.Text = comboBox1.SelectedValue.ToString();
+        }
+
+        private void comboId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = comboId.SelectedIndex;
         }
     }
 }

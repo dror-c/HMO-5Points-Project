@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DrorCohen.DB
 {
-    class GenericTherapyDB: GeneralDB
+    public class GenericTherapyDB: GeneralDB
     {
         public GenericTherapyDB() : base("GenericTherapy", "TherapyCode") { }
         public new GenericTherapy GetCurrentRow()

@@ -61,9 +61,13 @@
             this.hMODataSet = new DrorCohen.HMODataSet();
             this.departmentTableAdapter = new DrorCohen.HMODataSetTableAdapters.DepartmentTableAdapter();
             this.tableAdapterManager = new DrorCohen.HMODataSetTableAdapters.TableAdapterManager();
+            this.comboId = new System.Windows.Forms.ComboBox();
+            this.departmentDoctorNurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorOrNurseTableAdapter = new DrorCohen.HMODataSetTableAdapters.DoctorOrNurseTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentDoctorNurseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -338,12 +342,34 @@
             this.tableAdapterManager.SpecificTherapyForPatientTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DrorCohen.HMODataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // comboId
+            // 
+            this.comboId.DataSource = this.departmentBindingSource;
+            this.comboId.DisplayMember = "DepartmentID";
+            this.comboId.FormattingEnabled = true;
+            this.comboId.Location = new System.Drawing.Point(662, 386);
+            this.comboId.Name = "comboId";
+            this.comboId.Size = new System.Drawing.Size(121, 21);
+            this.comboId.TabIndex = 62;
+            this.comboId.ValueMember = "DepartmentID";
+            this.comboId.SelectedIndexChanged += new System.EventHandler(this.comboId_SelectedIndexChanged);
+            // 
+            // departmentDoctorNurseBindingSource
+            // 
+            this.departmentDoctorNurseBindingSource.DataMember = "DepartmentDoctor/Nurse";
+            this.departmentDoctorNurseBindingSource.DataSource = this.departmentBindingSource;
+            // 
+            // doctorOrNurseTableAdapter
+            // 
+            this.doctorOrNurseTableAdapter.ClearBeforeFill = true;
+            // 
             // frmDoctorOrNurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(989, 631);
+            this.Controls.Add(this.comboId);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.inputGender);
             this.Controls.Add(this.inputDepartmentID);
@@ -378,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentDoctorNurseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,5 +444,8 @@
         private HMODataSet hMODataSet;
         private HMODataSetTableAdapters.DepartmentTableAdapter departmentTableAdapter;
         private HMODataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ComboBox comboId;
+        private System.Windows.Forms.BindingSource departmentDoctorNurseBindingSource;
+        private HMODataSetTableAdapters.DoctorOrNurseTableAdapter doctorOrNurseTableAdapter;
     }
 }
