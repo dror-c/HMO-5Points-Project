@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.inputWhoGiveTherapy = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,12 +200,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(555, 218);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 76;
+            // 
             // frmGenericTherapy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.inputWhoGiveTherapy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputTypeOfTherapy);
@@ -249,5 +257,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox inputWhoGiveTherapy;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

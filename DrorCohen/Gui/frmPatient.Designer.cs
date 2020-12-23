@@ -56,6 +56,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lastNameSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.orderTherapy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -295,12 +296,23 @@
             this.label1.Text = "Search:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // orderTherapy
+            // 
+            this.orderTherapy.Location = new System.Drawing.Point(482, 30);
+            this.orderTherapy.Name = "orderTherapy";
+            this.orderTherapy.Size = new System.Drawing.Size(96, 23);
+            this.orderTherapy.TabIndex = 37;
+            this.orderTherapy.Text = "order therapy";
+            this.orderTherapy.UseVisualStyleBackColor = true;
+            this.orderTherapy.Click += new System.EventHandler(this.orderTherapy_Click);
+            // 
             // frmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(877, 461);
+            this.Controls.Add(this.orderTherapy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lastNameSearch);
             this.Controls.Add(this.listBox1);
@@ -366,5 +378,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button orderTherapy;
     }
 }

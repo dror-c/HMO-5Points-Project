@@ -55,3 +55,4 @@ C:\Users\Ofra\Downloads\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCo
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.Frmmain.resources
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDepartment.resources
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmGenericTherapy.resources
+C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOrderTherapy.resources

@@ -244,5 +244,12 @@ namespace DrorCohen.Gui
         {
             GetChoice(Convert.ToInt32(listBox1.SelectedValue));
         }
+
+        private void orderTherapy_Click(object sender, EventArgs e)
+        {
+            frmOrderTherapy f = new frmOrderTherapy(inputId.Text, this);
+            this.Hide();
+            f.ShowDialog();
+        }
     }
 }

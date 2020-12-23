@@ -10,8 +10,8 @@ namespace DrorCohen.Models
     {
         private string serial;
         private string therapyCode;
-        private string dateOfTherapy;
-        private string wasTheTherapyGiven;
+        private DateTime dateOfTherapy;
+        //private string wasTheTherapyGiven;
         public string Serial
         {
             set
@@ -34,7 +34,7 @@ namespace DrorCohen.Models
                 return this.therapyCode;
             }
         }
-        public string DateOfTherapy
+        public DateTime DateOfTherapy
         {
             set
             {
@@ -45,16 +45,16 @@ namespace DrorCohen.Models
                 return this.dateOfTherapy;
             }
         }
-        public string WasTheTherapyGiven
-        {
-            set
-            {
-                this.wasTheTherapyGiven = value;
-            }
-            get
-            {
-                return this.wasTheTherapyGiven;
-            }
-        }
+        //public string WasTheTherapyGiven
+        //{
+        //    set
+        //    {
+        //        this.wasTheTherapyGiven = value;
+        //    }
+        //    get
+        //    {
+        //        return this.wasTheTherapyGiven;
+        //    }
+        //}
     }
 }
