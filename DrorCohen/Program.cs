@@ -16,7 +16,8 @@ namespace DrorCohen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Gui.Frmmain());
+            //Application.Run(new Gui.Frmmain());
+            Application.Run(new Gui.frmLogIn());
         }
     }
 }

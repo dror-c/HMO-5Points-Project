@@ -65,6 +65,12 @@
     <Compile Include="Gui\frmGenericTherapy.Designer.cs">
       <DependentUpon>frmGenericTherapy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\Frmmain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="Gui\frmOrderTherapy.Designer.cs">
       <DependentUpon>frmOrderTherapy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\frmOrderTherapyFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmOrderTherapyFinal.Designer.cs">
+      <DependentUpon>frmOrderTherapyFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frmPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMODataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="meeting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>meeting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MeetingByDoctorId.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\ConnectionTableBetweenPatientAndDoctorAndSpecificTherapy.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DoctorOrNurse.cs" />
@@ -107,6 +129,11 @@
     <Compile Include="Models\SpecificTherapyForPatient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheDoctorMeeting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheDoctorMeeting.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utility\AddState.cs" />
     <Compile Include="Utility\ValidationUtilites.cs" />
     <EmbeddedResource Include="Gui\frmDepartment.resx">
@@ -114,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmGenericTherapy.resx">
       <DependentUpon>frmGenericTherapy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\Frmmain.resx">
       <DependentUpon>Frmmain.cs</DependentUpon>
@@ -123,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmOrderTherapy.resx">
       <DependentUpon>frmOrderTherapy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmOrderTherapyFinal.resx">
+      <DependentUpon>frmOrderTherapyFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmPatient.resx">
       <DependentUpon>frmPatient.cs</DependentUpon>
@@ -158,6 +191,28 @@
     <None Include="HMODataSet1.xss">
       <DependentUpon>HMODataSet1.xsd</DependentUpon>
     </None>
+    <None Include="meeting.xsc">
+      <DependentUpon>meeting.xsd</DependentUpon>
+    </None>
+    <None Include="meeting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>meeting.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="meeting.xss">
+      <DependentUpon>meeting.xsd</DependentUpon>
+    </None>
+    <None Include="MeetingByDoctorId.xsc">
+      <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
+    </None>
+    <None Include="MeetingByDoctorId.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MeetingByDoctorId.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MeetingByDoctorId.xss">
+      <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,11 +222,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TheDoctorMeeting.xsc">
+      <DependentUpon>TheDoctorMeeting.xsd</DependentUpon>
+    </None>
+    <None Include="TheDoctorMeeting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TheDoctorMeeting.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TheDoctorMeeting.xss">
+      <DependentUpon>TheDoctorMeeting.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="HMO.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

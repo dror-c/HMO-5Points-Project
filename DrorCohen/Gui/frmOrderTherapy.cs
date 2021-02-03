@@ -36,6 +36,8 @@ namespace DrorCohen.Gui
 
         private void frmOrderTherapy_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'meeting.SpecificMeetingDoctor' table. You can move, or remove it, as needed.
+
             // TODO: This line of code loads data into the 'hMODataSet1.SpecificMeetingDoctor' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'hMODataSet1.MeetingDoctor' table. You can move, or remove it, as needed.
             this.meetingDoctorTableAdapter.Fill(this.hMODataSet1.MeetingDoctor);
@@ -58,18 +60,38 @@ namespace DrorCohen.Gui
         private void button1_Click(object sender, EventArgs e)
         {
             string x = idTherapy.ToString();
-            this.specificMeetingDoctorTableAdapter.Fill(this.hMODataSet1.SpecificMeetingDoctor);
-            int serial=this.hMODataSet1.SpecificMeetingDoctor.Count + 1;
-            this.hMODataSet1.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial.ToString(), x, dateTimePicker1.Value, this.patientId);
+            this.specificMeetingDoctorTableAdapter1.Fill
+                (this.meeting.SpecificMeetingDoctor);
+            int serial=this.meeting.SpecificMeetingDoctor.Count + 1;
+            meeting.SpecificMeetingDoctor.
+                AddSpecificMeetingDoctorRow
+                (serial,x, dateTimePicker1.Value,patientId);
+
+
             //check there is no duplicate meeting
-            specificMeetingDoctorTableAdapter.Update(hMODataSet1);
+            specificMeetingDoctorTableAdapter1.Update
+                (meeting.SpecificMeetingDoctor);
         }
+        private string idDoctor, d;
         private int idTherapy;
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void meetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = meetingDoctorDataGridView.CurrentCell.RowIndex;
             idTherapy = Convert.ToInt32(meetingDoctorDataGridView.Rows[rowIndex].Cells[0].Value);
             button1.Visible = true;
+            d = (meetingDoctorDataGridView.Rows[rowIndex].Cells[3].Value).ToString();
+            idDoctor = (meetingDoctorDataGridView.Rows[rowIndex].Cells[2].Value).ToString();
         }
     }
 }

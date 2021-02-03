@@ -2143,6 +2143,8 @@ namespace DrorCohen {
             
             private global::System.Data.DataColumn columnIdPatient;
             
+            private global::System.Data.DataColumn columnSerial1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SpecificMeetingDoctorDataTable() {
@@ -2210,6 +2212,14 @@ namespace DrorCohen {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Serial1Column {
+                get {
+                    return this.columnSerial1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2245,13 +2255,14 @@ namespace DrorCohen {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SpecificMeetingDoctorRow AddSpecificMeetingDoctorRow(string Serial, MeetingDoctorRow parentMeetingDoctorRowByGenericTherapySpecificTherapyForPatient, System.DateTime DateOfTherapy, PatientRow parentPatientRowByPatientSpecificMeetingDoctor) {
+            public SpecificMeetingDoctorRow AddSpecificMeetingDoctorRow(string Serial, MeetingDoctorRow parentMeetingDoctorRowByGenericTherapySpecificTherapyForPatient, System.DateTime DateOfTherapy, PatientRow parentPatientRowByPatientSpecificMeetingDoctor, int Serial1) {
                 SpecificMeetingDoctorRow rowSpecificMeetingDoctorRow = ((SpecificMeetingDoctorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Serial,
                         null,
                         DateOfTherapy,
-                        null};
+                        null,
+                        Serial1};
                 if ((parentMeetingDoctorRowByGenericTherapySpecificTherapyForPatient != null)) {
                     columnValuesArray[1] = parentMeetingDoctorRowByGenericTherapySpecificTherapyForPatient[0];
                 }
@@ -2291,6 +2302,7 @@ namespace DrorCohen {
                 this.columnTherapyCode = base.Columns["TherapyCode"];
                 this.columnDateOfTherapy = base.Columns["DateOfTherapy"];
                 this.columnIdPatient = base.Columns["IdPatient"];
+                this.columnSerial1 = base.Columns["Serial1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2304,13 +2316,20 @@ namespace DrorCohen {
                 base.Columns.Add(this.columnDateOfTherapy);
                 this.columnIdPatient = new global::System.Data.DataColumn("IdPatient", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdPatient);
+                this.columnSerial1 = new global::System.Data.DataColumn("Serial1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerial1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSerial}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnSerial1}, false));
                 this.columnSerial.AllowDBNull = false;
                 this.columnSerial.Unique = true;
                 this.columnSerial.MaxLength = 255;
                 this.columnTherapyCode.MaxLength = 255;
                 this.columnIdPatient.MaxLength = 255;
+                this.columnSerial1.AllowDBNull = false;
+                this.columnSerial1.Unique = true;
+                this.columnSerial1.Caption = "Serial";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3352,6 +3371,17 @@ namespace DrorCohen {
                 }
                 set {
                     this[this.tableSpecificMeetingDoctor.IdPatientColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Serial1 {
+                get {
+                    return ((int)(this[this.tableSpecificMeetingDoctor.Serial1Column]));
+                }
+                set {
+                    this[this.tableSpecificMeetingDoctor.Serial1Column] = value;
                 }
             }
             
@@ -6145,10 +6175,10 @@ namespace DrorCohen.HMODataSet1TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "SpecificMeetingDoctor";
-            tableMapping.ColumnMappings.Add("Serial", "Serial");
             tableMapping.ColumnMappings.Add("TherapyCode", "TherapyCode");
             tableMapping.ColumnMappings.Add("DateOfTherapy", "DateOfTherapy");
             tableMapping.ColumnMappings.Add("IdPatient", "IdPatient");
+            tableMapping.ColumnMappings.Add("Serial", "Serial1");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -6157,7 +6187,7 @@ namespace DrorCohen.HMODataSet1TableAdapters {
                 " OR (`DateOfTherapy` = ?)) AND ((? = 1 AND `IdPatient` IS NULL) OR (`IdPatient` " +
                 "= ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Serial", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Serial", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TherapyCode", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TherapyCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfTherapy", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Original, true, null));
@@ -6169,7 +6199,7 @@ namespace DrorCohen.HMODataSet1TableAdapters {
             this._adapter.InsertCommand.CommandText = "INSERT INTO `SpecificMeetingDoctor` (`Serial`, `TherapyCode`, `DateOfTherapy`, `I" +
                 "dPatient`) VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Serial", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Serial", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TherapyCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
@@ -6177,11 +6207,11 @@ namespace DrorCohen.HMODataSet1TableAdapters {
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `SpecificMeetingDoctor` SET `Serial` = ?, `TherapyCode` = ?, `DateOfTherapy` = ?, `IdPatient` = ? WHERE ((`Serial` = ?) AND ((? = 1 AND `TherapyCode` IS NULL) OR (`TherapyCode` = ?)) AND ((? = 1 AND `DateOfTherapy` IS NULL) OR (`DateOfTherapy` = ?)) AND ((? = 1 AND `IdPatient` IS NULL) OR (`IdPatient` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Serial", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Serial", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TherapyCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Serial", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Serial", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TherapyCode", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TherapyCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfTherapy", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Original, true, null));
@@ -6200,11 +6230,17 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Serial, TherapyCode, DateOfTherapy, IdPatient FROM SpecificMeetingDoctor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        Serial, TherapyCode, DateOfTherapy, IdPatient\r\nFROM            Spec" +
+                "ificMeetingDoctor\r\nWHERE        (IdPatient = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6226,6 +6262,42 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual HMODataSet1.SpecificMeetingDoctorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            HMODataSet1.SpecificMeetingDoctorDataTable dataTable = new HMODataSet1.SpecificMeetingDoctorDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(HMODataSet1.SpecificMeetingDoctorDataTable dataTable, string IdPatient) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((IdPatient == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(IdPatient));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual HMODataSet1.SpecificMeetingDoctorDataTable GetDataBy(string IdPatient) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((IdPatient == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(IdPatient));
+            }
             HMODataSet1.SpecificMeetingDoctorDataTable dataTable = new HMODataSet1.SpecificMeetingDoctorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6264,13 +6336,8 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
-            if ((Original_Serial == null)) {
-                throw new global::System.ArgumentNullException("Original_Serial");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Serial));
-            }
+        public virtual int Delete(int Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Serial));
             if ((Original_TherapyCode == null)) {
                 throw new global::System.ArgumentNullException("Original_TherapyCode");
             }
@@ -6314,13 +6381,8 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Serial, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient) {
-            if ((Serial == null)) {
-                throw new global::System.ArgumentNullException("Serial");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Serial));
-            }
+        public virtual int Insert(int Serial, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Serial));
             if ((TherapyCode == null)) {
                 throw new global::System.ArgumentNullException("TherapyCode");
             }
@@ -6359,13 +6421,8 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Serial, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient, string Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
-            if ((Serial == null)) {
-                throw new global::System.ArgumentNullException("Serial");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Serial));
-            }
+        public virtual int Update(int Serial, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient, int Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Serial));
             if ((TherapyCode == null)) {
                 throw new global::System.ArgumentNullException("TherapyCode");
             }
@@ -6384,12 +6441,7 @@ namespace DrorCohen.HMODataSet1TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(IdPatient));
             }
-            if ((Original_Serial == null)) {
-                throw new global::System.ArgumentNullException("Original_Serial");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Serial));
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Serial));
             if ((Original_TherapyCode == null)) {
                 throw new global::System.ArgumentNullException("Original_TherapyCode");
             }
@@ -6433,7 +6485,7 @@ namespace DrorCohen.HMODataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient, string Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
+        public virtual int Update(string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient, int Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
             return this.Update(Original_Serial, TherapyCode, DateOfTherapy, IdPatient, Original_Serial, Original_TherapyCode, Original_DateOfTherapy, Original_IdPatient);
         }
     }
