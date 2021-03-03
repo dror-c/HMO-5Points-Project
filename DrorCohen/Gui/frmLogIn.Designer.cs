@@ -90,6 +90,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogIn
             // 
@@ -104,7 +105,7 @@
             this.Controls.Add(this.id);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmLogIn";
             this.Text = "frmLogIn";
             this.ResumeLayout(false);

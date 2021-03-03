@@ -17,7 +17,7 @@ namespace DrorCohen.Gui
         private Form parent;
         private AddState state;
         private DepartmentDB departments;
-        public frmDepartment(Frmmain frmmain)
+        public frmDepartment(Form frmmain)
         {
             this.parent = frmmain;
             InitializeComponent();

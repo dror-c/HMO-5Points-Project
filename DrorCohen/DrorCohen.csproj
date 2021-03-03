@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
     </Reference>
@@ -83,6 +86,12 @@
     <Compile Include="Gui\frmDoctorOrNurse.Designer.cs">
       <DependentUpon>frmDoctorOrNurse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\frmOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmOpen.Designer.cs">
+      <DependentUpon>frmOpen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frmOrderTherapy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +109,12 @@
     </Compile>
     <Compile Include="Gui\frmPatient.Designer.cs">
       <DependentUpon>frmPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\vaccine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\vaccine.Designer.cs">
+      <DependentUpon>vaccine.cs</DependentUpon>
     </Compile>
     <Compile Include="HMODataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -151,6 +166,9 @@
     <EmbeddedResource Include="Gui\frmDoctorOrNurse.resx">
       <DependentUpon>frmDoctorOrNurse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmOpen.resx">
+      <DependentUpon>frmOpen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmOrderTherapy.resx">
       <DependentUpon>frmOrderTherapy.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmPatient.resx">
       <DependentUpon>frmPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\vaccine.resx">
+      <DependentUpon>vaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -213,6 +234,7 @@
     <None Include="MeetingByDoctorId.xss">
       <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

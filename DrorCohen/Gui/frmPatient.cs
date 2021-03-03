@@ -28,7 +28,7 @@ namespace DrorCohen.Gui
         //    SetButtonStates(true);
         //}
 
-        public frmPatient(Frmmain frmmain)
+        public frmPatient(Form frmmain)
         {
             this.parent = frmmain;
             InitializeComponent();
@@ -247,7 +247,7 @@ namespace DrorCohen.Gui
 
         private void orderTherapy_Click(object sender, EventArgs e)
         {
-            frmOrderTherapy f = new frmOrderTherapy(inputId.Text, this);
+            frmOrderTherapyFinal f = new frmOrderTherapyFinal(inputId.Text, this);
             this.Hide();
             f.ShowDialog();
         }

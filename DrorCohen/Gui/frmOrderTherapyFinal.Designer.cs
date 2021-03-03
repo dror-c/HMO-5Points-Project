@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.theDoctorMeeting = new DrorCohen.TheDoctorMeeting();
             this.doctorOrNurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.theDoctorMeeting = new DrorCohen.TheDoctorMeeting();
+            this.label1 = new System.Windows.Forms.Label();
             this.doctorOrNurseTableAdapter = new DrorCohen.TheDoctorMeetingTableAdapters.DoctorOrNurseTableAdapter();
             this.tableAdapterManager = new DrorCohen.TheDoctorMeetingTableAdapters.TableAdapterManager();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -55,8 +55,8 @@
             this.specificMeetingDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.specificMeetingDoctorTableAdapter = new DrorCohen.meetingTableAdapters.SpecificMeetingDoctorTableAdapter();
             this.tableAdapterManager2 = new DrorCohen.meetingTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.theDoctorMeeting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theDoctorMeeting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingByDoctorId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorDataGridView)).BeginInit();
@@ -76,6 +76,16 @@
             this.comboBox1.ValueMember = "ID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // doctorOrNurseBindingSource
+            // 
+            this.doctorOrNurseBindingSource.DataMember = "DoctorOrNurse";
+            this.doctorOrNurseBindingSource.DataSource = this.theDoctorMeeting;
+            // 
+            // theDoctorMeeting
+            // 
+            this.theDoctorMeeting.DataSetName = "TheDoctorMeeting";
+            this.theDoctorMeeting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -84,16 +94,6 @@
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "choose doctor";
-            // 
-            // theDoctorMeeting
-            // 
-            this.theDoctorMeeting.DataSetName = "TheDoctorMeeting";
-            this.theDoctorMeeting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // doctorOrNurseBindingSource
-            // 
-            this.doctorOrNurseBindingSource.DataMember = "DoctorOrNurse";
-            this.doctorOrNurseBindingSource.DataSource = this.theDoctorMeeting;
             // 
             // doctorOrNurseTableAdapter
             // 
@@ -140,6 +140,7 @@
             this.meetingDoctorDataGridView.Name = "meetingDoctorDataGridView";
             this.meetingDoctorDataGridView.Size = new System.Drawing.Size(541, 220);
             this.meetingDoctorDataGridView.TabIndex = 2;
+            this.meetingDoctorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetingDoctorDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -195,6 +196,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // label3
             // 
@@ -251,8 +253,8 @@
             this.Name = "frmOrderTherapyFinal";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrderTherapyFinal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.theDoctorMeeting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theDoctorMeeting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingByDoctorId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorDataGridView)).EndInit();

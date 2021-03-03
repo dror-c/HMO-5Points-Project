@@ -279,9 +279,9 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.doctorOrNurseDataGridView.DataSource = this.doctorOrNurseBindingSource;
-            this.doctorOrNurseDataGridView.Location = new System.Drawing.Point(177, 212);
+            this.doctorOrNurseDataGridView.Location = new System.Drawing.Point(20, 212);
             this.doctorOrNurseDataGridView.Name = "doctorOrNurseDataGridView";
-            this.doctorOrNurseDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.doctorOrNurseDataGridView.Size = new System.Drawing.Size(1044, 220);
             this.doctorOrNurseDataGridView.TabIndex = 60;
             this.doctorOrNurseDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doctorOrNurseDataGridView_CellContentClick);
             // 
@@ -290,7 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(888, 510);
+            this.ClientSize = new System.Drawing.Size(1144, 510);
             this.Controls.Add(this.doctorOrNurseDataGridView);
             this.Controls.Add(this.save);
             this.Controls.Add(this.prev);

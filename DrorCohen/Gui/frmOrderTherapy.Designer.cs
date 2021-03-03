@@ -170,7 +170,7 @@
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource1;
             this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(115, 360);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
-            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(365, 220);
+            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(515, 220);
             this.specificMeetingDoctorDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn6
