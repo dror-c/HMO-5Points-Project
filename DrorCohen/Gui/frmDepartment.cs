@@ -170,5 +170,10 @@ namespace DrorCohen.Gui
             frmDoctorOrNurse f = new frmDoctorOrNurse(id);
             f.Show();
         }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

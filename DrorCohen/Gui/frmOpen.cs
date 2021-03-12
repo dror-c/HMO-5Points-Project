@@ -62,5 +62,15 @@ namespace DrorCohen.Gui
         {
             MessageBox.Show("please call to our call center: 1111");
         }
+
+        private void vaccine1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
