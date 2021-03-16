@@ -35,9 +35,9 @@
             this.department = new FontAwesome.Sharp.IconButton();
             this.doctor = new FontAwesome.Sharp.IconButton();
             this.Patient = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.vaccine1 = new DrorCohen.Gui.vaccine();
             this.panelMenue.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -174,16 +174,6 @@
             this.Patient.UseVisualStyleBackColor = true;
             this.Patient.Click += new System.EventHandler(this.Patient_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MediumBlue;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(492, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 12);
-            this.panel1.TabIndex = 1;
-            // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.iconButton2);
@@ -218,6 +208,16 @@
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumBlue;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(492, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1205, 12);
+            this.panel1.TabIndex = 1;
             // 
             // vaccine1
             // 
