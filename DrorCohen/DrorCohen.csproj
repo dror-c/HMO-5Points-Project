@@ -56,6 +56,11 @@
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
+    <Compile Include="FuturePatient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuturePatient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frmDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +147,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MeetingForToday.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeetingForToday.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\ConnectionTableBetweenPatientAndDoctorAndSpecificTherapy.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DoctorOrNurse.cs" />
@@ -199,6 +209,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FuturePatient.xsc">
+      <DependentUpon>FuturePatient.xsd</DependentUpon>
+    </None>
+    <None Include="FuturePatient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FuturePatient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FuturePatient.xss">
+      <DependentUpon>FuturePatient.xsd</DependentUpon>
+    </None>
     <None Include="HMODataSet.xsc">
       <DependentUpon>HMODataSet.xsd</DependentUpon>
     </None>
@@ -242,6 +263,17 @@
     </None>
     <None Include="MeetingByDoctorId.xss">
       <DependentUpon>MeetingByDoctorId.xsd</DependentUpon>
+    </None>
+    <None Include="MeetingForToday.xsc">
+      <DependentUpon>MeetingForToday.xsd</DependentUpon>
+    </None>
+    <None Include="MeetingForToday.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MeetingForToday.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MeetingForToday.xss">
+      <DependentUpon>MeetingForToday.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -290,5 +290,11 @@ namespace DrorCohen.Gui
         {
             comboBox1.SelectedIndex = comboId.SelectedIndex;
         }
+
+
+        private void inputId_TextChanged_1(object sender, EventArgs e)
+        {
+            this.specificMeetingDoctorTableAdapter.Fill(this.meetingForToday.SpecificMeetingDoctor, inputId.Text);
+        }
     }
 }

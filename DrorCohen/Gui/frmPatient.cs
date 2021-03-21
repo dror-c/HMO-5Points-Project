@@ -162,7 +162,9 @@ namespace DrorCohen.Gui
 
         private void inputId_TextChanged(object sender, EventArgs e)
         {
-
+            idPatientToolStripTextBox.Text = inputId.Text;
+            dateOfTherapyToolStripTextBox.Text = DateTime.Today.ToShortDateString();
+            this.specificMeetingDoctorTableAdapter.Fill(this.futurePatient.SpecificMeetingDoctor, idPatientToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -177,7 +179,15 @@ namespace DrorCohen.Gui
             }
             SetButtonStates(true);
             state = AddState.NAVIGATE;
-            patients.Save();
+            try
+            {
+                patients.Save();
+            }
+            catch 
+            {
+                patients.MovePrev();
+                Populate(patients.GetCurrentRow());
+            }
         }
 
         private void next_Click(object sender, EventArgs e)
@@ -250,6 +260,27 @@ namespace DrorCohen.Gui
             frmOrderTherapyFinal f = new frmOrderTherapyFinal(inputId.Text, this);
             this.Hide();
             f.ShowDialog();
+        }
+
+        private void specificMeetingDoctorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.specificMeetingDoctorBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.futurePatient);
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.specificMeetingDoctorTableAdapter.Fill(this.futurePatient.SpecificMeetingDoctor, idPatientToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
