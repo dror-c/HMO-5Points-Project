@@ -15,6 +15,11 @@ namespace DrorCohen.Gui
         public frmOpen()
         {
             InitializeComponent();
+            vaccine f = new vaccine () { Dock = DockStyle.Fill };
+            this.pContainer.Controls.Clear();
+            this.pContainer.Controls.Add(f);
+            this.pContainer.BringToFront();
+            f.Show();
         }
 
         private void imageLogo_Click(object sender, EventArgs e)
@@ -24,23 +29,38 @@ namespace DrorCohen.Gui
 
         private void Patient_Click(object sender, EventArgs e)
         {
-            frmPatient f = new frmPatient(this);
+            frmPatient f = new frmPatient(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pContainer.Controls.Clear();
+            this.pContainer.Controls.Add(f);
+            this.pContainer.BringToFront();
             f.Show();
-            this.Hide();
+            /*frmPatient f = new frmPatient(this);
+            f.Show();
+            this.Hide();*/
         }
 
         private void doctor_Click(object sender, EventArgs e)
         {
-            frmDoctorOrNurse f = new frmDoctorOrNurse(this);
+            frmDoctorOrNurse f = new frmDoctorOrNurse(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pContainer.Controls.Clear();
+            this.pContainer.Controls.Add(f);
+            this.pContainer.BringToFront();
             f.Show();
-            this.Hide();
+            /*frmDoctorOrNurse f = new frmDoctorOrNurse(this);
+            f.Show();
+            this.Hide();*/
         }
 
         private void department_Click(object sender, EventArgs e)
         {
-            frmDepartment f = new frmDepartment(this);
+            frmDepartment f = new frmDepartment(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.pContainer.Controls.Clear();
+            this.pContainer.Controls.Add(f);
+            this.pContainer.BringToFront();
             f.Show();
-            this.Hide();
+            /*frmDepartment f = new frmDepartment(this);
+            f.Show();
+            this.Hide();*/
         }
 
         private void therapys_Click(object sender, EventArgs e)
