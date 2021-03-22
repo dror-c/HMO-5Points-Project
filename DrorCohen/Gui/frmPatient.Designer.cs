@@ -356,7 +356,7 @@
             this.fillToolStripButton});
             this.fillToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(1010, 25);
+            this.fillToolStrip.Size = new System.Drawing.Size(1054, 25);
             this.fillToolStrip.TabIndex = 39;
             this.fillToolStrip.Text = "fillToolStrip";
             // 
@@ -447,7 +447,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1010, 613);
+            this.ClientSize = new System.Drawing.Size(1054, 652);
             this.Controls.Add(this.specificMeetingDoctorDataGridView);
             this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.orderTherapy);
