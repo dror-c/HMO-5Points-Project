@@ -115,12 +115,6 @@
     <Compile Include="Gui\frmPatient.Designer.cs">
       <DependentUpon>frmPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\toDelete.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\toDelete.Designer.cs">
-      <DependentUpon>toDelete.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\vaccine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmPatient.resx">
       <DependentUpon>frmPatient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\toDelete.resx">
-      <DependentUpon>toDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\vaccine.resx">
       <DependentUpon>vaccine.cs</DependentUpon>
