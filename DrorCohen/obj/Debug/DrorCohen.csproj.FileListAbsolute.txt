@@ -118,7 +118,6 @@ C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csp
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csproj.CopyComplete
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.exe
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.pdb
-C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.toDelete.resources
 C:\Users\Jonathan\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csprojAssemblyReference.cache
 C:\Users\Jonathan\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDepartment.resources
 C:\Users\Jonathan\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmGenericTherapy.resources

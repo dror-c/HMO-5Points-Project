@@ -185,8 +185,7 @@ namespace DrorCohen.Gui
             }
             catch 
             {
-                patients.MovePrev();
-                Populate(patients.GetCurrentRow());
+
             }
         }
 
@@ -281,6 +280,131 @@ namespace DrorCohen.Gui
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void specificMeetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void inputId_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.LegalId(inputId.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputId, "this id number is not valid id");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputId, null);
+            }
+        }
+
+        private void inputFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalName(inputFirstName.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputFirstName, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputFirstName, null);
+            }
+        }
+
+        private void inputLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalName(inputLastName.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputLastName, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputLastName, null);
+            }
+        }
+
+        private void inputAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalAddress(inputAddress.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputAddress, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputAddress, null);
+            }
+        }
+
+        private void inputPhoneNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsPhoneNumber(inputPhoneNumber.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputPhoneNumber, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputPhoneNumber, null);
+            }
+        }
+
+        private void inputDateBirth_Validating(object sender, CancelEventArgs e)
+        {
+            if (Utility.ValidationUtilites.GetAge(inputDateBirth.Value)<0)
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputDateBirth, "your phone number is invalid");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputDateBirth, null);
+            }
+        }
+
+        private void inputGender_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalSex(inputGender.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputGender, "this option does not exist");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputGender, null);
+            }
+        }
+
+        private void inputDateBirth_Validating_1(object sender, CancelEventArgs e)
+        {
+            if (Utility.ValidationUtilites.GetAge(inputDateBirth.Value)<0)
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputGender, "this date isn't happened yet");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputGender, null);
+            }
         }
     }
 }

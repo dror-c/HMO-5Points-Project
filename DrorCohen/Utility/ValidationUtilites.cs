@@ -10,6 +10,8 @@ namespace DrorCohen.Utility
     {
         public static bool LegalId(string s)
         {
+            /*if (s.Length == 0)
+                return false;*/
             int x;
             if (!int.TryParse(s, out x))
                 return false;
@@ -98,7 +100,7 @@ namespace DrorCohen.Utility
         public static bool IsLegalAddress(string word)
         {
             foreach (char c in word)
-                if (IsHebrewLetter(c) == false && IsEnglishLetter(c) == false && !(c<='9'&&c>='0') && (c != '-' || c != ' '))
+                if (IsHebrewLetter(c) == false && IsEnglishLetter(c) == false && !(c<='9'&&c>='0') && (c != '-' && c != ' '))
                     return false;
             return true;
         }
@@ -179,15 +181,7 @@ namespace DrorCohen.Utility
                     return false;
             return true;
         }
-        public static bool IsLegalPhoneNumber(string phoneNumber)
-        {
-            if (phoneNumber.Length == 10)
-                return false;
-            foreach (char c in phoneNumber)
-                if(!(c>=0 && c<=9))
-                    return false;
-            return true;
-        }
+
         public static bool IsLegalSex(string sex)
         {
             return(sex=="Male"||sex=="Female");
@@ -195,6 +189,16 @@ namespace DrorCohen.Utility
         public static bool IsLegalJob(string job)
         {
             return (job == "Doctor" || job == "Nurse" || job == "Other");
+        }
+
+        internal static bool IsPhoneNumber(string text)
+        {
+            if (text.Length != 10)
+                return false;
+            foreach (char c in text)
+                if (!(c >= '0' && c <= '9'))
+                    return false;
+            return true;
         }
     }
 }
