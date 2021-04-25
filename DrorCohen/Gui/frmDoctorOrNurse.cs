@@ -179,6 +179,7 @@ namespace DrorCohen.Gui
             inputDateBirth.Enabled = !b;
             inputDateDeath.Enabled = !b;
             inputDepartmentID.Enabled = !b;
+            comboBox1.Enabled = !b;
             inputDoctorOrNurse.Enabled = !b;
         }
         private void frmPatient_Load(object sender, EventArgs e)
@@ -191,13 +192,6 @@ namespace DrorCohen.Gui
 
         }
 
-        private void delete_Click(object sender, EventArgs e)
-        {
-            DialogResult result1 = MessageBox.Show("Are you sure that you want to delete?"
-                , "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-
-        }
 
         private void update_Click(object sender, EventArgs e)
         {
@@ -241,6 +235,15 @@ namespace DrorCohen.Gui
         private void cancel_Click(object sender, EventArgs e)
         {
             Populate(doctorsOrNurses.GetCurrentRow());
+            errorProvider1.SetError(inputId, null);
+            errorProvider1.SetError(inputFirstName, null);
+            errorProvider1.SetError(inputLastName, null);
+            errorProvider1.SetError(inputAddress, null);
+            errorProvider1.SetError(inputPhoneNumber, null);
+            errorProvider1.SetError(inputDateBirth, null);
+            errorProvider1.SetError(inputGender, null);
+            errorProvider1.SetError(inputDoctorOrNurse, null);
+            errorProvider1.SetError(comboBox1, null);
             SetButtonStates(true);
         }
         private void prev_Click(object sender, EventArgs e)
@@ -295,6 +298,144 @@ namespace DrorCohen.Gui
         private void inputId_TextChanged_1(object sender, EventArgs e)
         {
             this.specificMeetingDoctorTableAdapter.Fill(this.meetingForToday.SpecificMeetingDoctor, inputId.Text);
+        }
+
+        private void inputId_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.CheckIdNumber(inputId.Text))
+            {
+                e.Cancel = true;
+                inputId.Focus();
+                errorProvider1.SetError(inputId, "this id number is not valid id");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputId, null);
+            }
+        }
+
+        private void inputFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalName(inputFirstName.Text))
+            {
+                e.Cancel = true;
+                inputFirstName.Focus();
+                errorProvider1.SetError(inputFirstName, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputFirstName, null);
+            }
+        }
+
+        private void inputLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalName(inputLastName.Text))
+            {
+                e.Cancel = true;
+                inputLastName.Focus();
+                errorProvider1.SetError(inputLastName, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputLastName, null);
+            }
+        }
+
+        private void inputAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalAddress(inputAddress.Text))
+            {
+                e.Cancel = true;
+                inputAddress.Focus();
+                errorProvider1.SetError(inputAddress, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputAddress, null);
+            }
+        }
+
+        private void inputPhoneNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsPhoneNumber(inputPhoneNumber.Text))
+            {
+                e.Cancel = true;
+                inputPhoneNumber.Focus();
+                errorProvider1.SetError(inputPhoneNumber, "you have entered non valid charchters");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputPhoneNumber, null);
+            }
+        }
+
+        private void inputDateBirth_Validating(object sender, CancelEventArgs e)
+        {
+            if (inputDateBirth.Value > DateTime.Now)
+            {
+                e.Cancel = true;
+                inputDateBirth.Focus();
+                errorProvider1.SetError(inputDateBirth, "this date isnt happened yet");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputDateBirth, null);
+            }
+        }
+
+        private void inputGender_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalSex(inputGender.Text))
+            {
+                e.Cancel = true;
+                inputGender.Focus();
+                errorProvider1.SetError(inputGender, "this option does not exist");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputGender, null);
+            }
+        }
+
+        private void inputDoctorOrNurse_Validating(object sender, CancelEventArgs e)
+        {
+            if (!Utility.ValidationUtilites.IsLegalJob(inputDoctorOrNurse.Text))
+            {
+                e.Cancel = true;
+                inputDoctorOrNurse.Focus();
+                errorProvider1.SetError(inputDoctorOrNurse, "this option does not exist");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(inputDoctorOrNurse, null);
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            //bool flag = false;
+            //foreach(string s in comboBox1.Items.IndexOf(comboBox1.Text))
+            //    if (comboBox1.Text.Equals(s))
+            //    {
+            //        flag = true;
+            //        break;
+            //    }
+            //int a = comboBox1.Items.IndexOf(0);
+            //if (comboBox1.Items.IndexOf(comboBox1.Text)!=-1)
+            //{
+            //    e.Cancel = true;
+            //    comboBox1.Focus();
+            //    errorProvider1.SetError(comboBox1, "this department does not exist");
+            //}
         }
     }
 }

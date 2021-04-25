@@ -86,7 +86,7 @@
             "Male",
             "Female"});
             this.inputGender.Location = new System.Drawing.Point(263, 372);
-            this.inputGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputGender.Margin = new System.Windows.Forms.Padding(4);
             this.inputGender.Name = "inputGender";
             this.inputGender.Size = new System.Drawing.Size(265, 24);
             this.inputGender.TabIndex = 18;
@@ -95,6 +95,7 @@
             // dateOfDeath
             // 
             this.dateOfDeath.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfDeath.ForeColor = System.Drawing.Color.Blue;
             this.dateOfDeath.Location = new System.Drawing.Point(16, 331);
             this.dateOfDeath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateOfDeath.Name = "dateOfDeath";
@@ -105,6 +106,7 @@
             // maleOrFemale
             // 
             this.maleOrFemale.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maleOrFemale.ForeColor = System.Drawing.Color.Blue;
             this.maleOrFemale.Location = new System.Drawing.Point(16, 368);
             this.maleOrFemale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.maleOrFemale.Name = "maleOrFemale";
@@ -115,6 +117,7 @@
             // phoneNumber
             // 
             this.phoneNumber.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumber.ForeColor = System.Drawing.Color.Blue;
             this.phoneNumber.Location = new System.Drawing.Point(16, 245);
             this.phoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phoneNumber.Name = "phoneNumber";
@@ -125,6 +128,7 @@
             // dateOfBirth
             // 
             this.dateOfBirth.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfBirth.ForeColor = System.Drawing.Color.Blue;
             this.dateOfBirth.Location = new System.Drawing.Point(13, 287);
             this.dateOfBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dateOfBirth.Name = "dateOfBirth";
@@ -135,6 +139,7 @@
             // adress
             // 
             this.adress.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adress.ForeColor = System.Drawing.Color.Blue;
             this.adress.Location = new System.Drawing.Point(16, 193);
             this.adress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.adress.Name = "adress";
@@ -145,6 +150,7 @@
             // lastName
             // 
             this.lastName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName.ForeColor = System.Drawing.Color.Blue;
             this.lastName.Location = new System.Drawing.Point(16, 139);
             this.lastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName.Name = "lastName";
@@ -155,6 +161,7 @@
             // firstName
             // 
             this.firstName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstName.ForeColor = System.Drawing.Color.Blue;
             this.firstName.Location = new System.Drawing.Point(16, 86);
             this.firstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName.Name = "firstName";
@@ -164,7 +171,9 @@
             // 
             // id
             // 
+            this.id.BackColor = System.Drawing.Color.White;
             this.id.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.ForeColor = System.Drawing.Color.Blue;
             this.id.Location = new System.Drawing.Point(16, 42);
             this.id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.id.Name = "id";
@@ -175,7 +184,7 @@
             // inputDateDeath
             // 
             this.inputDateDeath.Location = new System.Drawing.Point(263, 331);
-            this.inputDateDeath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputDateDeath.Margin = new System.Windows.Forms.Padding(4);
             this.inputDateDeath.Name = "inputDateDeath";
             this.inputDateDeath.Size = new System.Drawing.Size(265, 22);
             this.inputDateDeath.TabIndex = 19;
@@ -183,7 +192,7 @@
             // inputPhoneNumber
             // 
             this.inputPhoneNumber.Location = new System.Drawing.Point(263, 245);
-            this.inputPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.inputPhoneNumber.Name = "inputPhoneNumber";
             this.inputPhoneNumber.Size = new System.Drawing.Size(265, 22);
             this.inputPhoneNumber.TabIndex = 21;
@@ -192,7 +201,7 @@
             // inputAddress
             // 
             this.inputAddress.Location = new System.Drawing.Point(263, 193);
-            this.inputAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputAddress.Margin = new System.Windows.Forms.Padding(4);
             this.inputAddress.Name = "inputAddress";
             this.inputAddress.Size = new System.Drawing.Size(265, 22);
             this.inputAddress.TabIndex = 22;
@@ -201,7 +210,7 @@
             // inputLastName
             // 
             this.inputLastName.Location = new System.Drawing.Point(263, 139);
-            this.inputLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputLastName.Margin = new System.Windows.Forms.Padding(4);
             this.inputLastName.Name = "inputLastName";
             this.inputLastName.Size = new System.Drawing.Size(265, 22);
             this.inputLastName.TabIndex = 23;
@@ -210,16 +219,17 @@
             // inputFirstName
             // 
             this.inputFirstName.Location = new System.Drawing.Point(263, 86);
-            this.inputFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.inputFirstName.Name = "inputFirstName";
             this.inputFirstName.Size = new System.Drawing.Size(265, 22);
             this.inputFirstName.TabIndex = 24;
+            this.inputFirstName.TextChanged += new System.EventHandler(this.inputFirstName_TextChanged);
             this.inputFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.inputFirstName_Validating);
             // 
             // inputId
             // 
             this.inputId.Location = new System.Drawing.Point(263, 42);
-            this.inputId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputId.Margin = new System.Windows.Forms.Padding(4);
             this.inputId.Name = "inputId";
             this.inputId.Size = new System.Drawing.Size(265, 22);
             this.inputId.TabIndex = 25;
@@ -229,7 +239,7 @@
             // update
             // 
             this.update.Location = new System.Drawing.Point(707, 126);
-            this.update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(100, 28);
             this.update.TabIndex = 26;
@@ -240,7 +250,7 @@
             // Add
             // 
             this.Add.Location = new System.Drawing.Point(707, 90);
-            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(100, 28);
             this.Add.TabIndex = 28;
@@ -252,7 +262,7 @@
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.cancel.Location = new System.Drawing.Point(707, 172);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(100, 28);
             this.cancel.TabIndex = 29;
@@ -263,7 +273,7 @@
             // next
             // 
             this.next.Location = new System.Drawing.Point(404, 452);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(125, 28);
             this.next.TabIndex = 30;
@@ -274,7 +284,7 @@
             // prev
             // 
             this.prev.Location = new System.Drawing.Point(157, 452);
-            this.prev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prev.Margin = new System.Windows.Forms.Padding(4);
             this.prev.Name = "prev";
             this.prev.Size = new System.Drawing.Size(125, 28);
             this.prev.TabIndex = 31;
@@ -286,7 +296,7 @@
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
             this.save.Location = new System.Drawing.Point(707, 239);
-            this.save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(283, 28);
             this.save.TabIndex = 32;
@@ -300,8 +310,8 @@
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(1028, 420);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Location = new System.Drawing.Point(1104, 289);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(160, 28);
             this.search.TabIndex = 33;
@@ -313,8 +323,8 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(1028, 280);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Location = new System.Drawing.Point(1104, 149);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(159, 116);
             this.listBox1.TabIndex = 34;
@@ -322,20 +332,24 @@
             // lastNameSearch
             // 
             this.lastNameSearch.HideSelection = false;
-            this.lastNameSearch.Location = new System.Drawing.Point(1027, 245);
-            this.lastNameSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lastNameSearch.Location = new System.Drawing.Point(1103, 82);
+            this.lastNameSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.lastNameSearch.Multiline = true;
             this.lastNameSearch.Name = "lastNameSearch";
-            this.lastNameSearch.Size = new System.Drawing.Size(159, 22);
+            this.lastNameSearch.Size = new System.Drawing.Size(159, 43);
             this.lastNameSearch.TabIndex = 35;
+            this.lastNameSearch.Text = "enter last name\r\n to search the patient";
+            this.lastNameSearch.Click += new System.EventHandler(this.lastNameSearch_Click);
             this.lastNameSearch.TextChanged += new System.EventHandler(this.lastNameSearch_TextChanged);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(1022, 205);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(1098, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 28);
+            this.label1.Size = new System.Drawing.Size(165, 49);
             this.label1.TabIndex = 36;
             this.label1.Text = "Search:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -343,7 +357,7 @@
             // orderTherapy
             // 
             this.orderTherapy.Location = new System.Drawing.Point(707, 46);
-            this.orderTherapy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderTherapy.Margin = new System.Windows.Forms.Padding(4);
             this.orderTherapy.Name = "orderTherapy";
             this.orderTherapy.Size = new System.Drawing.Size(128, 28);
             this.orderTherapy.TabIndex = 37;
@@ -430,7 +444,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource;
-            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(545, 536);
+            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(644, 400);
             this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
             this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
@@ -478,13 +492,13 @@
             this.inputDateBirth.Name = "inputDateBirth";
             this.inputDateBirth.Size = new System.Drawing.Size(265, 22);
             this.inputDateBirth.TabIndex = 40;
-            this.inputDateBirth.Validating += new System.ComponentModel.CancelEventHandler(this.inputDateBirth_Validating_1);
+            this.inputDateBirth.Validating += new System.ComponentModel.CancelEventHandler(this.inputDateBirth_Validating);
             // 
             // frmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1374, 706);
             this.Controls.Add(this.inputDateBirth);
             this.Controls.Add(this.specificMeetingDoctorDataGridView);
@@ -516,7 +530,7 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPatient";
             this.Text = "frmPatient";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPatient_FormClosing);

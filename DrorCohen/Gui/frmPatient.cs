@@ -230,6 +230,13 @@ namespace DrorCohen.Gui
         {
             Populate(patients.GetCurrentRow());
             SetButtonStates(true);
+            errorProvider1.SetError(inputId, null);
+            errorProvider1.SetError(inputFirstName, null);
+            errorProvider1.SetError(inputLastName, null);
+            errorProvider1.SetError(inputAddress,null);
+            errorProvider1.SetError(inputPhoneNumber, null);
+            errorProvider1.SetError(inputDateBirth, null);
+            errorProvider1.SetError(inputGender, null);
         }
 
         private void frmPatient_FormClosing(object sender, FormClosingEventArgs e)
@@ -257,7 +264,6 @@ namespace DrorCohen.Gui
         private void orderTherapy_Click(object sender, EventArgs e)
         {
             frmOrderTherapyFinal f = new frmOrderTherapyFinal(inputId.Text, this);
-            this.Hide();
             f.ShowDialog();
         }
 
@@ -289,7 +295,7 @@ namespace DrorCohen.Gui
 
         private void inputId_Validating(object sender, CancelEventArgs e)
         {
-            if (!Utility.ValidationUtilites.LegalId(inputId.Text))
+            if (!Utility.ValidationUtilites.CheckIdNumber(inputId.Text))
             {
                 e.Cancel = true;
                 inputId.Focus();
@@ -307,7 +313,7 @@ namespace DrorCohen.Gui
             if (!Utility.ValidationUtilites.IsLegalName(inputFirstName.Text))
             {
                 e.Cancel = true;
-                inputId.Focus();
+                inputFirstName.Focus();
                 errorProvider1.SetError(inputFirstName, "you have entered non valid charchters");
             }
             else
@@ -322,7 +328,7 @@ namespace DrorCohen.Gui
             if (!Utility.ValidationUtilites.IsLegalName(inputLastName.Text))
             {
                 e.Cancel = true;
-                inputId.Focus();
+                inputLastName.Focus();
                 errorProvider1.SetError(inputLastName, "you have entered non valid charchters");
             }
             else
@@ -337,7 +343,7 @@ namespace DrorCohen.Gui
             if (!Utility.ValidationUtilites.IsLegalAddress(inputAddress.Text))
             {
                 e.Cancel = true;
-                inputId.Focus();
+                inputAddress.Focus();
                 errorProvider1.SetError(inputAddress, "you have entered non valid charchters");
             }
             else
@@ -352,7 +358,7 @@ namespace DrorCohen.Gui
             if (!Utility.ValidationUtilites.IsPhoneNumber(inputPhoneNumber.Text))
             {
                 e.Cancel = true;
-                inputId.Focus();
+                inputPhoneNumber.Focus();
                 errorProvider1.SetError(inputPhoneNumber, "you have entered non valid charchters");
             }
             else
@@ -364,11 +370,11 @@ namespace DrorCohen.Gui
 
         private void inputDateBirth_Validating(object sender, CancelEventArgs e)
         {
-            if (Utility.ValidationUtilites.GetAge(inputDateBirth.Value)<0)
+            if (inputDateBirth.Value>DateTime.Now)
             {
                 e.Cancel = true;
-                inputId.Focus();
-                errorProvider1.SetError(inputDateBirth, "your phone number is invalid");
+                inputDateBirth.Focus();
+                errorProvider1.SetError(inputDateBirth, "this date isnt happened yet");
             }
             else
             {
@@ -382,7 +388,7 @@ namespace DrorCohen.Gui
             if (!Utility.ValidationUtilites.IsLegalSex(inputGender.Text))
             {
                 e.Cancel = true;
-                inputId.Focus();
+                inputGender.Focus();
                 errorProvider1.SetError(inputGender, "this option does not exist");
             }
             else
@@ -392,19 +398,16 @@ namespace DrorCohen.Gui
             }
         }
 
-        private void inputDateBirth_Validating_1(object sender, CancelEventArgs e)
+
+
+        private void lastNameSearch_Click(object sender, EventArgs e)
         {
-            if (Utility.ValidationUtilites.GetAge(inputDateBirth.Value)<0)
-            {
-                e.Cancel = true;
-                inputId.Focus();
-                errorProvider1.SetError(inputGender, "this date isn't happened yet");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(inputGender, null);
-            }
+            lastNameSearch.SelectAll();
+        }
+
+        private void inputFirstName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

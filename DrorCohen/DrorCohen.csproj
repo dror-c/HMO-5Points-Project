@@ -79,12 +79,6 @@
     <Compile Include="Gui\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\Frmmain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\Frmmain.Designer.cs">
-      <DependentUpon>Frmmain.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\frmDoctorOrNurse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\Frmmain.resx">
-      <DependentUpon>Frmmain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmDoctorOrNurse.resx">
       <DependentUpon>frmDoctorOrNurse.cs</DependentUpon>

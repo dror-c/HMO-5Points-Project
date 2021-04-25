@@ -105,7 +105,6 @@ C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csp
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDepartment.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmGenericTherapy.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmLogIn.resources
-C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.Frmmain.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDoctorOrNurse.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOpen.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOrderTherapy.resources

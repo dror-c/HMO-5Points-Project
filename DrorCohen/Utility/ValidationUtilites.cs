@@ -31,6 +31,12 @@ namespace DrorCohen.Utility
             }
             return sum % 10 == 0;
         }
+
+        public static bool CheckIdNumber(String s)
+        {
+            return s.Length == 9;
+        }
+
         public static bool PhoneNumber(string num)
         {
             string pattern = @"\b0[2-4 7-9]-[2-9]\d{6}";
@@ -50,8 +56,6 @@ namespace DrorCohen.Utility
             if (t < d.AddYears(age)) age--;
             return age;
         }
-
-
 
         public static bool GreaterThanZero(int num)
         {

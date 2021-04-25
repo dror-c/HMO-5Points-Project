@@ -57,6 +57,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorOrNurseDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).BeginInit();
@@ -70,9 +71,10 @@
             // save
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
-            this.save.Location = new System.Drawing.Point(474, 163);
+            this.save.Location = new System.Drawing.Point(673, 201);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(212, 23);
+            this.save.Size = new System.Drawing.Size(283, 28);
             this.save.TabIndex = 59;
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = false;
@@ -80,9 +82,10 @@
             // 
             // prev
             // 
-            this.prev.Location = new System.Drawing.Point(119, 157);
+            this.prev.Location = new System.Drawing.Point(200, 193);
+            this.prev.Margin = new System.Windows.Forms.Padding(4);
             this.prev.Name = "prev";
-            this.prev.Size = new System.Drawing.Size(94, 23);
+            this.prev.Size = new System.Drawing.Size(125, 28);
             this.prev.TabIndex = 58;
             this.prev.Text = "<<";
             this.prev.UseVisualStyleBackColor = true;
@@ -90,9 +93,10 @@
             // 
             // next
             // 
-            this.next.Location = new System.Drawing.Point(304, 157);
+            this.next.Location = new System.Drawing.Point(446, 193);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(94, 23);
+            this.next.Size = new System.Drawing.Size(125, 28);
             this.next.TabIndex = 57;
             this.next.Text = ">>";
             this.next.UseVisualStyleBackColor = true;
@@ -101,9 +105,10 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cancel.Location = new System.Drawing.Point(611, 119);
+            this.cancel.Location = new System.Drawing.Point(856, 146);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
+            this.cancel.Size = new System.Drawing.Size(100, 28);
             this.cancel.TabIndex = 56;
             this.cancel.Text = "cancel";
             this.cancel.UseVisualStyleBackColor = false;
@@ -111,9 +116,10 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(611, 66);
+            this.Add.Location = new System.Drawing.Point(856, 81);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 23);
+            this.Add.Size = new System.Drawing.Size(100, 28);
             this.Add.TabIndex = 55;
             this.Add.Text = "create";
             this.Add.UseVisualStyleBackColor = true;
@@ -121,9 +127,10 @@
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(611, 20);
+            this.update.Location = new System.Drawing.Point(856, 25);
+            this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(75, 23);
+            this.update.Size = new System.Drawing.Size(100, 28);
             this.update.TabIndex = 53;
             this.update.Text = "update";
             this.update.UseVisualStyleBackColor = true;
@@ -131,50 +138,59 @@
             // 
             // inputId
             // 
-            this.inputId.Location = new System.Drawing.Point(198, 24);
+            this.inputId.Location = new System.Drawing.Point(305, 30);
+            this.inputId.Margin = new System.Windows.Forms.Padding(4);
             this.inputId.Name = "inputId";
-            this.inputId.Size = new System.Drawing.Size(200, 20);
+            this.inputId.Size = new System.Drawing.Size(265, 22);
             this.inputId.TabIndex = 52;
             this.inputId.TextChanged += new System.EventHandler(this.inputId_TextChanged);
             // 
             // inputDepartmentName
             // 
-            this.inputDepartmentName.Location = new System.Drawing.Point(198, 60);
+            this.inputDepartmentName.Location = new System.Drawing.Point(305, 74);
+            this.inputDepartmentName.Margin = new System.Windows.Forms.Padding(4);
             this.inputDepartmentName.Name = "inputDepartmentName";
-            this.inputDepartmentName.Size = new System.Drawing.Size(200, 20);
+            this.inputDepartmentName.Size = new System.Drawing.Size(265, 22);
             this.inputDepartmentName.TabIndex = 51;
             // 
             // inputAmountOfPatient
             // 
-            this.inputAmountOfPatient.Location = new System.Drawing.Point(198, 103);
+            this.inputAmountOfPatient.Location = new System.Drawing.Point(305, 127);
+            this.inputAmountOfPatient.Margin = new System.Windows.Forms.Padding(4);
             this.inputAmountOfPatient.Name = "inputAmountOfPatient";
-            this.inputAmountOfPatient.Size = new System.Drawing.Size(200, 20);
+            this.inputAmountOfPatient.Size = new System.Drawing.Size(265, 22);
             this.inputAmountOfPatient.TabIndex = 50;
             // 
             // lastName
             // 
             this.lastName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastName.Location = new System.Drawing.Point(13, 103);
+            this.lastName.ForeColor = System.Drawing.Color.Blue;
+            this.lastName.Location = new System.Drawing.Point(17, 127);
+            this.lastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(167, 29);
+            this.lastName.Size = new System.Drawing.Size(280, 36);
             this.lastName.TabIndex = 39;
             this.lastName.Text = "Amount Of Patient: ";
             // 
             // firstName
             // 
             this.firstName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstName.Location = new System.Drawing.Point(13, 60);
+            this.firstName.ForeColor = System.Drawing.Color.Blue;
+            this.firstName.Location = new System.Drawing.Point(17, 74);
+            this.firstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(167, 32);
+            this.firstName.Size = new System.Drawing.Size(223, 39);
             this.firstName.TabIndex = 38;
             this.firstName.Text = "Department Name: ";
             // 
             // id
             // 
             this.id.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.Location = new System.Drawing.Point(13, 24);
+            this.id.ForeColor = System.Drawing.Color.Blue;
+            this.id.Location = new System.Drawing.Point(17, 30);
+            this.id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(134, 24);
+            this.id.Size = new System.Drawing.Size(179, 30);
             this.id.TabIndex = 37;
             this.id.Text = "Department ID: ";
             this.id.Click += new System.EventHandler(this.id_Click);
@@ -300,19 +316,32 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.doctorOrNurseDataGridView.DataSource = this.doctorOrNurseBindingSource;
-            this.doctorOrNurseDataGridView.Location = new System.Drawing.Point(20, 212);
+            this.doctorOrNurseDataGridView.Location = new System.Drawing.Point(22, 305);
+            this.doctorOrNurseDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.doctorOrNurseDataGridView.Name = "doctorOrNurseDataGridView";
             this.doctorOrNurseDataGridView.RowHeadersWidth = 51;
-            this.doctorOrNurseDataGridView.Size = new System.Drawing.Size(1044, 220);
+            this.doctorOrNurseDataGridView.Size = new System.Drawing.Size(1392, 176);
             this.doctorOrNurseDataGridView.TabIndex = 60;
             this.doctorOrNurseDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.doctorOrNurseDataGridView_CellContentClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(510, 260);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 28);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "The crew members in this department are:\r\n";
+            // 
             // frmDepartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1144, 510);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1525, 628);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.doctorOrNurseDataGridView);
             this.Controls.Add(this.save);
             this.Controls.Add(this.prev);
@@ -327,6 +356,7 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDepartment";
             this.Text = "frmDepartment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDepartment_FormClosing);
@@ -369,5 +399,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Label label1;
     }
 }
