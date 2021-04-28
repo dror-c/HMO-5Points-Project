@@ -38,13 +38,11 @@ namespace DrorCohen.Gui
             // TODO: This line of code loads data into the 'meetingByDoctorId.MeetingDoctor' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'theDoctorMeeting.DoctorOrNurse' table. You can move, or remove it, as needed.
             this.doctorOrNurseTableAdapter.Fill (this.theDoctorMeeting.DoctorOrNurse);
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
            this.meetingDoctorTableAdapter.FillBy(this.meetingByDoctorId.MeetingDoctor, comboBox1.SelectedValue.ToString());
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -54,37 +52,58 @@ namespace DrorCohen.Gui
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
             specificMeetingDoctorTableAdapter.Fill(meeting.SpecificMeetingDoctor);
-         //   this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
+         // this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
           string x = idTherapy.ToString();
-          
+
             int serial = this.meeting.SpecificMeetingDoctor.Count + 1;
 
-
-            //לבדוק אם התאריך זה באמת היום שניבחר לטיפול
-        
-            
-            string dd=  dateTimePicker1.Value.DayOfWeek.ToString();// שיהיה מספרלחלץ יום
+            string dd =  dateTimePicker1.Value.DayOfWeek.ToString();// שיהיה מספרלחלץ יום
             switch (dd)
             {
+                case "Sunday":
+                    dd = "1";
+                    break;
+                case "Monday":
+                    dd = "2";
+                    break;
+                case "Tuesday":
+                    dd = "3";
+                    break;
+                case "Wednesday":
+                    dd = "1";
+                    break;
                 case "Thursday":
                     dd = "5";
                     break;
-          
-
-
-                case "שני":
-                    dd = "2";
-                break;
+                case "Friday":
+                    dd = "6";
+                    break;
+                default:
+                    dd = "7";
+                    break;
             }
-
             if (dd == d)
             {
-                meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial, x, dateTimePicker1.Value, patientId);
-
-
-                //check there is no duplicate meeting
-                specificMeetingDoctorTableAdapter.Update(meeting.SpecificMeetingDoctor);
+                DateTime d = DateTime.Parse(dateTimePicker1.Value.ToShortDateString());
+                this.specificMeetingDoctorTableAdapter1.Validate(serial.ToString(), d);
+                //checking there is no duplicate meeting
+                if (/*this.specificMeetingDoctorTableAdapter.DuplicatedValidate
+                    (serial.ToString(), d) == 0)*/
+                    this.Validate.
+                )
+                {
+                    //meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
+                    //  (serial, x, d, patientId);
+                    specificMeetingDoctorTableAdapter.Fill
+                        (meeting.SpecificMeetingDoctor);
+                    meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
+                        (serial, x, d, patientId);
+                    this.specificMeetingDoctorTableAdapter.
+                    Update(meeting.SpecificMeetingDoctor);
+                }
             }
         }
 
@@ -92,6 +111,19 @@ namespace DrorCohen.Gui
         {
             this.meetingDoctorTableAdapter.FillBy(this.meetingByDoctorId.MeetingDoctor, comboBox1.SelectedValue.ToString());
         }
+
+        //private void fillToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        this.specificMeetingDoctorTableAdapter1.Fill(this.ds.SpecificMeetingDoctor, therapyCodeToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        System.Windows.Forms.MessageBox.Show(ex.Message);
+        //    }
+
+        //}
 
         private void meetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

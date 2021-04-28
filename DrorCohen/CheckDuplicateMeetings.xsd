@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="meeting" targetNamespace="http://tempuri.org/meeting.xsd" xmlns:mstns="http://tempuri.org/meeting.xsd" xmlns="http://tempuri.org/meeting.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="CheckDuplicateMeetings" targetNamespace="http://tempuri.org/CheckDuplicateMeetings.xsd" xmlns:mstns="http://tempuri.org/CheckDuplicateMeetings.xsd" xmlns="http://tempuri.org/CheckDuplicateMeetings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HMOConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HMOConnectionString1 (Settings)" PropertyReference="ApplicationSettings.DrorCohen.Properties.Settings.GlobalReference.Default.HMOConnectionString1" Provider="System.Data.OleDb" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HMOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HMOConnectionString (Settings)" PropertyReference="ApplicationSettings.DrorCohen.Properties.Settings.GlobalReference.Default.HMOConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HMOConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HMOConnectionString2 (Settings)" PropertyReference="ApplicationSettings.DrorCohen.Properties.Settings.GlobalReference.Default.HMOConnectionString2" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SpecificMeetingDoctorTableAdapter" GeneratorDataComponentClassName="SpecificMeetingDoctorTableAdapter" Name="SpecificMeetingDoctor" UserDataComponentName="SpecificMeetingDoctorTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dupTableAdapter" GeneratorDataComponentClassName="dupTableAdapter" Name="dup" UserDataComponentName="dupTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HMOConnectionString1 (Settings)" DbObjectName="SpecificMeetingDoctor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HMOConnectionString2 (Settings)" DbObjectName="SpecificMeetingDoctor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `SpecificMeetingDoctor` WHERE ((`Serial` = ?) AND ((? = 1 AND `TherapyCode` IS NULL) OR (`TherapyCode` = ?)) AND ((? = 1 AND `DateOfTherapy` IS NULL) OR (`DateOfTherapy` = ?)) AND ((? = 1 AND `IdPatient` IS NULL) OR (`IdPatient` = ?)))</CommandText>
@@ -37,7 +36,7 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Serial, TherapyCode, DateOfTherapy, IdPatient FROM SpecificMeetingDoctor</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -69,33 +68,18 @@
               <Mapping SourceColumn="IdPatient" DataSetColumn="IdPatient" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="HMOConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DuplicatedValidate" Modifier="Public" Name="DuplicatedValidate" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DuplicatedValidate">
+              <DbSource ConnectionRef="HMOConnectionString2 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ValidateDuplicateMeeting" Modifier="Public" Name="ValidateDuplicateMeeting" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ValidateDuplicateMeeting">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) AS Expr1
 FROM     SpecificMeetingDoctor
 WHERE  (TherapyCode = ?) AND (DateOfTherapy = ?)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="TherapyCode" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="TherapyCode" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="TherapyCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="TherapyCode" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="TherapyCode" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="TherapyCode" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="Param2" ColumnName="DateOfTherapy" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="DateOfTherapy" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfTherapy" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="HMOConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertSpecificMeeting" Modifier="Public" Name="InsertSpecificMeeting" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertSpecificMeeting">
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO SpecificMeetingDoctor
-                  (Serial, TherapyCode, DateOfTherapy, IdPatient)
-VALUES (?, ?, ?, ?)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Serial" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.Int32" DbType="Int32" Direction="Input" ParameterName="Serial" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Serial" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="TherapyCode" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="TherapyCode" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="TherapyCode" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="DateOfTherapy" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.Date" DbType="Date" Direction="Input" ParameterName="DateOfTherapy" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="DateOfTherapy" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="Param4" ColumnName="IdPatient" DataSourceName="SpecificMeetingDoctor" DataTypeServer="DbType.StringFixedLength(255)" DbType="String" Direction="Input" ParameterName="IdPatient" Precision="0" ProviderType="WChar" Scale="0" Size="255" SourceColumn="IdPatient" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -104,10 +88,10 @@ VALUES (?, ?, ?, ?)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="meeting" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="meeting" msprop:Generator_UserDSName="meeting">
+  <xs:element name="CheckDuplicateMeetings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CheckDuplicateMeetings" msprop:Generator_UserDSName="CheckDuplicateMeetings">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SpecificMeetingDoctor" msprop:Generator_TableClassName="SpecificMeetingDoctorDataTable" msprop:Generator_TableVarName="tableSpecificMeetingDoctor" msprop:Generator_TablePropName="SpecificMeetingDoctor" msprop:Generator_RowDeletingName="SpecificMeetingDoctorRowDeleting" msprop:Generator_RowChangingName="SpecificMeetingDoctorRowChanging" msprop:Generator_RowEvHandlerName="SpecificMeetingDoctorRowChangeEventHandler" msprop:Generator_RowDeletedName="SpecificMeetingDoctorRowDeleted" msprop:Generator_UserTableName="SpecificMeetingDoctor" msprop:Generator_RowChangedName="SpecificMeetingDoctorRowChanged" msprop:Generator_RowEvArgName="SpecificMeetingDoctorRowChangeEvent" msprop:Generator_RowClassName="SpecificMeetingDoctorRow">
+        <xs:element name="dup" msprop:Generator_TableClassName="dupDataTable" msprop:Generator_TableVarName="tabledup" msprop:Generator_TablePropName="dup" msprop:Generator_RowDeletingName="dupRowDeleting" msprop:Generator_RowChangingName="dupRowChanging" msprop:Generator_RowEvHandlerName="dupRowChangeEventHandler" msprop:Generator_RowDeletedName="dupRowDeleted" msprop:Generator_UserTableName="dup" msprop:Generator_RowChangedName="dupRowChanged" msprop:Generator_RowEvArgName="dupRowChangeEvent" msprop:Generator_RowClassName="dupRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Serial" msprop:Generator_ColumnVarNameInTable="columnSerial" msprop:Generator_ColumnPropNameInRow="Serial" msprop:Generator_ColumnPropNameInTable="SerialColumn" msprop:Generator_UserColumnName="Serial" type="xs:int" />
@@ -132,7 +116,7 @@ VALUES (?, ?, ?, ?)</CommandText>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:SpecificMeetingDoctor" />
+      <xs:selector xpath=".//mstns:dup" />
       <xs:field xpath="mstns:Serial" />
     </xs:unique>
   </xs:element>

@@ -49,6 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckDuplicateMeetings.cs">
+      <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CheckDuplicateMeetings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DATA\DAL.cs" />
     <Compile Include="DB\DepartmentDB.cs" />
     <Compile Include="DB\DoctorOrNurseDB.cs" />
@@ -56,6 +64,11 @@
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
+    <Compile Include="ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FuturePatient.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,6 +138,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HMODataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="meeting.cs">
+      <DependentUpon>meeting.xsd</DependentUpon>
+    </Compile>
     <Compile Include="meeting.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +207,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="CheckDuplicateMeetings.xsc">
+      <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
+    </None>
+    <None Include="CheckDuplicateMeetings.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CheckDuplicateMeetings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CheckDuplicateMeetings.xss">
+      <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
+    </None>
+    <None Include="ds.xsc">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds.xss">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
     <None Include="FuturePatient.xsc">
       <DependentUpon>FuturePatient.xsd</DependentUpon>
     </None>
