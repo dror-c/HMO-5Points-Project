@@ -173,6 +173,7 @@
             this.inputFirstName.Name = "inputFirstName";
             this.inputFirstName.Size = new System.Drawing.Size(265, 22);
             this.inputFirstName.TabIndex = 47;
+            this.inputFirstName.TextChanged += new System.EventHandler(this.inputFirstName_TextChanged);
             this.inputFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.inputFirstName_Validating);
             // 
             // inputLastName

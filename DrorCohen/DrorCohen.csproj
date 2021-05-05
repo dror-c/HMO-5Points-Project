@@ -69,6 +69,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="f.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>f.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FutrueTherapysForPatient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FutrueTherapysForPatient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FuturePatient.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +172,11 @@
     <Compile Include="Models\GenericTherapy.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\SpecificTherapyForPatient.cs" />
+    <Compile Include="PatientFutureTherapy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientFutureTherapy.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TheDoctorMeeting.Designer.cs">
@@ -228,6 +243,28 @@
     </None>
     <None Include="ds.xss">
       <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="f.xsc">
+      <DependentUpon>f.xsd</DependentUpon>
+    </None>
+    <None Include="f.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>f.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="f.xss">
+      <DependentUpon>f.xsd</DependentUpon>
+    </None>
+    <None Include="FutrueTherapysForPatient.xsc">
+      <DependentUpon>FutrueTherapysForPatient.xsd</DependentUpon>
+    </None>
+    <None Include="FutrueTherapysForPatient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FutrueTherapysForPatient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FutrueTherapysForPatient.xss">
+      <DependentUpon>FutrueTherapysForPatient.xsd</DependentUpon>
     </None>
     <None Include="FuturePatient.xsc">
       <DependentUpon>FuturePatient.xsd</DependentUpon>
@@ -296,6 +333,17 @@
       <DependentUpon>MeetingForToday.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PatientFutureTherapy.xsc">
+      <DependentUpon>PatientFutureTherapy.xsd</DependentUpon>
+    </None>
+    <None Include="PatientFutureTherapy.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PatientFutureTherapy.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PatientFutureTherapy.xss">
+      <DependentUpon>PatientFutureTherapy.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -321,9 +369,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HMO.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="HMO.accdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

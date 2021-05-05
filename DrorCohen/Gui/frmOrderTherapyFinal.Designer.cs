@@ -51,10 +51,6 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.meeting = new DrorCohen.meeting();
-            this.specificMeetingDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.specificMeetingDoctorTableAdapter = new DrorCohen.meetingTableAdapters.SpecificMeetingDoctorTableAdapter();
-            this.tableAdapterManager2 = new DrorCohen.meetingTableAdapters.TableAdapterManager();
             this.checkDuplicateMeetings1 = new DrorCohen.CheckDuplicateMeetings();
             this.ds = new DrorCohen.ds();
             this.specificMeetingDoctorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -63,17 +59,30 @@
             this.dupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dupTableAdapter = new DrorCohen.CheckDuplicateMeetingsTableAdapters.dupTableAdapter();
             this.tableAdapterManager4 = new DrorCohen.CheckDuplicateMeetingsTableAdapters.TableAdapterManager();
+            this.meeting = new DrorCohen.meeting();
+            this.specificMeetingDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.specificMeetingDoctorTableAdapter = new DrorCohen.meetingTableAdapters.SpecificMeetingDoctorTableAdapter();
+            this.tableAdapterManager2 = new DrorCohen.meetingTableAdapters.TableAdapterManager();
+            this.f = new DrorCohen.f();
+            this.specificMeetingDoctorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.specificMeetingDoctorTableAdapter2 = new DrorCohen.fTableAdapters.SpecificMeetingDoctorTableAdapter();
+            this.tableAdapterManager5 = new DrorCohen.fTableAdapters.TableAdapterManager();
+            this.specificMeetingDoctorDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theDoctorMeeting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingByDoctorId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meeting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkDuplicateMeetings1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meeting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -149,7 +158,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.meetingDoctorDataGridView.DataSource = this.meetingDoctorBindingSource;
-            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(290, 101);
+            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(291, 101);
             this.meetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.meetingDoctorDataGridView.Name = "meetingDoctorDataGridView";
             this.meetingDoctorDataGridView.RowHeadersWidth = 51;
@@ -226,6 +235,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(159, 24);
             this.comboBox2.TabIndex = 5;
+            this.comboBox2.Visible = false;
             this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
             // 
             // label3
@@ -236,10 +246,11 @@
             this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "choose hour";
+            this.label3.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 431);
+            this.button1.Location = new System.Drawing.Point(83, 344);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 28);
@@ -247,26 +258,6 @@
             this.button1.Text = "submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // meeting
-            // 
-            this.meeting.DataSetName = "meeting";
-            this.meeting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // specificMeetingDoctorBindingSource
-            // 
-            this.specificMeetingDoctorBindingSource.DataMember = "SpecificMeetingDoctor";
-            this.specificMeetingDoctorBindingSource.DataSource = this.meeting;
-            // 
-            // specificMeetingDoctorTableAdapter
-            // 
-            this.specificMeetingDoctorTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager2
-            // 
-            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager2.SpecificMeetingDoctorTableAdapter = this.specificMeetingDoctorTableAdapter;
-            this.tableAdapterManager2.UpdateOrder = DrorCohen.meetingTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // checkDuplicateMeetings1
             // 
@@ -308,11 +299,75 @@
             this.tableAdapterManager4.dupTableAdapter = this.dupTableAdapter;
             this.tableAdapterManager4.UpdateOrder = DrorCohen.CheckDuplicateMeetingsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // meeting
+            // 
+            this.meeting.DataSetName = "meeting";
+            this.meeting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // specificMeetingDoctorBindingSource
+            // 
+            this.specificMeetingDoctorBindingSource.DataMember = "SpecificMeetingDoctor";
+            this.specificMeetingDoctorBindingSource.DataSource = this.meeting;
+            // 
+            // specificMeetingDoctorTableAdapter
+            // 
+            this.specificMeetingDoctorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.SpecificMeetingDoctorTableAdapter = this.specificMeetingDoctorTableAdapter;
+            this.tableAdapterManager2.UpdateOrder = DrorCohen.meetingTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // f
+            // 
+            this.f.DataSetName = "f";
+            this.f.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // specificMeetingDoctorBindingSource2
+            // 
+            this.specificMeetingDoctorBindingSource2.DataMember = "SpecificMeetingDoctor";
+            this.specificMeetingDoctorBindingSource2.DataSource = this.f;
+            // 
+            // specificMeetingDoctorTableAdapter2
+            // 
+            this.specificMeetingDoctorTableAdapter2.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager5
+            // 
+            this.tableAdapterManager5.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager5.Connection = null;
+            this.tableAdapterManager5.UpdateOrder = DrorCohen.fTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // specificMeetingDoctorDataGridView
+            // 
+            this.specificMeetingDoctorDataGridView.AutoGenerateColumns = false;
+            this.specificMeetingDoctorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.specificMeetingDoctorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6});
+            this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource2;
+            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(349, 508);
+            this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
+            this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
+            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(400, 271);
+            this.specificMeetingDoctorDataGridView.TabIndex = 9;
+            this.specificMeetingDoctorDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Expr1";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Expr1";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
             // frmOrderTherapyFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 773);
+            this.ClientSize = new System.Drawing.Size(1067, 804);
+            this.Controls.Add(this.specificMeetingDoctorDataGridView);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
@@ -330,12 +385,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.meetingByDoctorId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meeting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkDuplicateMeetings1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meeting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.f)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specificMeetingDoctorDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +435,11 @@
         private System.Windows.Forms.BindingSource dupBindingSource;
         private CheckDuplicateMeetingsTableAdapters.dupTableAdapter dupTableAdapter;
         private CheckDuplicateMeetingsTableAdapters.TableAdapterManager tableAdapterManager4;
+        private f f;
+        private System.Windows.Forms.BindingSource specificMeetingDoctorBindingSource2;
+        private fTableAdapters.SpecificMeetingDoctorTableAdapter specificMeetingDoctorTableAdapter2;
+        private fTableAdapters.TableAdapterManager tableAdapterManager5;
+        private System.Windows.Forms.DataGridView specificMeetingDoctorDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

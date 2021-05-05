@@ -20,9 +20,9 @@ namespace DrorCohen {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("meeting")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FutrueTherapysForPatient")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class meeting : global::System.Data.DataSet {
+    public partial class FutrueTherapysForPatient : global::System.Data.DataSet {
         
         private SpecificMeetingDoctorDataTable tableSpecificMeetingDoctor;
         
@@ -30,7 +30,7 @@ namespace DrorCohen {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public meeting() {
+        public FutrueTherapysForPatient() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DrorCohen {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected meeting(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FutrueTherapysForPatient(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace DrorCohen {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            meeting cln = ((meeting)(base.Clone()));
+            FutrueTherapysForPatient cln = ((FutrueTherapysForPatient)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace DrorCohen {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "meeting";
+            this.DataSetName = "FutrueTherapysForPatient";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/meeting.xsd";
+            this.Namespace = "http://tempuri.org/FutrueTherapysForPatient.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSpecificMeetingDoctor = new SpecificMeetingDoctorDataTable();
@@ -225,7 +225,7 @@ namespace DrorCohen {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            meeting ds = new meeting();
+            FutrueTherapysForPatient ds = new FutrueTherapysForPatient();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -515,7 +515,7 @@ namespace DrorCohen {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                meeting ds = new meeting();
+                FutrueTherapysForPatient ds = new FutrueTherapysForPatient();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -719,7 +719,7 @@ namespace DrorCohen {
         }
     }
 }
-namespace DrorCohen.meetingTableAdapters {
+namespace DrorCohen.FutrueTherapysForPatientTableAdapters {
     
     
     /// <summary>
@@ -892,40 +892,24 @@ namespace DrorCohen.meetingTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::DrorCohen.Properties.Settings.Default.HMOConnectionString1;
+            this._connection.ConnectionString = global::DrorCohen.Properties.Settings.Default.HMOConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Serial, TherapyCode, DateOfTherapy, IdPatient FROM SpecificMeetingDoctor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            SpecificMeetingDoctor\r\nWHERE    " +
-                "    (TherapyCode = ?) AND (DateOfTherapy = ?)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TherapyCode", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO SpecificMeetingDoctor\n                  (Serial, TherapyCode, DateOfT" +
-                "herapy, IdPatient)\nVALUES (?, ?, ?, ?)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Serial", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Serial", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TherapyCode", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(meeting.SpecificMeetingDoctorDataTable dataTable) {
+        public virtual int Fill(FutrueTherapysForPatient.SpecificMeetingDoctorDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -938,9 +922,9 @@ namespace DrorCohen.meetingTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual meeting.SpecificMeetingDoctorDataTable GetData() {
+        public virtual FutrueTherapysForPatient.SpecificMeetingDoctorDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            meeting.SpecificMeetingDoctorDataTable dataTable = new meeting.SpecificMeetingDoctorDataTable();
+            FutrueTherapysForPatient.SpecificMeetingDoctorDataTable dataTable = new FutrueTherapysForPatient.SpecificMeetingDoctorDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -948,62 +932,14 @@ namespace DrorCohen.meetingTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(meeting.SpecificMeetingDoctorDataTable dataTable, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((TherapyCode == null)) {
-                throw new global::System.ArgumentNullException("TherapyCode");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TherapyCode));
-            }
-            if ((DateOfTherapy.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DateOfTherapy.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual meeting.SpecificMeetingDoctorDataTable GetDataBy2(string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((TherapyCode == null)) {
-                throw new global::System.ArgumentNullException("TherapyCode");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TherapyCode));
-            }
-            if ((DateOfTherapy.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(DateOfTherapy.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            meeting.SpecificMeetingDoctorDataTable dataTable = new meeting.SpecificMeetingDoctorDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(meeting.SpecificMeetingDoctorDataTable dataTable) {
+        public virtual int Update(FutrueTherapysForPatient.SpecificMeetingDoctorDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(meeting dataSet) {
+        public virtual int Update(FutrueTherapysForPatient dataSet) {
             return this.Adapter.Update(dataSet, "SpecificMeetingDoctor");
         }
         
@@ -1178,48 +1114,6 @@ namespace DrorCohen.meetingTableAdapters {
         public virtual int Update(string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient, int Original_Serial, string Original_TherapyCode, global::System.Nullable<global::System.DateTime> Original_DateOfTherapy, string Original_IdPatient) {
             return this.Update(Original_Serial, TherapyCode, DateOfTherapy, IdPatient, Original_Serial, Original_TherapyCode, Original_DateOfTherapy, Original_IdPatient);
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertSpecificMeeting(int Serial, string TherapyCode, global::System.Nullable<global::System.DateTime> DateOfTherapy, string IdPatient) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(Serial));
-            if ((TherapyCode == null)) {
-                throw new global::System.ArgumentNullException("TherapyCode");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(TherapyCode));
-            }
-            if ((DateOfTherapy.HasValue == true)) {
-                command.Parameters[2].Value = ((System.DateTime)(DateOfTherapy.Value));
-            }
-            else {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((IdPatient == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(IdPatient));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
     }
     
     /// <summary>
@@ -1313,7 +1207,7 @@ namespace DrorCohen.meetingTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(meeting dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FutrueTherapysForPatient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._specificMeetingDoctorTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.SpecificMeetingDoctor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1332,7 +1226,7 @@ namespace DrorCohen.meetingTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(meeting dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FutrueTherapysForPatient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._specificMeetingDoctorTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.SpecificMeetingDoctor.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1350,7 +1244,7 @@ namespace DrorCohen.meetingTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(meeting dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FutrueTherapysForPatient dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._specificMeetingDoctorTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SpecificMeetingDoctor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1392,7 +1286,7 @@ namespace DrorCohen.meetingTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(meeting dataSet) {
+        public virtual int UpdateAll(FutrueTherapysForPatient dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -901,8 +901,8 @@ namespace DrorCohen.FuturePatientTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     Serial, TherapyCode, DateOfTherapy, IdPatient\r\nFROM        SpecificMee" +
-                "tingDoctor\r\nWHERE     (IdPatient = ?) AND (DateOfTherapy >= ?)";
+            this._commandCollection[0].CommandText = "SELECT     Serial, TherapyCode, DateOfTherapy, IdPatient\nFROM        SpecificMeet" +
+                "ingDoctor\nWHERE     (IdPatient = ?) AND (DateOfTherapy >= ?)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));

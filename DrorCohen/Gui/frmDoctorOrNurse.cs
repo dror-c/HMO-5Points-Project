@@ -437,5 +437,10 @@ namespace DrorCohen.Gui
             //    errorProvider1.SetError(comboBox1, "this department does not exist");
             //}
         }
+
+        private void inputFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

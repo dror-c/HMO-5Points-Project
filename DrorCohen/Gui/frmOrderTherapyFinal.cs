@@ -34,15 +34,15 @@ namespace DrorCohen.Gui
         private void frmOrderTherapyFinal_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'meeting.SpecificMeetingDoctor' table. You can move, or remove it, as needed.
-            
+
             // TODO: This line of code loads data into the 'meetingByDoctorId.MeetingDoctor' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'theDoctorMeeting.DoctorOrNurse' table. You can move, or remove it, as needed.
-            this.doctorOrNurseTableAdapter.Fill (this.theDoctorMeeting.DoctorOrNurse);
+            this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           this.meetingDoctorTableAdapter.FillBy(this.meetingByDoctorId.MeetingDoctor, comboBox1.SelectedValue.ToString());
+            this.meetingDoctorTableAdapter.FillBy(this.meetingByDoctorId.MeetingDoctor, comboBox1.SelectedValue.ToString());
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -52,15 +52,15 @@ namespace DrorCohen.Gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
             specificMeetingDoctorTableAdapter.Fill(meeting.SpecificMeetingDoctor);
-         // this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
-          string x = idTherapy.ToString();
+            // this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
+            string x = idTherapy.ToString();
 
             int serial = this.meeting.SpecificMeetingDoctor.Count + 1;
 
-            string dd =  dateTimePicker1.Value.DayOfWeek.ToString();// שיהיה מספרלחלץ יום
+            string dd = dateTimePicker1.Value.DayOfWeek.ToString();
             switch (dd)
             {
                 case "Sunday":
@@ -88,28 +88,55 @@ namespace DrorCohen.Gui
             if (dd == d)
             {
                 DateTime d = DateTime.Parse(dateTimePicker1.Value.ToShortDateString());
-                this.specificMeetingDoctorTableAdapter1.Validate(serial.ToString(), d);
+                //   this.specificMeetingDoctorTableAdapter.DuplicatedValidate(serial.ToString(), d);
+
+                //      specificMeetingDoctorTableAdapter.FillBy(meeting.SpecificMeetingDoctor, serial.ToString(), d);
+                //      MessageBox.Show(meeting.SpecificMeetingDoctor.Count.ToString());
                 //checking there is no duplicate meeting
-                if (/*this.specificMeetingDoctorTableAdapter.DuplicatedValidate
-                    (serial.ToString(), d) == 0)*/
-                    this.Validate.
-                )
-                {
-                    //meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
-                    //  (serial, x, d, patientId);
-                    specificMeetingDoctorTableAdapter.Fill
-                        (meeting.SpecificMeetingDoctor);
-                    meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
-                        (serial, x, d, patientId);
-                    this.specificMeetingDoctorTableAdapter.
-                    Update(meeting.SpecificMeetingDoctor);
+                //if (/*this.specificMeetingDoctorTableAdapter.DuplicatedValidate
+                //    (serial.ToString(), d) == 0)*/
+
+                
+                this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, idTherapy.ToString()/*serial.ToString()*/, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(d, typeof(System.DateTime))))));
+                if (Convert.ToInt32(f.SpecificMeetingDoctor.Rows[0][0].ToString()) == 0) {
+                    meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial,idTherapy.ToString(),d,patientId);
+                    specificMeetingDoctorTableAdapter.Update(meeting.SpecificMeetingDoctor);
+
                 }
+                //f.SpecificMeetingDoctor.Rows[0][0] = 5;
+                //f.SpecificMeetingDoctor.AcceptChanges();
             }
+
+            //)
+
+            //meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
+            //  (serial, x, d, patientId);
+            
+            specificMeetingDoctorTableAdapter.Fill
+                (meeting.SpecificMeetingDoctor);
+            //meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow
+            //    (serial, x, d, patientId);
+            this.specificMeetingDoctorTableAdapter.
+            Update(meeting.SpecificMeetingDoctor);
         }
+
 
         private void comboBox2_Click(object sender, EventArgs e)
         {
             this.meetingDoctorTableAdapter.FillBy(this.meetingByDoctorId.MeetingDoctor, comboBox1.SelectedValue.ToString());
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, therapyCodeToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
+            //}
+            //catch (System.Exception ex)
+            //{
+            //    System.Windows.Forms.MessageBox.Show(ex.Message);
+            //}
+
         }
 
         //private void fillToolStripButton_Click(object sender, EventArgs e)
@@ -133,5 +160,7 @@ namespace DrorCohen.Gui
             d = (meetingDoctorDataGridView.Rows[rowIndex].Cells[3].Value).ToString();//לשנותן באמת יום
             idDoctor = (meetingDoctorDataGridView.Rows[rowIndex].Cells[2].Value).ToString();
         }
+
+
     }
 }
