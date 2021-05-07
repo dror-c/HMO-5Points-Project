@@ -905,8 +905,8 @@ namespace DrorCohen.CheckDuplicateMeetingsTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     SpecificMeetingDoctor\r\nWHERE  (TherapyCode = ?" +
-                ") AND (DateOfTherapy = ?)";
+            this._commandCollection[1].CommandText = "SELECT COUNT(*) AS Expr1\nFROM     SpecificMeetingDoctor\nWHERE  (TherapyCode = ?) " +
+                "AND (DateOfTherapy = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TherapyCode", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TherapyCode", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfTherapy", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfTherapy", global::System.Data.DataRowVersion.Current, false, null));

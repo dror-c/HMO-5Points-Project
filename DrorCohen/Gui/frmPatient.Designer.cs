@@ -444,12 +444,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource;
-            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(644, 400);
+            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(601, 348);
             this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
             this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
             this.specificMeetingDoctorDataGridView.RowTemplate.Height = 26;
-            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(576, 80);
+            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(732, 185);
             this.specificMeetingDoctorDataGridView.TabIndex = 39;
             this.specificMeetingDoctorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.specificMeetingDoctorDataGridView_CellContentClick);
             // 

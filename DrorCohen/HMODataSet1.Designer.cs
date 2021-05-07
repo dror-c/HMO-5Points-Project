@@ -6237,8 +6237,8 @@ namespace DrorCohen.HMODataSet1TableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Serial, TherapyCode, DateOfTherapy, IdPatient\r\nFROM            Spec" +
-                "ificMeetingDoctor\r\nWHERE        (IdPatient = ?)";
+            this._commandCollection[1].CommandText = "SELECT        Serial, TherapyCode, DateOfTherapy, IdPatient\nFROM            Speci" +
+                "ficMeetingDoctor\nWHERE        (IdPatient = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdPatient", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdPatient", global::System.Data.DataRowVersion.Current, false, null));
         }

@@ -77,9 +77,11 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.meetingDoctorDataGridView.DataSource = this.meetingDoctorBindingSource;
-            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(289, 141);
+            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(385, 174);
+            this.meetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.meetingDoctorDataGridView.Name = "meetingDoctorDataGridView";
-            this.meetingDoctorDataGridView.Size = new System.Drawing.Size(544, 111);
+            this.meetingDoctorDataGridView.RowHeadersWidth = 51;
+            this.meetingDoctorDataGridView.Size = new System.Drawing.Size(725, 137);
             this.meetingDoctorDataGridView.TabIndex = 2;
             this.meetingDoctorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetingDoctorDataGridView_CellContentClick);
             // 
@@ -87,31 +89,41 @@
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "TherapyCode";
             this.dataGridViewTextBoxColumn1.HeaderText = "TherapyCode";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "WhoCanGiveTheTherapy";
             this.dataGridViewTextBoxColumn2.HeaderText = "WhoCanGiveTheTherapy";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "IdDoctor";
             this.dataGridViewTextBoxColumn3.HeaderText = "IdDoctor";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "day";
             this.dataGridViewTextBoxColumn4.HeaderText = "day";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "hour";
             this.dataGridViewTextBoxColumn5.HeaderText = "hour";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // meetingDoctorBindingSource
             // 
@@ -125,9 +137,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(670, 258);
+            this.button1.Location = new System.Drawing.Point(893, 318);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,26 +149,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 107);
+            this.label1.Location = new System.Drawing.Point(37, 132);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "select date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(605, 106);
+            this.label2.Location = new System.Drawing.Point(807, 130);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "select therapy";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(31, 141);
+            this.dateTimePicker1.Location = new System.Drawing.Point(41, 174);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // specificMeetingDoctorDataGridView
@@ -168,34 +184,44 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource1;
-            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(115, 360);
+            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(153, 443);
+            this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
-            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(515, 220);
+            this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
+            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(687, 271);
             this.specificMeetingDoctorDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Serial";
             this.dataGridViewTextBoxColumn6.HeaderText = "Serial";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "TherapyCode";
             this.dataGridViewTextBoxColumn7.HeaderText = "TherapyCode";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "DateOfTherapy";
             this.dataGridViewTextBoxColumn8.HeaderText = "DateOfTherapy";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "IdPatient";
             this.dataGridViewTextBoxColumn9.HeaderText = "IdPatient";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // specificMeetingDoctorBindingSource1
             // 
@@ -243,36 +269,41 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(179, 287);
+            this.label3.Location = new System.Drawing.Point(239, 353);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(342, 23);
+            this.label3.Size = new System.Drawing.Size(456, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "check validate of date, is the doctor has already another meeting";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(31, 222);
+            this.comboBox1.Location = new System.Drawing.Point(41, 273);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 8;
+            this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 187);
+            this.label4.Location = new System.Drawing.Point(41, 230);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(37, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "hour";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // frmOrderTherapy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 600);
+            this.ClientSize = new System.Drawing.Size(1259, 738);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
@@ -282,6 +313,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.meetingDoctorDataGridView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmOrderTherapy";
             this.Text = "frmOrderTherapy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOrderTherapy_FormClosing);

@@ -954,8 +954,8 @@ namespace DrorCohen.MeetingByDoctorIdTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        TherapyCode, WhoCanGiveTheTherapy, IdDoctor, [day], [hour]\r\nFROM   " +
-                "         MeetingDoctor\r\nWHERE        (IdDoctor = ?)";
+            this._commandCollection[1].CommandText = "SELECT        TherapyCode, WhoCanGiveTheTherapy, IdDoctor, [day], [hour]\nFROM    " +
+                "        MeetingDoctor\nWHERE        (IdDoctor = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IdDoctor", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IdDoctor", global::System.Data.DataRowVersion.Current, false, null));
         }

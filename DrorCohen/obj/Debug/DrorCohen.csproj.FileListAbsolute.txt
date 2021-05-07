@@ -96,7 +96,6 @@ C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\bin\Debug\FontAwesome.S
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOpen.resources
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csproj.CopyComplete
 C:\Users\User\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.vaccine.resources
-C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\HMO.accdb
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.exe.config
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.exe
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.pdb
@@ -161,3 +160,6 @@ C:\Users\Ofra\Desktop\יב לבדיקה\HMO-5Points-Project-main\HMO-5Points-Pro
 C:\Users\Ofra\Desktop\יב לבדיקה\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\bin\Debug\DrorCohen.pdb
 C:\Users\Ofra\Desktop\יב לבדיקה\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Ofra\Desktop\יב לבדיקה\HMO-5Points-Project-main\HMO-5Points-Project-main\DrorCohen\obj\Debug\DrorCohen.csproj.CopyComplete
+C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\bin\Debug\System.dll
+C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\bin\Debug\System.xml
+C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.MyMessage.resources

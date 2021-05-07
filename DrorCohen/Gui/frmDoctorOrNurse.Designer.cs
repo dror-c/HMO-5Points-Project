@@ -91,6 +91,7 @@
             // save
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
+            this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Location = new System.Drawing.Point(702, 240);
             this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
@@ -125,6 +126,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Location = new System.Drawing.Point(702, 178);
             this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
@@ -136,6 +138,7 @@
             // 
             // Add
             // 
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Location = new System.Drawing.Point(702, 113);
             this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
@@ -147,6 +150,7 @@
             // 
             // update
             // 
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.update.Location = new System.Drawing.Point(702, 55);
             this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";

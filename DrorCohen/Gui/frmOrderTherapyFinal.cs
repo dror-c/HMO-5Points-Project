@@ -53,7 +53,6 @@ namespace DrorCohen.Gui
         private void button1_Click(object sender, EventArgs e)
         {
 
-
             specificMeetingDoctorTableAdapter.Fill(meeting.SpecificMeetingDoctor);
             // this.doctorOrNurseTableAdapter.Fill(this.theDoctorMeeting.DoctorOrNurse);
             string x = idTherapy.ToString();
@@ -88,23 +87,31 @@ namespace DrorCohen.Gui
             if (dd == d)
             {
                 DateTime d = DateTime.Parse(dateTimePicker1.Value.ToShortDateString());
-                //   this.specificMeetingDoctorTableAdapter.DuplicatedValidate(serial.ToString(), d);
-
-                //      specificMeetingDoctorTableAdapter.FillBy(meeting.SpecificMeetingDoctor, serial.ToString(), d);
-                //      MessageBox.Show(meeting.SpecificMeetingDoctor.Count.ToString());
-                //checking there is no duplicate meeting
-                //if (/*this.specificMeetingDoctorTableAdapter.DuplicatedValidate
-                //    (serial.ToString(), d) == 0)*/
 
                 
                 this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, idTherapy.ToString()/*serial.ToString()*/, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(d, typeof(System.DateTime))))));
                 if (Convert.ToInt32(f.SpecificMeetingDoctor.Rows[0][0].ToString()) == 0) {
                     meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial,idTherapy.ToString(),d,patientId);
                     specificMeetingDoctorTableAdapter.Update(meeting.SpecificMeetingDoctor);
-
+                    MyMessage m = new MyMessage("your request to get therapy has been accepted and aprroved :)\n see you at "+d.ToShortDateString(),1);
+                    m.applyCustomChange();
+                    this.Close();
+                    m.ShowDialog();
+                }
+                else
+                {
+                    MyMessage message = new MyMessage("your rerquest doesn't aprooved from some reasons \n please try another date or another doctor", 2);
+                    message.applyCustomChange();
+                    message.ShowDialog();
                 }
                 //f.SpecificMeetingDoctor.Rows[0][0] = 5;
                 //f.SpecificMeetingDoctor.AcceptChanges();
+            }
+            else
+            {
+                MyMessage message = new MyMessage("your rerquest doesn't aprooved from some reasons \n please try another date or another doctor", 2);
+                message.applyCustomChange();
+                message.ShowDialog();
             }
 
             //)
@@ -139,19 +146,6 @@ namespace DrorCohen.Gui
 
         }
 
-        //private void fillToolStripButton_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.specificMeetingDoctorTableAdapter1.Fill(this.ds.SpecificMeetingDoctor, therapyCodeToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
-        //    }
-        //    catch (System.Exception ex)
-        //    {
-        //        System.Windows.Forms.MessageBox.Show(ex.Message);
-        //    }
-
-        //}
-
         private void meetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = meetingDoctorDataGridView.CurrentCell.RowIndex;
@@ -160,7 +154,5 @@ namespace DrorCohen.Gui
             d = (meetingDoctorDataGridView.Rows[rowIndex].Cells[3].Value).ToString();//לשנותן באמת יום
             idDoctor = (meetingDoctorDataGridView.Rows[rowIndex].Cells[2].Value).ToString();
         }
-
-
     }
 }

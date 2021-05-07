@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DrorCohen</RootNamespace>
     <AssemblyName>DrorCohen</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -132,6 +133,12 @@
     <Compile Include="Gui\frmPatient.Designer.cs">
       <DependentUpon>frmPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\MyMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MyMessage.Designer.cs">
+      <DependentUpon>MyMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\vaccine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +192,7 @@
       <DependentUpon>TheDoctorMeeting.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utility\AddState.cs" />
+    <Compile Include="Utility\StatusMessage.cs" />
     <Compile Include="Utility\ValidationUtilites.cs" />
     <EmbeddedResource Include="Gui\frmDepartment.resx">
       <DependentUpon>frmDepartment.cs</DependentUpon>
@@ -210,6 +218,9 @@
     <EmbeddedResource Include="Gui\frmPatient.resx">
       <DependentUpon>frmPatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MyMessage.resx">
+      <DependentUpon>MyMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\vaccine.resx">
       <DependentUpon>vaccine.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +232,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="CheckDuplicateMeetings.xsc">
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>

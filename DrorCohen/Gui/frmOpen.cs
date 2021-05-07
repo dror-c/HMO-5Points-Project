@@ -80,7 +80,10 @@ namespace DrorCohen.Gui
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("please call to our call center: 1111");
+            MyMessage m = new MyMessage("please call to our call center: 1111", (int)Utility.StatusMessage.INFO);
+            //MessageBox.Show("please call to our call center: 1111");
+            m.applyCustomChange();
+            m.ShowDialog();
         }
 
         private void vaccine1_Load(object sender, EventArgs e)

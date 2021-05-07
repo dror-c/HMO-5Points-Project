@@ -54,8 +54,9 @@
             this.panelMenue.Controls.Add(this.panelLogo);
             this.panelMenue.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenue.Location = new System.Drawing.Point(0, 0);
+            this.panelMenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenue.Name = "panelMenue";
-            this.panelMenue.Size = new System.Drawing.Size(369, 607);
+            this.panelMenue.Size = new System.Drawing.Size(492, 795);
             this.panelMenue.TabIndex = 0;
             // 
             // iconButton1
@@ -69,10 +70,11 @@
             this.iconButton1.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 537);
+            this.iconButton1.Location = new System.Drawing.Point(0, 709);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.iconButton1.Size = new System.Drawing.Size(369, 70);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.iconButton1.Size = new System.Drawing.Size(492, 86);
             this.iconButton1.TabIndex = 5;
             this.iconButton1.Text = "help";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,10 +93,11 @@
             this.therapys.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.therapys.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.therapys.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.therapys.Location = new System.Drawing.Point(0, 426);
+            this.therapys.Location = new System.Drawing.Point(0, 524);
+            this.therapys.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.therapys.Name = "therapys";
-            this.therapys.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.therapys.Size = new System.Drawing.Size(369, 70);
+            this.therapys.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.therapys.Size = new System.Drawing.Size(492, 86);
             this.therapys.TabIndex = 4;
             this.therapys.Text = "all therapys";
             this.therapys.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,10 +116,11 @@
             this.department.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.department.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.department.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.department.Location = new System.Drawing.Point(0, 356);
+            this.department.Location = new System.Drawing.Point(0, 438);
+            this.department.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.department.Name = "department";
-            this.department.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.department.Size = new System.Drawing.Size(369, 70);
+            this.department.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.department.Size = new System.Drawing.Size(492, 86);
             this.department.TabIndex = 3;
             this.department.Text = "departments";
             this.department.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,10 +139,11 @@
             this.doctor.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.doctor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.doctor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.doctor.Location = new System.Drawing.Point(0, 286);
+            this.doctor.Location = new System.Drawing.Point(0, 352);
+            this.doctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.doctor.Name = "doctor";
-            this.doctor.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.doctor.Size = new System.Drawing.Size(369, 70);
+            this.doctor.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.doctor.Size = new System.Drawing.Size(492, 86);
             this.doctor.TabIndex = 2;
             this.doctor.Text = "workers\' details";
             this.doctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,10 +162,11 @@
             this.Patient.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.Patient.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Patient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Patient.Location = new System.Drawing.Point(0, 216);
+            this.Patient.Location = new System.Drawing.Point(0, 266);
+            this.Patient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Patient.Name = "Patient";
-            this.Patient.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.Patient.Size = new System.Drawing.Size(369, 70);
+            this.Patient.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.Patient.Size = new System.Drawing.Size(492, 86);
             this.Patient.TabIndex = 1;
             this.Patient.Text = "patients\' details";
             this.Patient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,8 +179,9 @@
             this.panelLogo.Controls.Add(this.iconButton2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(369, 216);
+            this.panelLogo.Size = new System.Drawing.Size(492, 266);
             this.panelLogo.TabIndex = 0;
             // 
             // iconButton2
@@ -192,9 +199,10 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 72;
             this.iconButton2.Location = new System.Drawing.Point(0, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.iconButton2.Size = new System.Drawing.Size(369, 182);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(12, 0, 28, 0);
+            this.iconButton2.Size = new System.Drawing.Size(492, 224);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Your Best\r\n Health Care";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -205,30 +213,34 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumBlue;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(369, 0);
+            this.panel1.Location = new System.Drawing.Point(492, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 10);
+            this.panel1.Size = new System.Drawing.Size(1303, 12);
             this.panel1.TabIndex = 1;
             // 
             // pContainer
             // 
             this.pContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pContainer.Location = new System.Drawing.Point(369, 10);
+            this.pContainer.Location = new System.Drawing.Point(492, 12);
+            this.pContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pContainer.Name = "pContainer";
-            this.pContainer.Size = new System.Drawing.Size(904, 597);
+            this.pContainer.Size = new System.Drawing.Size(1303, 783);
             this.pContainer.TabIndex = 2;
             // 
             // frmOpen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1273, 607);
+            this.ClientSize = new System.Drawing.Size(1795, 795);
             this.Controls.Add(this.pContainer);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenue);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmOpen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmOpen_Load);
             this.panelMenue.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

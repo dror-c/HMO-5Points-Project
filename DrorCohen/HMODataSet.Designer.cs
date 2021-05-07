@@ -4630,8 +4630,8 @@ namespace DrorCohen.HMODataSetTableAdapters {
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT        ID, FirstName, LastName, PhoneNumber, DateOfBirth, DateOfDeath, Add" +
-                "ress, MaleFemale, IsDoctorOrNurse, DepartmentID\r\nFROM            DoctorOrNurse\r\n" +
-                "WHERE        (DepartmentID = ?)";
+                "ress, MaleFemale, IsDoctorOrNurse, DepartmentID\nFROM            DoctorOrNurse\nWH" +
+                "ERE        (DepartmentID = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DepartmentID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DepartmentID", global::System.Data.DataRowVersion.Current, false, null));
         }

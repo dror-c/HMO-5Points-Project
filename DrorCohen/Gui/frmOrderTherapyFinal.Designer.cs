@@ -347,7 +347,7 @@
             this.dataGridViewTextBoxColumn6});
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource2;
             this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(349, 508);
-            this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
             this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
             this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(400, 271);
@@ -378,6 +378,7 @@
             this.Controls.Add(this.comboBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmOrderTherapyFinal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrderTherapyFinal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).EndInit();
