@@ -11,7 +11,6 @@ namespace DrorCohen.Models
     public class DoctorOrNurse: Patient,IEntity
     {
         private string isDoctorOrNurse;
-        private string departmentID;
         public string IsDoctorOrNurse
         {
             set 
@@ -21,11 +20,7 @@ namespace DrorCohen.Models
             }
             get { return this.isDoctorOrNurse; }
         }
-        public string DepartmentID
-        {
-            set { this.departmentID = value; }
-            get { return this.departmentID; }
-        }
+
         public DoctorOrNurse() { }
         public DoctorOrNurse(DataRow dr)
         {
@@ -37,7 +32,6 @@ namespace DrorCohen.Models
             this.DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]);
             this.DateOfDeath = Convert.ToDateTime(dr["DateOfDeath"]);
             this.MaleOrFemale = dr["MaleFemale"].ToString();
-            this.DepartmentID = dr["DepartmentID"].ToString();
             this.IsDoctorOrNurse = dr["IsDoctorOrNurse"].ToString();
         }
         public override void Populate(DataRow dr)
@@ -50,10 +44,7 @@ namespace DrorCohen.Models
             dr["DateOfBirth"] = DateOfBirth;
             dr["DateOfDeath"] = DateOfDeath;
             dr["MaleFemale"] = MaleOrFemale;
-            /*How use the populate in Patient and add continue to the populate*/
-            dr["DepartmentID"] = DepartmentID;
             dr["IsDoctorOrNurse"] = IsDoctorOrNurse;
-
         }
     }
 }

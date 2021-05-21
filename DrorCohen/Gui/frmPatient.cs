@@ -41,7 +41,12 @@ namespace DrorCohen.Gui
             listBox1.ValueMember = "ID";
             listBox1.DisplayMember = "LastName";
         }
-
+        public void MyRefresh()
+        {
+            idPatientToolStripTextBox.Text = inputId.Text;
+            dateOfTherapyToolStripTextBox.Text = DateTime.Today.ToShortDateString();
+            this.specificMeetingDoctorTableAdapter.Fill(this.futurePatient.SpecificMeetingDoctor, idPatientToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
+        }
         private void Populate(Patient p)
         {
             inputId.Text = p.Id;
@@ -408,6 +413,17 @@ namespace DrorCohen.Gui
         private void inputFirstName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void orderTherapy_Validated(object sender, EventArgs e)
+        {
+        }
+
+        private void frmPatient_Activated(object sender, EventArgs e)
+        {
+            idPatientToolStripTextBox.Text = inputId.Text;
+            dateOfTherapyToolStripTextBox.Text = DateTime.Today.ToShortDateString();
+            this.specificMeetingDoctorTableAdapter.Fill(this.futurePatient.SpecificMeetingDoctor, idPatientToolStripTextBox.Text, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(dateOfTherapyToolStripTextBox.Text, typeof(System.DateTime))))));
         }
     }
 }

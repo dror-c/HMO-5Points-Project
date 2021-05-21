@@ -57,7 +57,7 @@ namespace DrorCohen.Gui
             }
             try
             {
-                d.AmountOfPatient= Convert.ToInt32(inputAmountOfPatient.Text);
+                d.AmountOfPatient = Convert.ToInt32(inputAmountOfPatient.Text);
                 errorProvider1.SetError(inputId, "");
             }
             catch (Exception ex)
@@ -81,7 +81,8 @@ namespace DrorCohen.Gui
         }
         private void inputId_TextChanged(object sender, EventArgs e)
         {
-            this.doctorOrNurseTableAdapter.FillBy(this.hMODataSet.DoctorOrNurse,inputId.Text);
+            this.doctorOrNurseTableAdapter.Show(this.doctorAndDepartmentConnection1.DoctorOrNurse,inputId.Text);
+            //this.doctorOrNurseTableAdapter.FillBy(this.hMODataSet.DoctorOrNurse, inputId.Text);
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -153,25 +154,62 @@ namespace DrorCohen.Gui
         private void doctorOrNurseBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.doctorOrNurseBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.hMODataSet);
+            /*this.doctorOrNurseBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.hMODataSet);*/
 
         }
 
         private void frmDepartment_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 's.DoctorOrNurse' table. You can move, or remove it, as needed.
+            this.doctorOrNurseTableAdapter1.Fill(this.s.DoctorOrNurse);
+            // TODO: This line of code loads data into the 'doctorAndDepartmentConnection1.ConnectionDoctorDepartment' table. You can move, or remove it, as needed.
+            this.connectionDoctorDepartmentTableAdapter.Fill(this.doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
+            // TODO: This line of code loads data into the 'doctorAndDepartmentConnection1.DoctorOrNurse' table. You can move, or remove it, as needed.
+            //this.doctorOrNurseTableAdapter.Fill(this.doctorAndDepartmentConnection1.DoctorOrNurse);
             // TODO: This line of code loads data into the 'hMODataSet.DoctorOrNurse' table. You can move, or remove it, as needed.
         }
 
         private void doctorOrNurseDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = doctorOrNurseDataGridView.CurrentCell.RowIndex;
-            string id = doctorOrNurseDataGridView.Rows[rowIndex].Cells[0].Value.ToString();
-            frmDoctorOrNurse f = new frmDoctorOrNurse(id);
-            f.Show();
+            //int rowIndex = doctorOrNurseDataGridView.CurrentCell.RowIndex;
+            //string id = doctorOrNurseDataGridView.Rows[rowIndex].Cells[0].Value.ToString();
+            //frmDoctorOrNurse f = new frmDoctorOrNurse(id);
+            //f.Show();
         }
 
         private void id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.doctorOrNurseTableAdapter.FillBy(this.doctorAndDepartmentConnection1.DoctorOrNurse);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void doctorAndDepartmentConnection1BindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow(inputId.Text, comboBox1.SelectedItem.ToString())
+            doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow
+                (inputId.Text, comboBox1.SelectedItem.ToString());
+            this.connectionDoctorDepartmentTableAdapter.Update(doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

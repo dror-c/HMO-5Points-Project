@@ -54,8 +54,6 @@ namespace DrorCohen.Gui
             inputDateBirth.Value = p.DateOfBirth;
             inputDateDeath.Value = p.DateOfDeath;
             inputDoctorOrNurse.Text = p.IsDoctorOrNurse;
-            inputDepartmentID.Text = p.DepartmentID;
-            comboId.Text = p.DepartmentID;
         }
         private bool UpdateObject(DoctorOrNurse p)
         {
@@ -150,16 +148,6 @@ namespace DrorCohen.Gui
                 ok = false;
                 errorProvider1.SetError(inputId, ex.Message);
             }
-            try
-            {
-                p.DepartmentID = inputDepartmentID.Text;
-                errorProvider1.SetError(inputId, "");
-            }
-            catch (Exception ex)
-            {
-                ok = false;
-                errorProvider1.SetError(inputId, ex.Message);
-            }
             return ok;
         }
         private void SetButtonStates(bool b)
@@ -178,8 +166,6 @@ namespace DrorCohen.Gui
             inputGender.Enabled = !b;
             inputDateBirth.Enabled = !b;
             inputDateDeath.Enabled = !b;
-            inputDepartmentID.Enabled = !b;
-            comboBox1.Enabled = !b;
             inputDoctorOrNurse.Enabled = !b;
         }
         private void frmPatient_Load(object sender, EventArgs e)
@@ -243,7 +229,6 @@ namespace DrorCohen.Gui
             errorProvider1.SetError(inputDateBirth, null);
             errorProvider1.SetError(inputGender, null);
             errorProvider1.SetError(inputDoctorOrNurse, null);
-            errorProvider1.SetError(comboBox1, null);
             SetButtonStates(true);
         }
         private void prev_Click(object sender, EventArgs e)
@@ -283,16 +268,7 @@ namespace DrorCohen.Gui
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(flag==true)
-                inputDepartmentID.Text = comboBox1.SelectedValue.ToString();
-        }
 
-        private void comboId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox1.SelectedIndex = comboId.SelectedIndex;
-        }
 
 
         private void inputId_TextChanged_1(object sender, EventArgs e)
@@ -439,6 +415,11 @@ namespace DrorCohen.Gui
         }
 
         private void inputFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void specificMeetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

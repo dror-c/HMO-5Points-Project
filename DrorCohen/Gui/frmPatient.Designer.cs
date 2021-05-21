@@ -238,6 +238,7 @@
             // 
             // update
             // 
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.update.Location = new System.Drawing.Point(707, 126);
             this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";
@@ -249,6 +250,7 @@
             // 
             // Add
             // 
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Location = new System.Drawing.Point(707, 90);
             this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
@@ -261,6 +263,7 @@
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Location = new System.Drawing.Point(707, 172);
             this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
@@ -272,6 +275,7 @@
             // 
             // next
             // 
+            this.next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.next.Location = new System.Drawing.Point(404, 452);
             this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
@@ -283,6 +287,7 @@
             // 
             // prev
             // 
+            this.prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prev.Location = new System.Drawing.Point(157, 452);
             this.prev.Margin = new System.Windows.Forms.Padding(4);
             this.prev.Name = "prev";
@@ -295,6 +300,7 @@
             // save
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
+            this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Location = new System.Drawing.Point(707, 239);
             this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
@@ -310,6 +316,7 @@
             // 
             // search
             // 
+            this.search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search.Location = new System.Drawing.Point(1104, 289);
             this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
@@ -356,6 +363,7 @@
             // 
             // orderTherapy
             // 
+            this.orderTherapy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderTherapy.Location = new System.Drawing.Point(707, 46);
             this.orderTherapy.Margin = new System.Windows.Forms.Padding(4);
             this.orderTherapy.Name = "orderTherapy";
@@ -364,6 +372,7 @@
             this.orderTherapy.Text = "order therapy";
             this.orderTherapy.UseVisualStyleBackColor = true;
             this.orderTherapy.Click += new System.EventHandler(this.orderTherapy_Click);
+            this.orderTherapy.Validated += new System.EventHandler(this.orderTherapy_Validated);
             // 
             // futurePatient
             // 
@@ -533,6 +542,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPatient";
             this.Text = "frmPatient";
+            this.Activated += new System.EventHandler(this.frmPatient_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPatient_FormClosing);
             this.Load += new System.EventHandler(this.frmPatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

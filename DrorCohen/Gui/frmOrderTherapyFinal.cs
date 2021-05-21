@@ -14,9 +14,9 @@ namespace DrorCohen.Gui
     {
         private string idDoctor, d;
         private int idTherapy;
-        private Form parent;
+        private frmPatient parent;
         private string patientId;
-        public frmOrderTherapyFinal(string patientId, Form parent)
+        public frmOrderTherapyFinal(string patientId, frmPatient parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -72,7 +72,7 @@ namespace DrorCohen.Gui
                     dd = "3";
                     break;
                 case "Wednesday":
-                    dd = "1";
+                    dd = "4";
                     break;
                 case "Thursday":
                     dd = "5";
@@ -89,13 +89,14 @@ namespace DrorCohen.Gui
                 DateTime d = DateTime.Parse(dateTimePicker1.Value.ToShortDateString());
 
                 
-                this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, idTherapy.ToString()/*serial.ToString()*/, new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(d, typeof(System.DateTime))))));
+                this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, idTherapy.ToString(), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(d, typeof(System.DateTime))))));
                 if (Convert.ToInt32(f.SpecificMeetingDoctor.Rows[0][0].ToString()) == 0) {
                     meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial,idTherapy.ToString(),d,patientId);
                     specificMeetingDoctorTableAdapter.Update(meeting.SpecificMeetingDoctor);
                     MyMessage m = new MyMessage("your request to get therapy has been accepted and aprroved :)\n see you at "+d.ToShortDateString(),1);
                     m.applyCustomChange();
                     this.Close();
+                    parent.MyRefresh();
                     m.ShowDialog();
                 }
                 else

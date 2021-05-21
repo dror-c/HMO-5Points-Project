@@ -163,3 +163,4 @@ C:\Users\Ofra\Desktop\יב לבדיקה\HMO-5Points-Project-main\HMO-5Points-Pro
 C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\bin\Debug\System.dll
 C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\bin\Debug\System.xml
 C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.MyMessage.resources
+C:\Users\dror\source\repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmScheduleDoctor.resources
