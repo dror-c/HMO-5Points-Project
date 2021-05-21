@@ -209,6 +209,7 @@ namespace DrorCohen.Gui
             SetButtonStates(true);
             state = AddState.NAVIGATE;
             doctorsOrNurses.Save();
+            
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -422,6 +423,13 @@ namespace DrorCohen.Gui
         private void specificMeetingDoctorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmScheduleDoctor f = new frmScheduleDoctor(inputId.Text);
+            f.Width = 1100;
+            f.ShowDialog();
         }
     }
 }

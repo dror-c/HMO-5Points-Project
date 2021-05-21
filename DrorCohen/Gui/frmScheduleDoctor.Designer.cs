@@ -30,334 +30,271 @@ namespace DrorCohen.Gui
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScheduleDoctor));
-            System.Windows.Forms.Label therapyCodeLabel;
-            System.Windows.Forms.Label whoCanGiveTheTherapyLabel;
-            System.Windows.Forms.Label idDoctorLabel;
-            System.Windows.Forms.Label dayLabel;
-            System.Windows.Forms.Label hourLabel;
-            this.hMODataSet1 = new DrorCohen.HMODataSet1();
-            this.meetingDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.meetingDoctorTableAdapter = new DrorCohen.HMODataSet1TableAdapters.MeetingDoctorTableAdapter();
-            this.tableAdapterManager = new DrorCohen.HMODataSet1TableAdapters.TableAdapterManager();
-            this.meetingDoctorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.meetingDoctorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.therapyCodeTextBox = new System.Windows.Forms.TextBox();
-            this.whoCanGiveTheTherapyTextBox = new System.Windows.Forms.TextBox();
-            this.idDoctorTextBox = new System.Windows.Forms.TextBox();
-            this.dayTextBox = new System.Windows.Forms.TextBox();
-            this.hourTextBox = new System.Windows.Forms.TextBox();
-            therapyCodeLabel = new System.Windows.Forms.Label();
-            whoCanGiveTheTherapyLabel = new System.Windows.Forms.Label();
-            idDoctorLabel = new System.Windows.Forms.Label();
-            dayLabel = new System.Windows.Forms.Label();
-            hourLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.hMODataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingNavigator)).BeginInit();
-            this.meetingDoctorBindingNavigator.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.save = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.prev = new System.Windows.Forms.Button();
+            this.next = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // hMODataSet1
+            // label2
             // 
-            this.hMODataSet1.DataSetName = "HMODataSet1";
-            this.hMODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(12, 132);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(269, 28);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Who Can Give The Therapy:";
             // 
-            // meetingDoctorBindingSource
+            // label1
             // 
-            this.meetingDoctorBindingSource.DataMember = "MeetingDoctor";
-            this.meetingDoctorBindingSource.DataSource = this.hMODataSet1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(12, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 28);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Therapy Code:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // meetingDoctorTableAdapter
+            // textBox1
             // 
-            this.meetingDoctorTableAdapter.ClearBeforeFill = true;
+            this.textBox1.Location = new System.Drawing.Point(324, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(140, 24);
+            this.textBox1.TabIndex = 17;
             // 
-            // tableAdapterManager
+            // label4
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ConnectionDoctorDepartmentTableAdapter = null;
-            this.tableAdapterManager.DepartmentTableAdapter = null;
-            this.tableAdapterManager.DoctorOrNurseTableAdapter = null;
-            this.tableAdapterManager.MeetingDoctorTableAdapter = this.meetingDoctorTableAdapter;
-            this.tableAdapterManager.PatientTableAdapter = null;
-            this.tableAdapterManager.SpecificMeetingDoctorTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = DrorCohen.HMODataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(12, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 28);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Id Doctor:";
             // 
-            // meetingDoctorBindingNavigator
+            // label5
             // 
-            this.meetingDoctorBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.meetingDoctorBindingNavigator.BindingSource = this.meetingDoctorBindingSource;
-            this.meetingDoctorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.meetingDoctorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.meetingDoctorBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.meetingDoctorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.meetingDoctorBindingNavigatorSaveItem});
-            this.meetingDoctorBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.meetingDoctorBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.meetingDoctorBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.meetingDoctorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.meetingDoctorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.meetingDoctorBindingNavigator.Name = "meetingDoctorBindingNavigator";
-            this.meetingDoctorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.meetingDoctorBindingNavigator.Size = new System.Drawing.Size(800, 27);
-            this.meetingDoctorBindingNavigator.TabIndex = 0;
-            this.meetingDoctorBindingNavigator.Text = "bindingNavigator1";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(12, 229);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 28);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "day:";
             // 
-            // bindingNavigatorMoveFirstItem
+            // label3
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 28);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "hour:";
             // 
-            // bindingNavigatorMovePreviousItem
+            // comboBox1
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"});
+            this.comboBox1.Location = new System.Drawing.Point(324, 229);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(140, 24);
+            this.comboBox1.TabIndex = 22;
             // 
-            // bindingNavigatorSeparator
+            // textBox2
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.textBox2.Location = new System.Drawing.Point(324, 185);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(140, 24);
+            this.textBox2.TabIndex = 23;
             // 
-            // bindingNavigatorPositionItem
+            // comboBox2
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Doctor",
+            "Nurse"});
+            this.comboBox2.Location = new System.Drawing.Point(324, 132);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(140, 24);
+            this.comboBox2.TabIndex = 24;
             // 
-            // bindingNavigatorCountItem
+            // save
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.save.BackColor = System.Drawing.Color.Lime;
+            this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save.Location = new System.Drawing.Point(544, 253);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(248, 28);
+            this.save.TabIndex = 36;
+            this.save.Text = "save";
+            this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // bindingNavigatorSeparator1
+            // cancel
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel.Location = new System.Drawing.Point(544, 181);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(88, 28);
+            this.cancel.TabIndex = 35;
+            this.cancel.Text = "cancel";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
-            // bindingNavigatorMoveNextItem
+            // Add
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add.Location = new System.Drawing.Point(544, 71);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(88, 28);
+            this.Add.TabIndex = 34;
+            this.Add.Text = "create";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // bindingNavigatorMoveLastItem
+            // update
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update.Location = new System.Drawing.Point(544, 128);
+            this.update.Margin = new System.Windows.Forms.Padding(4);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(88, 28);
+            this.update.TabIndex = 33;
+            this.update.Text = "update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // bindingNavigatorSeparator2
+            // prev
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prev.Location = new System.Drawing.Point(83, 343);
+            this.prev.Margin = new System.Windows.Forms.Padding(4);
+            this.prev.Name = "prev";
+            this.prev.Size = new System.Drawing.Size(109, 28);
+            this.prev.TabIndex = 38;
+            this.prev.Text = "<<";
+            this.prev.UseVisualStyleBackColor = true;
+            this.prev.Click += new System.EventHandler(this.prev_Click);
             // 
-            // bindingNavigatorAddNewItem
+            // next
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.next.Location = new System.Drawing.Point(300, 343);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(109, 28);
+            this.next.TabIndex = 37;
+            this.next.Text = ">>";
+            this.next.UseVisualStyleBackColor = true;
+            this.next.Click += new System.EventHandler(this.next_Click);
             // 
-            // bindingNavigatorDeleteItem
+            // textBox3
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.textBox3.Location = new System.Drawing.Point(324, 282);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(140, 24);
+            this.textBox3.TabIndex = 39;
             // 
-            // meetingDoctorBindingNavigatorSaveItem
+            // errorProvider1
             // 
-            this.meetingDoctorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.meetingDoctorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("meetingDoctorBindingNavigatorSaveItem.Image")));
-            this.meetingDoctorBindingNavigatorSaveItem.Name = "meetingDoctorBindingNavigatorSaveItem";
-            this.meetingDoctorBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.meetingDoctorBindingNavigatorSaveItem.Text = "Save Data";
-            this.meetingDoctorBindingNavigatorSaveItem.Click += new System.EventHandler(this.meetingDoctorBindingNavigatorSaveItem_Click);
+            this.errorProvider1.ContainerControl = this;
             // 
-            // therapyCodeLabel
+            // label6
             // 
-            therapyCodeLabel.AutoSize = true;
-            therapyCodeLabel.Location = new System.Drawing.Point(451, 107);
-            therapyCodeLabel.Name = "therapyCodeLabel";
-            therapyCodeLabel.Size = new System.Drawing.Size(102, 17);
-            therapyCodeLabel.TabIndex = 1;
-            therapyCodeLabel.Text = "Therapy Code:";
-            // 
-            // therapyCodeTextBox
-            // 
-            this.therapyCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.meetingDoctorBindingSource, "TherapyCode", true));
-            this.therapyCodeTextBox.Location = new System.Drawing.Point(646, 104);
-            this.therapyCodeTextBox.Name = "therapyCodeTextBox";
-            this.therapyCodeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.therapyCodeTextBox.TabIndex = 2;
-            // 
-            // whoCanGiveTheTherapyLabel
-            // 
-            whoCanGiveTheTherapyLabel.AutoSize = true;
-            whoCanGiveTheTherapyLabel.Location = new System.Drawing.Point(451, 135);
-            whoCanGiveTheTherapyLabel.Name = "whoCanGiveTheTherapyLabel";
-            whoCanGiveTheTherapyLabel.Size = new System.Drawing.Size(189, 17);
-            whoCanGiveTheTherapyLabel.TabIndex = 3;
-            whoCanGiveTheTherapyLabel.Text = "Who Can Give The Therapy:";
-            // 
-            // whoCanGiveTheTherapyTextBox
-            // 
-            this.whoCanGiveTheTherapyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.meetingDoctorBindingSource, "WhoCanGiveTheTherapy", true));
-            this.whoCanGiveTheTherapyTextBox.Location = new System.Drawing.Point(646, 132);
-            this.whoCanGiveTheTherapyTextBox.Name = "whoCanGiveTheTherapyTextBox";
-            this.whoCanGiveTheTherapyTextBox.Size = new System.Drawing.Size(100, 22);
-            this.whoCanGiveTheTherapyTextBox.TabIndex = 4;
-            // 
-            // idDoctorLabel
-            // 
-            idDoctorLabel.AutoSize = true;
-            idDoctorLabel.Location = new System.Drawing.Point(451, 163);
-            idDoctorLabel.Name = "idDoctorLabel";
-            idDoctorLabel.Size = new System.Drawing.Size(69, 17);
-            idDoctorLabel.TabIndex = 5;
-            idDoctorLabel.Text = "Id Doctor:";
-            // 
-            // idDoctorTextBox
-            // 
-            this.idDoctorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.meetingDoctorBindingSource, "IdDoctor", true));
-            this.idDoctorTextBox.Location = new System.Drawing.Point(646, 160);
-            this.idDoctorTextBox.Name = "idDoctorTextBox";
-            this.idDoctorTextBox.Size = new System.Drawing.Size(100, 22);
-            this.idDoctorTextBox.TabIndex = 6;
-            // 
-            // dayLabel
-            // 
-            dayLabel.AutoSize = true;
-            dayLabel.Location = new System.Drawing.Point(451, 191);
-            dayLabel.Name = "dayLabel";
-            dayLabel.Size = new System.Drawing.Size(35, 17);
-            dayLabel.TabIndex = 7;
-            dayLabel.Text = "day:";
-            // 
-            // dayTextBox
-            // 
-            this.dayTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.meetingDoctorBindingSource, "day", true));
-            this.dayTextBox.Location = new System.Drawing.Point(646, 188);
-            this.dayTextBox.Name = "dayTextBox";
-            this.dayTextBox.Size = new System.Drawing.Size(100, 22);
-            this.dayTextBox.TabIndex = 8;
-            // 
-            // hourLabel
-            // 
-            hourLabel.AutoSize = true;
-            hourLabel.Location = new System.Drawing.Point(451, 219);
-            hourLabel.Name = "hourLabel";
-            hourLabel.Size = new System.Drawing.Size(41, 17);
-            hourLabel.TabIndex = 9;
-            hourLabel.Text = "hour:";
-            // 
-            // hourTextBox
-            // 
-            this.hourTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.meetingDoctorBindingSource, "hour", true));
-            this.hourTextBox.Location = new System.Drawing.Point(646, 216);
-            this.hourTextBox.Name = "hourTextBox";
-            this.hourTextBox.Size = new System.Drawing.Size(100, 22);
-            this.hourTextBox.TabIndex = 10;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
+            this.label6.Location = new System.Drawing.Point(649, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(468, 96);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "OOPS!\r\nYou didn\'t set any time to get patients.\r\nYou have to do it right now";
+            this.label6.Visible = false;
             // 
             // frmScheduleDoctor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(therapyCodeLabel);
-            this.Controls.Add(this.therapyCodeTextBox);
-            this.Controls.Add(whoCanGiveTheTherapyLabel);
-            this.Controls.Add(this.whoCanGiveTheTherapyTextBox);
-            this.Controls.Add(idDoctorLabel);
-            this.Controls.Add(this.idDoctorTextBox);
-            this.Controls.Add(dayLabel);
-            this.Controls.Add(this.dayTextBox);
-            this.Controls.Add(hourLabel);
-            this.Controls.Add(this.hourTextBox);
-            this.Controls.Add(this.meetingDoctorBindingNavigator);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1120, 384);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.prev);
+            this.Controls.Add(this.next);
+            this.Controls.Add(this.save);
+            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.update);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "frmScheduleDoctor";
             this.Text = "frmScheduleDoctor";
             this.Load += new System.EventHandler(this.frmScheduleDoctor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.hMODataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meetingDoctorBindingNavigator)).EndInit();
-            this.meetingDoctorBindingNavigator.ResumeLayout(false);
-            this.meetingDoctorBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private HMODataSet1 hMODataSet1;
-        private System.Windows.Forms.BindingSource meetingDoctorBindingSource;
-        private HMODataSet1TableAdapters.MeetingDoctorTableAdapter meetingDoctorTableAdapter;
-        private HMODataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator meetingDoctorBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton meetingDoctorBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox therapyCodeTextBox;
-        private System.Windows.Forms.TextBox whoCanGiveTheTherapyTextBox;
-        private System.Windows.Forms.TextBox idDoctorTextBox;
-        private System.Windows.Forms.TextBox dayTextBox;
-        private System.Windows.Forms.TextBox hourTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button prev;
+        private System.Windows.Forms.Button next;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label6;
     }
 }

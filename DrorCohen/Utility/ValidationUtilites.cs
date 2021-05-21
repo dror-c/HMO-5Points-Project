@@ -8,6 +8,23 @@ namespace DrorCohen.Utility
 {
     public static class ValidationUtilites
     {
+        public static bool IsLegalHour(string hour)
+        {
+            if (hour.Length != 5)
+                return false;
+            if (hour[2] != ':')
+                return false;
+            int x;
+            string s = hour[0] + "" + hour[1];
+            x = int.Parse(s);
+            if (x < 0 || x > 23)
+                return false;
+            s = hour[3] + "" + hour[4];
+            x = int.Parse(s);
+            if (x < 0 || x > 59)
+                return false;
+            return true;
+        }
         public static bool LegalId(string s)
         {
             /*if (s.Length == 0)

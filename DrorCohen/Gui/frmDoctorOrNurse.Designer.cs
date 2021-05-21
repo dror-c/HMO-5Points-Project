@@ -56,6 +56,7 @@
             this.inputGender = new System.Windows.Forms.ComboBox();
             this.hMODataSet = new DrorCohen.HMODataSet();
             this.tableAdapterManager = new DrorCohen.HMODataSetTableAdapters.TableAdapterManager();
+            this.departmentTableAdapter = new DrorCohen.HMODataSetTableAdapters.DepartmentTableAdapter();
             this.departmentDoctorNurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorOrNurseTableAdapter = new DrorCohen.HMODataSetTableAdapters.DoctorOrNurseTableAdapter();
             this.meetingForToday = new DrorCohen.MeetingForToday();
@@ -69,8 +70,8 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.departmentTableAdapter = new DrorCohen.HMODataSetTableAdapters.DepartmentTableAdapter();
             this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hMODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentDoctorNurseBindingSource)).BeginInit();
@@ -363,6 +364,10 @@
             this.tableAdapterManager.SpecificTherapyForPatientTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DrorCohen.HMODataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // departmentTableAdapter
+            // 
+            this.departmentTableAdapter.ClearBeforeFill = true;
+            // 
             // departmentDoctorNurseBindingSource
             // 
             this.departmentDoctorNurseBindingSource.DataMember = "DepartmentDoctor/Nurse";
@@ -462,14 +467,22 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "The schedule time of the worker";
             // 
-            // departmentTableAdapter
-            // 
-            this.departmentTableAdapter.ClearBeforeFill = true;
-            // 
             // departmentBindingSource
             // 
             this.departmentBindingSource.DataMember = "Department";
             this.departmentBindingSource.DataSource = this.hMODataSet;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(751, 55);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 29);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "manage schedule";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmDoctorOrNurse
             // 
@@ -477,6 +490,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1369, 798);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.specificMeetingDoctorDataGridView);
             this.Controls.Add(this.inputGender);
@@ -565,5 +579,6 @@
         private System.Windows.Forms.Label label1;
         private HMODataSetTableAdapters.DepartmentTableAdapter departmentTableAdapter;
         private System.Windows.Forms.BindingSource departmentBindingSource;
+        private System.Windows.Forms.Button button1;
     }
 }

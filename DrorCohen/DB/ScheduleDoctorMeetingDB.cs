@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DrorCohen.DB
 {
-    public class GenericTherapyDB: GeneralDB
+    public class ScheduleDoctorMeetingDB : GeneralDB
     {
-        public GenericTherapyDB() : base("GenericTherapy", "TherapyCode") { }
-        public new GenericTherapy GetCurrentRow()
+        public ScheduleDoctorMeetingDB() : base("MeetingDoctor", "TherapyCode") { }
+        public new ScheduleDoctorMeeting GetCurrentRow()
         {
-            return new GenericTherapy(base.GetCurrentRow());
+            return new ScheduleDoctorMeeting(base.GetCurrentRow());
         }
         //החזרת מפתח ראשי האחרון
         public /*int*/ string GetKey()
@@ -29,7 +29,7 @@ namespace DrorCohen.DB
         {
             return "TherapyCode";
         }
-        public void Update(GenericTherapy cos)
+        public void Update(ScheduleDoctorMeeting cos)
         {
             DataRow dr = base.GetCurrentRow();
             cos.Populate(dr);

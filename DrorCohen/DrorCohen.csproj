@@ -66,7 +66,7 @@
     <Compile Include="DATA\DAL.cs" />
     <Compile Include="DB\DepartmentDB.cs" />
     <Compile Include="DB\DoctorOrNurseDB.cs" />
-    <Compile Include="DB\GenericTherapyDB.cs" />
+    <Compile Include="DB\ScheduleDoctorMeetingDB.cs" />
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
@@ -192,7 +192,7 @@
     <Compile Include="Models\ConnectionTableBetweenPatientAndDoctorAndSpecificTherapy.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DoctorOrNurse.cs" />
-    <Compile Include="Models\GenericTherapy.cs" />
+    <Compile Include="Models\ScheduleDoctorMeeting.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\SpecificTherapyForPatient.cs" />
     <Compile Include="PatientFutureTherapy.Designer.cs">
@@ -206,6 +206,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>s.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Scedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scedule.xsd</DependentUpon>
     </Compile>
     <Compile Include="showDoctors.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -426,6 +431,17 @@
     </None>
     <None Include="s.xss">
       <DependentUpon>s.xsd</DependentUpon>
+    </None>
+    <None Include="Scedule.xsc">
+      <DependentUpon>Scedule.xsd</DependentUpon>
+    </None>
+    <None Include="Scedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Scedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scedule.xss">
+      <DependentUpon>Scedule.xsd</DependentUpon>
     </None>
     <None Include="showDoctors.xsc">
       <DependentUpon>showDoctors.xsd</DependentUpon>
