@@ -21,7 +21,6 @@ namespace DrorCohen.DB
             DAL d = DAL.GetInstance();
             DataTable a = d.GetDisplayTable("Department", "Select * From Department");
             return new DataView(table);
-
         }
         //החזרת מפתח ראשי האחרון
         public /*int*/ string GetKey()

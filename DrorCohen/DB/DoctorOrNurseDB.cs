@@ -29,7 +29,7 @@ namespace DrorCohen.DB
         {
             return "ID";
         }
-        public void Update(Patient cos)
+        public void Update(DoctorOrNurse cos)
         {
             DataRow dr = base.GetCurrentRow();
             cos.Populate(dr);

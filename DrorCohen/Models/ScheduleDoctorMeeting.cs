@@ -11,24 +11,30 @@ namespace DrorCohen.Models
     public class ScheduleDoctorMeeting:IEntity
     {
         private string therapyCode;
+        private string whoCanGiveTheTherapy;
         private string idDoctor;
         private int day;
         private string hour;
-        private string whoCanGiveTheTherapy;
+        
         public ScheduleDoctorMeeting() { }
         public ScheduleDoctorMeeting(DataRow dr)
         {
             this.TherapyCode = dr["TherapyCode"].ToString();
-            this.idDoctor = dr["IdDoctor"].ToString();
-            this.day = Convert.ToInt32(dr["day"]);
-            this.hour = dr["hour"].ToString();
             this.whoCanGiveTheTherapy = dr["WhoCanGiveTheTherapy"].ToString();
+            this.idDoctor = dr["IdDoctor"].ToString();
+            this.day =Convert.ToInt32(dr["day"].ToString());
+            this.hour = dr["hour"].ToString();
         }
 
         public string TherapyCode
         {
             set { this.therapyCode = value; }
             get { return this.therapyCode; }
+        }
+        public string WhoCanGiveTheTherapy
+        {
+            set { this.whoCanGiveTheTherapy = value; }
+            get { return this.whoCanGiveTheTherapy; }
         }
         public string IdDoctor
         {
@@ -45,18 +51,14 @@ namespace DrorCohen.Models
             set { this.hour = value; }
             get { return this.hour; }
         }
-        public string WhoCanGiveTheTherapy
-        {
-            set { this.whoCanGiveTheTherapy = value; }
-            get { return this.whoCanGiveTheTherapy; }
-        }
+        
         public virtual void Populate(DataRow dr)
         {
             dr["TherapyCode"] = TherapyCode;
+            dr["WhoCanGiveTheTherapy"] = WhoCanGiveTheTherapy;
             dr["IdDoctor"] = idDoctor;
             dr["day"] = day;
             dr["hour"] = hour;
-            dr["WhoCanGiveTheTherapy"] = WhoCanGiveTheTherapy;
         }
     }
 }

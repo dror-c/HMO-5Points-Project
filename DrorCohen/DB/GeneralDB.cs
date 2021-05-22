@@ -125,7 +125,6 @@ namespace DrorCohen.DB
         }
         public virtual void Save()
         {
-           
            DAL.GetInstance().Update(table.TableName);
         }
         #endregion

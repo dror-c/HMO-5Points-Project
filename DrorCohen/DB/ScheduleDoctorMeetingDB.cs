@@ -1,4 +1,5 @@
-﻿using DrorCohen.Models;
+﻿using DrorCohen.DATA;
+using DrorCohen.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,12 @@ namespace DrorCohen.DB
         public new ScheduleDoctorMeeting GetCurrentRow()
         {
             return new ScheduleDoctorMeeting(base.GetCurrentRow());
+        }
+        public DataView GetDataView()
+        {
+            DAL d = DAL.GetInstance();
+            DataTable a = d.GetDisplayTable("MeetingDoctor", "Select * From MeetingDoctor");
+            return new DataView(table);
         }
         //החזרת מפתח ראשי האחרון
         public /*int*/ string GetKey()

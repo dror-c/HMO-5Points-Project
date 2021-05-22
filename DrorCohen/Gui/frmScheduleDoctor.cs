@@ -70,6 +70,7 @@ namespace DrorCohen.Gui
                 {
                     Clear();
                     textBox1.Text = meetings.GetKey();
+                    textBox2.Text = doctorId;
                     state = AddState.ADDNEW;
                     SetButtonStates(false);
                     cancel.Enabled = false;
@@ -93,15 +94,72 @@ namespace DrorCohen.Gui
         {
 
         }
-
+        private bool UpdateObject(ScheduleDoctorMeeting s)
+        {
+            bool ok = true;
+            try
+            {
+                s.TherapyCode= textBox1.Text;
+                errorProvider1.SetError(textBox1, "");
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                errorProvider1.SetError(textBox1, ex.Message);
+            }
+            try
+            {
+                s.IdDoctor= textBox2.Text;
+                errorProvider1.SetError(textBox2, "");
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                errorProvider1.SetError(textBox2, ex.Message);
+            }
+            try
+            {
+                s.WhoCanGiveTheTherapy= comboBox2.Text;
+                errorProvider1.SetError(comboBox2, "");
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox2, ex.Message);
+            }
+            try
+            {
+                s.Day = comboBox1.SelectedIndex+1;
+                errorProvider1.SetError(comboBox1, "");
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox1, ex.Message);
+            }
+            try
+            {
+                s.Hour = textBox3.Text;
+                errorProvider1.SetError(textBox3, "");
+            }
+            catch (Exception ex)
+            {
+                ok = false;
+                errorProvider1.SetError(textBox3, ex.Message);
+            }
+            return ok;
+        }
         private void save_Click(object sender, EventArgs e)
         {
             ScheduleDoctorMeeting s = new ScheduleDoctorMeeting();
-            s.Day = comboBox1.SelectedIndex + 1;
-            if (state == AddState.ADDNEW)
-                meetings.AddRow(s);
-            else
-                meetings.UpdateRow(s);
+            //s.Day = comboBox1.SelectedIndex + 1;
+            if (UpdateObject(s))
+            {
+                if (state == AddState.ADDNEW)
+                    meetings.AddRow(s);
+                else
+                    meetings.UpdateRow(s);
+            }
             SetButtonStates(true);
             state = AddState.NAVIGATE;
             meetings.Save();
@@ -130,6 +188,7 @@ namespace DrorCohen.Gui
         {
             Clear();
             textBox1.Text = meetings.GetKey();
+            textBox2.Text = this.doctorId;
             state = AddState.ADDNEW;
             SetButtonStates(false);
         }

@@ -130,11 +130,8 @@ namespace DrorCohen.DATA
         //עדכון נתונים למאגר
         public void Update(string tableName)
         {
-
-           
-            OleDbDataAdapter adapter = (OleDbDataAdapter)adapters[tableName];
+           OleDbDataAdapter adapter = (OleDbDataAdapter)adapters[tableName];
            adapter.Update(ds, tableName);
-           
         }
         //עדכון לכל הטבלאות
         public void Update()
