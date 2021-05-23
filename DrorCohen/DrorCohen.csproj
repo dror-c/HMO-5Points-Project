@@ -182,7 +182,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MeetingForToday.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Models\ConnectionTableBetweenPatientAndDoctorAndSpecificTherapy.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DoctorOrNurse.cs" />
     <Compile Include="Models\ScheduleDoctorMeeting.cs" />

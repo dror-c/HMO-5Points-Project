@@ -49,7 +49,6 @@
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfDeathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maleFemaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isDoctorOrNurseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,10 +88,9 @@
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save.Location = new System.Drawing.Point(589, 201);
-            this.save.Margin = new System.Windows.Forms.Padding(4);
+            this.save.Location = new System.Drawing.Point(505, 163);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(248, 28);
+            this.save.Size = new System.Drawing.Size(213, 28);
             this.save.TabIndex = 59;
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = false;
@@ -101,10 +99,9 @@
             // prev
             // 
             this.prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prev.Location = new System.Drawing.Point(175, 193);
-            this.prev.Margin = new System.Windows.Forms.Padding(4);
+            this.prev.Location = new System.Drawing.Point(150, 157);
             this.prev.Name = "prev";
-            this.prev.Size = new System.Drawing.Size(109, 28);
+            this.prev.Size = new System.Drawing.Size(93, 23);
             this.prev.TabIndex = 58;
             this.prev.Text = "<<";
             this.prev.UseVisualStyleBackColor = true;
@@ -113,10 +110,9 @@
             // next
             // 
             this.next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.next.Location = new System.Drawing.Point(390, 193);
-            this.next.Margin = new System.Windows.Forms.Padding(4);
+            this.next.Location = new System.Drawing.Point(334, 157);
             this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(109, 28);
+            this.next.Size = new System.Drawing.Size(93, 23);
             this.next.TabIndex = 57;
             this.next.Text = ">>";
             this.next.UseVisualStyleBackColor = true;
@@ -126,10 +122,9 @@
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.Location = new System.Drawing.Point(749, 146);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.cancel.Location = new System.Drawing.Point(642, 115);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(88, 28);
+            this.cancel.Size = new System.Drawing.Size(75, 27);
             this.cancel.TabIndex = 56;
             this.cancel.Text = "cancel";
             this.cancel.UseVisualStyleBackColor = false;
@@ -138,10 +133,9 @@
             // Add
             // 
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add.Location = new System.Drawing.Point(749, 81);
-            this.Add.Margin = new System.Windows.Forms.Padding(4);
+            this.Add.Location = new System.Drawing.Point(642, 66);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(88, 28);
+            this.Add.Size = new System.Drawing.Size(75, 26);
             this.Add.TabIndex = 55;
             this.Add.Text = "create";
             this.Add.UseVisualStyleBackColor = true;
@@ -150,10 +144,9 @@
             // update
             // 
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Location = new System.Drawing.Point(749, 25);
-            this.update.Margin = new System.Windows.Forms.Padding(4);
+            this.update.Location = new System.Drawing.Point(642, 20);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(88, 28);
+            this.update.Size = new System.Drawing.Size(75, 28);
             this.update.TabIndex = 53;
             this.update.Text = "update";
             this.update.UseVisualStyleBackColor = true;
@@ -161,37 +154,33 @@
             // 
             // inputId
             // 
-            this.inputId.Location = new System.Drawing.Point(267, 30);
-            this.inputId.Margin = new System.Windows.Forms.Padding(4);
+            this.inputId.Location = new System.Drawing.Point(229, 24);
             this.inputId.Name = "inputId";
-            this.inputId.Size = new System.Drawing.Size(232, 24);
+            this.inputId.Size = new System.Drawing.Size(199, 20);
             this.inputId.TabIndex = 52;
             this.inputId.TextChanged += new System.EventHandler(this.inputId_TextChanged);
             // 
             // inputDepartmentName
             // 
-            this.inputDepartmentName.Location = new System.Drawing.Point(267, 74);
-            this.inputDepartmentName.Margin = new System.Windows.Forms.Padding(4);
+            this.inputDepartmentName.Location = new System.Drawing.Point(229, 60);
             this.inputDepartmentName.Name = "inputDepartmentName";
-            this.inputDepartmentName.Size = new System.Drawing.Size(232, 24);
+            this.inputDepartmentName.Size = new System.Drawing.Size(199, 20);
             this.inputDepartmentName.TabIndex = 51;
             // 
             // inputAmountOfPatient
             // 
-            this.inputAmountOfPatient.Location = new System.Drawing.Point(267, 127);
-            this.inputAmountOfPatient.Margin = new System.Windows.Forms.Padding(4);
+            this.inputAmountOfPatient.Location = new System.Drawing.Point(229, 103);
             this.inputAmountOfPatient.Name = "inputAmountOfPatient";
-            this.inputAmountOfPatient.Size = new System.Drawing.Size(232, 24);
+            this.inputAmountOfPatient.Size = new System.Drawing.Size(199, 20);
             this.inputAmountOfPatient.TabIndex = 50;
             // 
             // lastName
             // 
             this.lastName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName.ForeColor = System.Drawing.Color.Blue;
-            this.lastName.Location = new System.Drawing.Point(15, 127);
-            this.lastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastName.Location = new System.Drawing.Point(13, 103);
             this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(245, 36);
+            this.lastName.Size = new System.Drawing.Size(210, 29);
             this.lastName.TabIndex = 39;
             this.lastName.Text = "Amount Of Patient: ";
             // 
@@ -199,10 +188,9 @@
             // 
             this.firstName.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstName.ForeColor = System.Drawing.Color.Blue;
-            this.firstName.Location = new System.Drawing.Point(15, 74);
-            this.firstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.firstName.Location = new System.Drawing.Point(13, 60);
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(195, 39);
+            this.firstName.Size = new System.Drawing.Size(167, 32);
             this.firstName.TabIndex = 38;
             this.firstName.Text = "Department Name: ";
             // 
@@ -210,10 +198,9 @@
             // 
             this.id.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id.ForeColor = System.Drawing.Color.Blue;
-            this.id.Location = new System.Drawing.Point(15, 30);
-            this.id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.id.Location = new System.Drawing.Point(13, 24);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(157, 30);
+            this.id.Size = new System.Drawing.Size(135, 24);
             this.id.TabIndex = 37;
             this.id.Text = "Department ID: ";
             this.id.Click += new System.EventHandler(this.id_Click);
@@ -223,7 +210,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(446, 260);
+            this.label1.Location = new System.Drawing.Point(382, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(405, 28);
             this.label1.TabIndex = 61;
@@ -239,16 +226,16 @@
             this.lastNameDataGridViewTextBoxColumn,
             this.phoneNumberDataGridViewTextBoxColumn,
             this.dateOfBirthDataGridViewTextBoxColumn,
-            this.dateOfDeathDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
             this.maleFemaleDataGridViewTextBoxColumn,
             this.isDoctorOrNurseDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.doctorOrNurseBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 291);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 236);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1310, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1123, 122);
             this.dataGridView1.TabIndex = 62;
             // 
             // iDDataGridViewTextBoxColumn
@@ -290,14 +277,6 @@
             this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
             this.dateOfBirthDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateOfDeathDataGridViewTextBoxColumn
-            // 
-            this.dateOfDeathDataGridViewTextBoxColumn.DataPropertyName = "DateOfDeath";
-            this.dateOfDeathDataGridViewTextBoxColumn.HeaderText = "DateOfDeath";
-            this.dateOfDeathDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateOfDeathDataGridViewTextBoxColumn.Name = "dateOfDeathDataGridViewTextBoxColumn";
-            this.dateOfDeathDataGridViewTextBoxColumn.Width = 125;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -350,9 +329,10 @@
             this.comboBox1.DisplayMember = "LastName";
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(985, 166);
+            this.comboBox1.Location = new System.Drawing.Point(844, 135);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 24);
+            this.comboBox1.Size = new System.Drawing.Size(152, 21);
             this.comboBox1.TabIndex = 63;
             this.comboBox1.ValueMember = "ID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -393,9 +373,10 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(985, 201);
+            this.button1.Location = new System.Drawing.Point(844, 163);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 34);
+            this.button1.Size = new System.Drawing.Size(152, 28);
             this.button1.TabIndex = 64;
             this.button1.Text = "submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -406,7 +387,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(997, 95);
+            this.label2.Location = new System.Drawing.Point(855, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 56);
             this.label2.TabIndex = 65;
@@ -414,10 +395,10 @@
             // 
             // frmDepartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1342, 628);
+            this.ClientSize = new System.Drawing.Size(1150, 510);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -436,7 +417,6 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDepartment";
             this.Text = "frmDepartment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDepartment_FormClosing);

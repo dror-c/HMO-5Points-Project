@@ -90,10 +90,10 @@
             this.comboBox1.DataSource = this.doctorOrNurseBindingSource;
             this.comboBox1.DisplayMember = "LastName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 76);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Location = new System.Drawing.Point(54, 62);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 24);
+            this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "ID";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -113,7 +113,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(72, 30);
+            this.label1.Location = new System.Drawing.Point(54, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 28);
             this.label1.TabIndex = 1;
@@ -160,11 +161,11 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.meetingDoctorDataGridView.DataSource = this.meetingDoctorBindingSource;
-            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(291, 101);
-            this.meetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.meetingDoctorDataGridView.Location = new System.Drawing.Point(218, 82);
+            this.meetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.meetingDoctorDataGridView.Name = "meetingDoctorDataGridView";
             this.meetingDoctorDataGridView.RowHeadersWidth = 51;
-            this.meetingDoctorDataGridView.Size = new System.Drawing.Size(721, 271);
+            this.meetingDoctorDataGridView.Size = new System.Drawing.Size(541, 220);
             this.meetingDoctorDataGridView.TabIndex = 2;
             this.meetingDoctorDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetingDoctorDataGridView_CellContentClick);
             this.meetingDoctorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetingDoctorDataGridView_CellContentClick);
@@ -213,10 +214,10 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 203);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(54, 165);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(173, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(131, 20);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -225,7 +226,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(72, 161);
+            this.label2.Location = new System.Drawing.Point(54, 131);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 28);
             this.label2.TabIndex = 4;
@@ -234,10 +236,10 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(72, 293);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox2.Location = new System.Drawing.Point(54, 238);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 24);
+            this.comboBox2.Size = new System.Drawing.Size(120, 21);
             this.comboBox2.TabIndex = 5;
             this.comboBox2.Visible = false;
             this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
@@ -245,9 +247,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 270);
+            this.label3.Location = new System.Drawing.Point(60, 219);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
+            this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "choose hour";
             this.label3.Visible = false;
@@ -255,10 +258,10 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(71, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(53, 280);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 28);
+            this.button1.Size = new System.Drawing.Size(74, 33);
             this.button1.TabIndex = 7;
             this.button1.Text = "submit";
             this.button1.UseVisualStyleBackColor = true;
@@ -351,11 +354,10 @@
             this.specificMeetingDoctorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6});
             this.specificMeetingDoctorDataGridView.DataSource = this.specificMeetingDoctorBindingSource2;
-            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(349, 508);
-            this.specificMeetingDoctorDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.specificMeetingDoctorDataGridView.Location = new System.Drawing.Point(262, 413);
             this.specificMeetingDoctorDataGridView.Name = "specificMeetingDoctorDataGridView";
             this.specificMeetingDoctorDataGridView.RowHeadersWidth = 51;
-            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(400, 271);
+            this.specificMeetingDoctorDataGridView.Size = new System.Drawing.Size(300, 220);
             this.specificMeetingDoctorDataGridView.TabIndex = 9;
             this.specificMeetingDoctorDataGridView.Visible = false;
             // 
@@ -369,10 +371,10 @@
             // 
             // frmOrderTherapyFinal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 804);
+            this.ClientSize = new System.Drawing.Size(800, 653);
             this.Controls.Add(this.specificMeetingDoctorDataGridView);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -382,7 +384,7 @@
             this.Controls.Add(this.meetingDoctorDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmOrderTherapyFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

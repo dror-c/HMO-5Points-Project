@@ -205,9 +205,9 @@
             // update
             // 
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Location = new System.Drawing.Point(531, 102);
+            this.update.Location = new System.Drawing.Point(531, 109);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(75, 23);
+            this.update.Size = new System.Drawing.Size(75, 31);
             this.update.TabIndex = 26;
             this.update.Text = "update";
             this.update.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Location = new System.Drawing.Point(531, 73);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 23);
+            this.Add.Size = new System.Drawing.Size(75, 30);
             this.Add.TabIndex = 28;
             this.Add.Text = "create";
             this.Add.UseVisualStyleBackColor = true;
@@ -228,9 +228,9 @@
             // 
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.Location = new System.Drawing.Point(531, 140);
+            this.cancel.Location = new System.Drawing.Point(531, 156);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
+            this.cancel.Size = new System.Drawing.Size(75, 26);
             this.cancel.TabIndex = 29;
             this.cancel.Text = "cancel";
             this.cancel.UseVisualStyleBackColor = false;
@@ -262,9 +262,9 @@
             // 
             this.save.BackColor = System.Drawing.Color.Lime;
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save.Location = new System.Drawing.Point(531, 194);
+            this.save.Location = new System.Drawing.Point(531, 204);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(213, 23);
+            this.save.Size = new System.Drawing.Size(213, 32);
             this.save.TabIndex = 32;
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = false;
@@ -279,7 +279,7 @@
             this.search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search.Location = new System.Drawing.Point(828, 235);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(120, 23);
+            this.search.Size = new System.Drawing.Size(120, 28);
             this.search.TabIndex = 33;
             this.search.Text = "submit";
             this.search.UseVisualStyleBackColor = true;
@@ -321,7 +321,7 @@
             this.orderTherapy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderTherapy.Location = new System.Drawing.Point(531, 37);
             this.orderTherapy.Name = "orderTherapy";
-            this.orderTherapy.Size = new System.Drawing.Size(96, 23);
+            this.orderTherapy.Size = new System.Drawing.Size(96, 30);
             this.orderTherapy.TabIndex = 37;
             this.orderTherapy.Text = "order therapy";
             this.orderTherapy.UseVisualStyleBackColor = true;
@@ -359,7 +359,7 @@
             this.fillToolStripButton});
             this.fillToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(1030, 27);
+            this.fillToolStrip.Size = new System.Drawing.Size(1030, 31);
             this.fillToolStrip.TabIndex = 39;
             this.fillToolStrip.Text = "fillToolStrip";
             // 
@@ -372,7 +372,6 @@
             // 
             // idPatientToolStripTextBox
             // 
-            this.idPatientToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.idPatientToolStripTextBox.Name = "idPatientToolStripTextBox";
             this.idPatientToolStripTextBox.Size = new System.Drawing.Size(85, 27);
             this.idPatientToolStripTextBox.Visible = false;
@@ -385,7 +384,6 @@
             // 
             // dateOfTherapyToolStripTextBox
             // 
-            this.dateOfTherapyToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateOfTherapyToolStripTextBox.Name = "dateOfTherapyToolStripTextBox";
             this.dateOfTherapyToolStripTextBox.Size = new System.Drawing.Size(85, 27);
             // 

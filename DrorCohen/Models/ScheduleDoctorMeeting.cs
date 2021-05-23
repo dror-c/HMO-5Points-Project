@@ -22,7 +22,7 @@ namespace DrorCohen.Models
             this.TherapyCode = dr["TherapyCode"].ToString();
             this.whoCanGiveTheTherapy = dr["WhoCanGiveTheTherapy"].ToString();
             this.idDoctor = dr["IdDoctor"].ToString();
-            this.day =Convert.ToInt32(dr["day"].ToString());
+            this.day =(int)(dr["day"]);
             this.hour = dr["hour"].ToString();
         }
 
@@ -52,7 +52,7 @@ namespace DrorCohen.Models
             get { return this.hour; }
         }
         
-        public virtual void Populate(DataRow dr)
+        public void Populate(DataRow dr)
         {
             dr["TherapyCode"] = TherapyCode;
             dr["WhoCanGiveTheTherapy"] = WhoCanGiveTheTherapy;

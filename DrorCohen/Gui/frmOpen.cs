@@ -100,13 +100,13 @@ namespace DrorCohen.Gui
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            parent.Close();
+            this.Dispose();
+            parent.Dispose();
         }
 
         private void frmOpen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            parent.Close();
+            parent.Dispose();
         }
     }
 }
