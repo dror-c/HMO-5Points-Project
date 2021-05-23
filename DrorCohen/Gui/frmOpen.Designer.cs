@@ -230,6 +230,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOpen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOpen_FormClosing);
             this.Load += new System.EventHandler(this.frmOpen_Load);
             this.panelMenue.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

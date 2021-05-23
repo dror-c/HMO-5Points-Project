@@ -103,5 +103,10 @@ namespace DrorCohen.Gui
             this.Close();
             parent.Close();
         }
+
+        private void frmOpen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Close();
+        }
     }
 }

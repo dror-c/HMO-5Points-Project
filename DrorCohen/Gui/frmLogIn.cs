@@ -59,5 +59,10 @@ namespace DrorCohen.Gui
             this.doctorOrNurseTableAdapter.Fill(this.isAdmin1.DoctorOrNurse);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
