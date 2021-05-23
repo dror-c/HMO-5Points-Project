@@ -24,8 +24,9 @@ namespace DrorCohen.Gui
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int x = (int)this.doctorOrNurseTableAdapter.isAdmin(id.Text, "admin");
             //Frmmain f = new Frmmain();
-            if (id.Text.Equals("111111111"))
+            if (x>0)
             {
                 frmOpen f = new frmOpen(this);
                 f.Show();
@@ -41,6 +42,21 @@ namespace DrorCohen.Gui
 
         private void id_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void doctorOrNurseBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.doctorOrNurseBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.isAdmin1);
+
+        }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'isAdmin1.DoctorOrNurse' table. You can move, or remove it, as needed.
+            this.doctorOrNurseTableAdapter.Fill(this.isAdmin1.DoctorOrNurse);
 
         }
     }

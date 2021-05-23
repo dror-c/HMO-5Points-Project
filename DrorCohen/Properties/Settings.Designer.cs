@@ -72,5 +72,15 @@ namespace DrorCohen.Properties {
                 return ((string)(this["HMOConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|HMO.accdb")]
+        public string HMOConnectionString5 {
+            get {
+                return ((string)(this["HMOConnectionString5"]));
+            }
+        }
     }
 }

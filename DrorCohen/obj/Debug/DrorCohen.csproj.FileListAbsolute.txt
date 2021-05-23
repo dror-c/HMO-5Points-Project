@@ -102,11 +102,9 @@ C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\DrorCohen.pdb
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.csprojAssemblyReference.cache
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDepartment.resources
-C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmGenericTherapy.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmLogIn.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmDoctorOrNurse.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOpen.resources
-C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOrderTherapy.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmOrderTherapyFinal.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.frmPatient.resources
 C:\Users\dror\Source\Repos\HMO-5Points-Project\DrorCohen\obj\Debug\DrorCohen.Gui.vaccine.resources

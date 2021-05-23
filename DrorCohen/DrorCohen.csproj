@@ -101,12 +101,6 @@
     <Compile Include="Gui\frmDepartment.Designer.cs">
       <DependentUpon>frmDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\frmGenericTherapy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frmGenericTherapy.Designer.cs">
-      <DependentUpon>frmGenericTherapy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,12 +118,6 @@
     </Compile>
     <Compile Include="Gui\frmOpen.Designer.cs">
       <DependentUpon>frmOpen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frmOrderTherapy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frmOrderTherapy.Designer.cs">
-      <DependentUpon>frmOrderTherapy.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\frmOrderTherapyFinal.cs">
       <SubType>Form</SubType>
@@ -170,6 +158,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HMODataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="isAdmin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>isAdmin.xsd</DependentUpon>
     </Compile>
     <Compile Include="meeting.cs">
       <DependentUpon>meeting.xsd</DependentUpon>
@@ -228,9 +221,6 @@
     <EmbeddedResource Include="Gui\frmDepartment.resx">
       <DependentUpon>frmDepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frmGenericTherapy.resx">
-      <DependentUpon>frmGenericTherapy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmOpen.resx">
       <DependentUpon>frmOpen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frmOrderTherapy.resx">
-      <DependentUpon>frmOrderTherapy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmOrderTherapyFinal.resx">
       <DependentUpon>frmOrderTherapyFinal.cs</DependentUpon>
@@ -366,6 +353,17 @@
     </None>
     <None Include="HMODataSet1.xss">
       <DependentUpon>HMODataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="isAdmin.xsc">
+      <DependentUpon>isAdmin.xsd</DependentUpon>
+    </None>
+    <None Include="isAdmin.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>isAdmin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="isAdmin.xss">
+      <DependentUpon>isAdmin.xsd</DependentUpon>
     </None>
     <None Include="meeting.xsc">
       <DependentUpon>meeting.xsd</DependentUpon>

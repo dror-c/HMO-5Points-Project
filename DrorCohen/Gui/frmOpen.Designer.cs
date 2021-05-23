@@ -91,10 +91,10 @@
             this.department.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.department.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.department.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.department.Location = new System.Drawing.Point(0, 382);
+            this.department.Location = new System.Drawing.Point(0, 364);
             this.department.Name = "department";
             this.department.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.department.Size = new System.Drawing.Size(369, 88);
+            this.department.Size = new System.Drawing.Size(369, 78);
             this.department.TabIndex = 3;
             this.department.Text = "departments";
             this.department.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,7 +116,7 @@
             this.doctor.Location = new System.Drawing.Point(0, 289);
             this.doctor.Name = "doctor";
             this.doctor.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.doctor.Size = new System.Drawing.Size(369, 93);
+            this.doctor.Size = new System.Drawing.Size(369, 75);
             this.doctor.TabIndex = 2;
             this.doctor.Text = "workers\' details";
             this.doctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,10 +207,10 @@
             this.exitButton.IconColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.exitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitButton.Location = new System.Drawing.Point(0, 488);
+            this.exitButton.Location = new System.Drawing.Point(0, 506);
             this.exitButton.Name = "exitButton";
             this.exitButton.Padding = new System.Windows.Forms.Padding(9, 0, 21, 0);
-            this.exitButton.Size = new System.Drawing.Size(369, 88);
+            this.exitButton.Size = new System.Drawing.Size(369, 70);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "EXIT";
             this.exitButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
