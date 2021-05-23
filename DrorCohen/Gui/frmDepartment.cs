@@ -204,8 +204,8 @@ namespace DrorCohen.Gui
         private void button1_Click(object sender, EventArgs e)
         {
             //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow(inputId.Text, comboBox1.SelectedItem.ToString())
-            doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow
-                (inputId.Text, comboBox1.SelectedItem.ToString());
+            //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow
+                //(inputId.Text, comboBox1.SelectedItem.ToString());
             this.connectionDoctorDepartmentTableAdapter.Update(doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
         }
 

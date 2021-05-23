@@ -56,7 +56,6 @@ namespace DrorCohen.Gui
             inputPhoneNumber.Text = p.PhoneNumber;
             inputGender.Text = p.MaleOrFemale;
             inputDateBirth.Value = p.DateOfBirth;
-           inputDateDeath.Value = p.DateOfDeath;
         }
         private bool UpdateObject(Patient p)
         {
@@ -131,16 +130,6 @@ namespace DrorCohen.Gui
                 ok = false;
                 errorProvider1.SetError(inputId, ex.Message);
             }
-            try
-            {
-                p.DateOfDeath = inputDateDeath.Value;
-                errorProvider1.SetError(inputId, "");
-            }
-            catch (Exception ex)
-            {
-                ok = false;
-                errorProvider1.SetError(inputId, ex.Message);
-            }
             return ok;
         }
         private void SetButtonStates(bool b)
@@ -158,7 +147,6 @@ namespace DrorCohen.Gui
             inputPhoneNumber.Enabled = !b;
             inputGender.Enabled = !b;
             inputDateBirth.Enabled = !b;
-            inputDateDeath.Enabled = !b;
         }
         private void frmPatient_Load(object sender, EventArgs e)
         {

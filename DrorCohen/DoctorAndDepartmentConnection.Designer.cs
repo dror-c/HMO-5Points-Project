@@ -450,11 +450,7 @@ namespace DrorCohen {
             public void AddConnectionDoctorDepartmentRow(ConnectionDoctorDepartmentRow row) {
                 this.Rows.Add(row);
             }
-            public void AddConnectionDoctorDepartmentRow(string departmentId,string doctorId)
-            {
-                this.Rows.Add(departmentId, doctorId);
-            }
-
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ConnectionDoctorDepartmentRow AddConnectionDoctorDepartmentRow(DepartmentRow parentDepartmentRowByDepartmentConnectionDoctorDepartment, DoctorOrNurseRow parentDoctorOrNurseRowByDoctorOrNurseConnectionDoctorDepartment) {
@@ -947,8 +943,6 @@ namespace DrorCohen {
             
             private global::System.Data.DataColumn columnDateOfBirth;
             
-            private global::System.Data.DataColumn columnDateOfDeath;
-            
             private global::System.Data.DataColumn columnAddress;
             
             private global::System.Data.DataColumn columnMaleFemale;
@@ -1030,14 +1024,6 @@ namespace DrorCohen {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DateOfDeathColumn {
-                get {
-                    return this.columnDateOfDeath;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn AddressColumn {
                 get {
                     return this.columnAddress;
@@ -1097,7 +1083,7 @@ namespace DrorCohen {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DoctorOrNurseRow AddDoctorOrNurseRow(string ID, string FirstName, string LastName, string PhoneNumber, System.DateTime DateOfBirth, System.DateTime DateOfDeath, string Address, string MaleFemale, string IsDoctorOrNurse) {
+            public DoctorOrNurseRow AddDoctorOrNurseRow(string ID, string FirstName, string LastName, string PhoneNumber, System.DateTime DateOfBirth, string Address, string MaleFemale, string IsDoctorOrNurse) {
                 DoctorOrNurseRow rowDoctorOrNurseRow = ((DoctorOrNurseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -1105,7 +1091,6 @@ namespace DrorCohen {
                         LastName,
                         PhoneNumber,
                         DateOfBirth,
-                        DateOfDeath,
                         Address,
                         MaleFemale,
                         IsDoctorOrNurse};
@@ -1143,7 +1128,6 @@ namespace DrorCohen {
                 this.columnLastName = base.Columns["LastName"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
                 this.columnDateOfBirth = base.Columns["DateOfBirth"];
-                this.columnDateOfDeath = base.Columns["DateOfDeath"];
                 this.columnAddress = base.Columns["Address"];
                 this.columnMaleFemale = base.Columns["MaleFemale"];
                 this.columnIsDoctorOrNurse = base.Columns["IsDoctorOrNurse"];
@@ -1162,8 +1146,6 @@ namespace DrorCohen {
                 base.Columns.Add(this.columnPhoneNumber);
                 this.columnDateOfBirth = new global::System.Data.DataColumn("DateOfBirth", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateOfBirth);
-                this.columnDateOfDeath = new global::System.Data.DataColumn("DateOfDeath", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateOfDeath);
                 this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAddress);
                 this.columnMaleFemale = new global::System.Data.DataColumn("MaleFemale", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1550,22 +1532,6 @@ namespace DrorCohen {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime DateOfDeath {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDoctorOrNurse.DateOfDeathColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateOfDeath\' in table \'DoctorOrNurse\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDoctorOrNurse.DateOfDeathColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Address {
                 get {
                     try {
@@ -1658,18 +1624,6 @@ namespace DrorCohen {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDateOfBirthNull() {
                 this[this.tableDoctorOrNurse.DateOfBirthColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDateOfDeathNull() {
-                return this.IsNull(this.tableDoctorOrNurse.DateOfDeathColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDateOfDeathNull() {
-                this[this.tableDoctorOrNurse.DateOfDeathColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2713,14 +2667,13 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
             tableMapping.ColumnMappings.Add("DateOfBirth", "DateOfBirth");
-            tableMapping.ColumnMappings.Add("DateOfDeath", "DateOfDeath");
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("MaleFemale", "MaleFemale");
             tableMapping.ColumnMappings.Add("IsDoctorOrNurse", "IsDoctorOrNurse");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `DoctorOrNurse` WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `DateOfBirth` IS NULL) OR (`DateOfBirth` = ?)) AND ((? = 1 AND `DateOfDeath` IS NULL) OR (`DateOfDeath` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `MaleFemale` IS NULL) OR (`MaleFemale` = ?)) AND ((? = 1 AND `IsDoctorOrNurse` IS NULL) OR (`IsDoctorOrNurse` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `DoctorOrNurse` WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `DateOfBirth` IS NULL) OR (`DateOfBirth` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `MaleFemale` IS NULL) OR (`MaleFemale` = ?)) AND ((? = 1 AND `IsDoctorOrNurse` IS NULL) OR (`IsDoctorOrNurse` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
@@ -2731,8 +2684,6 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfBirth", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateOfBirth", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfDeath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateOfDeath", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MaleFemale", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MaleFemale", global::System.Data.DataRowVersion.Original, true, null));
@@ -2742,28 +2693,26 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `DoctorOrNurse` (`ID`, `FirstName`, `LastName`, `PhoneNumber`, `DateO" +
-                "fBirth`, `DateOfDeath`, `Address`, `MaleFemale`, `IsDoctorOrNurse`) VALUES (?, ?" +
-                ", ?, ?, ?, ?, ?, ?, ?)";
+                "fBirth`, `Address`, `MaleFemale`, `IsDoctorOrNurse`) VALUES (?, ?, ?, ?, ?, ?, ?" +
+                ", ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfBirth", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfDeath", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MaleFemale", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MaleFemale", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsDoctorOrNurse", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IsDoctorOrNurse", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `DoctorOrNurse` SET `ID` = ?, `FirstName` = ?, `LastName` = ?, `PhoneNumber` = ?, `DateOfBirth` = ?, `DateOfDeath` = ?, `Address` = ?, `MaleFemale` = ?, `IsDoctorOrNurse` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `DateOfBirth` IS NULL) OR (`DateOfBirth` = ?)) AND ((? = 1 AND `DateOfDeath` IS NULL) OR (`DateOfDeath` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `MaleFemale` IS NULL) OR (`MaleFemale` = ?)) AND ((? = 1 AND `IsDoctorOrNurse` IS NULL) OR (`IsDoctorOrNurse` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `DoctorOrNurse` SET `ID` = ?, `FirstName` = ?, `LastName` = ?, `PhoneNumber` = ?, `DateOfBirth` = ?, `Address` = ?, `MaleFemale` = ?, `IsDoctorOrNurse` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `DateOfBirth` IS NULL) OR (`DateOfBirth` = ?)) AND ((? = 1 AND `Address` IS NULL) OR (`Address` = ?)) AND ((? = 1 AND `MaleFemale` IS NULL) OR (`MaleFemale` = ?)) AND ((? = 1 AND `IsDoctorOrNurse` IS NULL) OR (`IsDoctorOrNurse` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LastName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LastName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfBirth", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DateOfDeath", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("MaleFemale", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MaleFemale", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsDoctorOrNurse", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "IsDoctorOrNurse", global::System.Data.DataRowVersion.Current, false, null));
@@ -2776,8 +2725,6 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PhoneNumber", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfBirth", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateOfBirth", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DateOfDeath", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DateOfDeath", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DateOfDeath", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Address", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_MaleFemale", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "MaleFemale", global::System.Data.DataRowVersion.Original, true, null));
@@ -2799,13 +2746,13 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, FirstName, LastName, PhoneNumber, DateOfBirth, DateOfDeath, Address, M" +
-                "aleFemale, IsDoctorOrNurse FROM DoctorOrNurse";
+            this._commandCollection[0].CommandText = "SELECT ID, FirstName, LastName, PhoneNumber, DateOfBirth, Address, MaleFemale, Is" +
+                "DoctorOrNurse FROM DoctorOrNurse";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT     ID, FirstName, LastName, PhoneNumber, DateOfBirth, DateOfDeath, Addres" +
-                "s, MaleFemale, IsDoctorOrNurse\r\nFROM        DoctorOrNurse";
+            this._commandCollection[1].CommandText = "SELECT Address, DateOfBirth, FirstName, ID, IsDoctorOrNurse, LastName, MaleFemale" +
+                ", PhoneNumber FROM DoctorOrNurse";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = new global::System.Data.OleDb.OleDbConnection(global::DrorCohen.Properties.Settings.Default.HMOConnectionString);
@@ -2825,12 +2772,10 @@ namespace DrorCohen.DoctorAndDepartmentConnectionTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DepartmentID", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DepartmentID", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT     ID, FirstName, LastName, PhoneNumber, DateOfBirth, DateOfDeath, Address, MaleFemale, IsDoctorOrNurse
-FROM        DoctorOrNurse
-WHERE     EXISTS
-                      (SELECT     DoctorOrNurseId
-                       FROM        ConnectionDoctorDepartment
-                       WHERE     (DoctorOrNurseId = DoctorOrNurse.ID) AND (DepartmentId = ?))";
+            this._commandCollection[3].CommandText = "SELECT Address, DateOfBirth, FirstName, ID, IsDoctorOrNurse, LastName, MaleFemale" +
+                ", PhoneNumber FROM DoctorOrNurse WHERE EXISTS (SELECT DoctorOrNurseId FROM Conne" +
+                "ctionDoctorDepartment WHERE (DoctorOrNurseId = DoctorOrNurse.ID) AND (Department" +
+                "Id = ?))";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Param1", global::System.Data.OleDb.OleDbType.VarWChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "", global::System.Data.DataRowVersion.Current, false, null));
         }
@@ -2941,7 +2886,7 @@ WHERE     EXISTS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ID, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, global::System.Nullable<global::System.DateTime> Original_DateOfDeath, string Original_Address, string Original_MaleFemale, string Original_IsDoctorOrNurse) {
+        public virtual int Delete(string Original_ID, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_Address, string Original_MaleFemale, string Original_IsDoctorOrNurse) {
             if ((Original_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_ID");
             }
@@ -2980,37 +2925,29 @@ WHERE     EXISTS
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_DateOfDeath.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_DateOfDeath.Value));
-            }
-            else {
+            if ((Original_Address == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Address == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Address));
+            }
+            if ((Original_MaleFemale == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Address));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_MaleFemale));
             }
-            if ((Original_MaleFemale == null)) {
+            if ((Original_IsDoctorOrNurse == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_MaleFemale));
-            }
-            if ((Original_IsDoctorOrNurse == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_IsDoctorOrNurse));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_IsDoctorOrNurse));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3032,7 +2969,7 @@ WHERE     EXISTS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ID, string FirstName, string LastName, string PhoneNumber, global::System.Nullable<global::System.DateTime> DateOfBirth, global::System.Nullable<global::System.DateTime> DateOfDeath, string Address, string MaleFemale, string IsDoctorOrNurse) {
+        public virtual int Insert(string ID, string FirstName, string LastName, string PhoneNumber, global::System.Nullable<global::System.DateTime> DateOfBirth, string Address, string MaleFemale, string IsDoctorOrNurse) {
             if ((ID == null)) {
                 throw new global::System.ArgumentNullException("ID");
             }
@@ -3063,29 +3000,23 @@ WHERE     EXISTS
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((DateOfDeath.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(DateOfDeath.Value));
-            }
-            else {
+            if ((Address == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Address == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Address));
+            }
+            if ((MaleFemale == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Address));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(MaleFemale));
             }
-            if ((MaleFemale == null)) {
+            if ((IsDoctorOrNurse == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(MaleFemale));
-            }
-            if ((IsDoctorOrNurse == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(IsDoctorOrNurse));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(IsDoctorOrNurse));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3113,7 +3044,6 @@ WHERE     EXISTS
                     string LastName, 
                     string PhoneNumber, 
                     global::System.Nullable<global::System.DateTime> DateOfBirth, 
-                    global::System.Nullable<global::System.DateTime> DateOfDeath, 
                     string Address, 
                     string MaleFemale, 
                     string IsDoctorOrNurse, 
@@ -3122,7 +3052,6 @@ WHERE     EXISTS
                     string Original_LastName, 
                     string Original_PhoneNumber, 
                     global::System.Nullable<global::System.DateTime> Original_DateOfBirth, 
-                    global::System.Nullable<global::System.DateTime> Original_DateOfDeath, 
                     string Original_Address, 
                     string Original_MaleFemale, 
                     string Original_IsDoctorOrNurse) {
@@ -3156,99 +3085,85 @@ WHERE     EXISTS
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((DateOfDeath.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(DateOfDeath.Value));
-            }
-            else {
+            if ((Address == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Address == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Address));
+            }
+            if ((MaleFemale == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Address));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(MaleFemale));
             }
-            if ((MaleFemale == null)) {
+            if ((IsDoctorOrNurse == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(MaleFemale));
-            }
-            if ((IsDoctorOrNurse == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(IsDoctorOrNurse));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(IsDoctorOrNurse));
             }
             if ((Original_ID == null)) {
                 throw new global::System.ArgumentNullException("Original_ID");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ID));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ID));
             }
             if ((Original_FirstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_FirstName));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_FirstName));
             }
             if ((Original_LastName == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_LastName));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_LastName));
             }
             if ((Original_PhoneNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PhoneNumber));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_PhoneNumber));
             }
             if ((Original_DateOfBirth.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_DateOfBirth.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_DateOfBirth.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_DateOfDeath.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_DateOfDeath.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_Address == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Address));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Address));
             }
             if ((Original_MaleFemale == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_MaleFemale));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_MaleFemale));
             }
             if ((Original_IsDoctorOrNurse == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_IsDoctorOrNurse));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_IsDoctorOrNurse));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3270,25 +3185,8 @@ WHERE     EXISTS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string FirstName, 
-                    string LastName, 
-                    string PhoneNumber, 
-                    global::System.Nullable<global::System.DateTime> DateOfBirth, 
-                    global::System.Nullable<global::System.DateTime> DateOfDeath, 
-                    string Address, 
-                    string MaleFemale, 
-                    string IsDoctorOrNurse, 
-                    string Original_ID, 
-                    string Original_FirstName, 
-                    string Original_LastName, 
-                    string Original_PhoneNumber, 
-                    global::System.Nullable<global::System.DateTime> Original_DateOfBirth, 
-                    global::System.Nullable<global::System.DateTime> Original_DateOfDeath, 
-                    string Original_Address, 
-                    string Original_MaleFemale, 
-                    string Original_IsDoctorOrNurse) {
-            return this.Update(Original_ID, FirstName, LastName, PhoneNumber, DateOfBirth, DateOfDeath, Address, MaleFemale, IsDoctorOrNurse, Original_ID, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_DateOfBirth, Original_DateOfDeath, Original_Address, Original_MaleFemale, Original_IsDoctorOrNurse);
+        public virtual int Update(string FirstName, string LastName, string PhoneNumber, global::System.Nullable<global::System.DateTime> DateOfBirth, string Address, string MaleFemale, string IsDoctorOrNurse, string Original_ID, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, global::System.Nullable<global::System.DateTime> Original_DateOfBirth, string Original_Address, string Original_MaleFemale, string Original_IsDoctorOrNurse) {
+            return this.Update(Original_ID, FirstName, LastName, PhoneNumber, DateOfBirth, Address, MaleFemale, IsDoctorOrNurse, Original_ID, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_DateOfBirth, Original_Address, Original_MaleFemale, Original_IsDoctorOrNurse);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.inputGender = new System.Windows.Forms.ComboBox();
-            this.dateOfDeath = new System.Windows.Forms.Label();
             this.maleOrFemale = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.Label();
@@ -38,7 +37,6 @@
             this.lastName = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.Label();
-            this.inputDateDeath = new System.Windows.Forms.DateTimePicker();
             this.inputPhoneNumber = new System.Windows.Forms.TextBox();
             this.inputAddress = new System.Windows.Forms.TextBox();
             this.inputLastName = new System.Windows.Forms.TextBox();
@@ -91,17 +89,6 @@
             this.inputGender.Size = new System.Drawing.Size(232, 24);
             this.inputGender.TabIndex = 18;
             this.inputGender.Validating += new System.ComponentModel.CancelEventHandler(this.inputGender_Validating);
-            // 
-            // dateOfDeath
-            // 
-            this.dateOfDeath.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfDeath.ForeColor = System.Drawing.Color.Blue;
-            this.dateOfDeath.Location = new System.Drawing.Point(14, 331);
-            this.dateOfDeath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dateOfDeath.Name = "dateOfDeath";
-            this.dateOfDeath.Size = new System.Drawing.Size(189, 37);
-            this.dateOfDeath.TabIndex = 17;
-            this.dateOfDeath.Text = "Date Of Death: ";
             // 
             // maleOrFemale
             // 
@@ -180,14 +167,6 @@
             this.id.Size = new System.Drawing.Size(139, 30);
             this.id.TabIndex = 10;
             this.id.Text = "id: ";
-            // 
-            // inputDateDeath
-            // 
-            this.inputDateDeath.Location = new System.Drawing.Point(230, 331);
-            this.inputDateDeath.Margin = new System.Windows.Forms.Padding(4);
-            this.inputDateDeath.Name = "inputDateDeath";
-            this.inputDateDeath.Size = new System.Drawing.Size(232, 24);
-            this.inputDateDeath.TabIndex = 19;
             // 
             // inputPhoneNumber
             // 
@@ -528,9 +507,7 @@
             this.Controls.Add(this.inputLastName);
             this.Controls.Add(this.inputAddress);
             this.Controls.Add(this.inputPhoneNumber);
-            this.Controls.Add(this.inputDateDeath);
             this.Controls.Add(this.inputGender);
-            this.Controls.Add(this.dateOfDeath);
             this.Controls.Add(this.maleOrFemale);
             this.Controls.Add(this.phoneNumber);
             this.Controls.Add(this.dateOfBirth);
@@ -559,7 +536,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox inputGender;
-        private System.Windows.Forms.Label dateOfDeath;
         private System.Windows.Forms.Label maleOrFemale;
         private System.Windows.Forms.Label phoneNumber;
         private System.Windows.Forms.Label dateOfBirth;
@@ -567,7 +543,6 @@
         private System.Windows.Forms.Label lastName;
         private System.Windows.Forms.Label firstName;
         private System.Windows.Forms.Label id;
-        private System.Windows.Forms.DateTimePicker inputDateDeath;
         private System.Windows.Forms.TextBox inputPhoneNumber;
         private System.Windows.Forms.TextBox inputAddress;
         private System.Windows.Forms.TextBox inputLastName;

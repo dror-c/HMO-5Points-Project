@@ -42,8 +42,6 @@
             this.inputAddress = new System.Windows.Forms.TextBox();
             this.inputPhoneNumber = new System.Windows.Forms.TextBox();
             this.inputDateBirth = new System.Windows.Forms.DateTimePicker();
-            this.inputDateDeath = new System.Windows.Forms.DateTimePicker();
-            this.dateOfDeath = new System.Windows.Forms.Label();
             this.maleOrFemale = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.Label();
@@ -214,25 +212,6 @@
             this.inputDateBirth.Size = new System.Drawing.Size(232, 24);
             this.inputDateBirth.TabIndex = 43;
             this.inputDateBirth.Validating += new System.ComponentModel.CancelEventHandler(this.inputDateBirth_Validating);
-            // 
-            // inputDateDeath
-            // 
-            this.inputDateDeath.Location = new System.Drawing.Point(290, 350);
-            this.inputDateDeath.Margin = new System.Windows.Forms.Padding(4);
-            this.inputDateDeath.Name = "inputDateDeath";
-            this.inputDateDeath.Size = new System.Drawing.Size(232, 24);
-            this.inputDateDeath.TabIndex = 42;
-            // 
-            // dateOfDeath
-            // 
-            this.dateOfDeath.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfDeath.ForeColor = System.Drawing.Color.Blue;
-            this.dateOfDeath.Location = new System.Drawing.Point(74, 350);
-            this.dateOfDeath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dateOfDeath.Name = "dateOfDeath";
-            this.dateOfDeath.Size = new System.Drawing.Size(209, 37);
-            this.dateOfDeath.TabIndex = 40;
-            this.dateOfDeath.Text = "Date Of Death: ";
             // 
             // maleOrFemale
             // 
@@ -508,8 +487,6 @@
             this.Controls.Add(this.inputAddress);
             this.Controls.Add(this.inputPhoneNumber);
             this.Controls.Add(this.inputDateBirth);
-            this.Controls.Add(this.inputDateDeath);
-            this.Controls.Add(this.dateOfDeath);
             this.Controls.Add(this.maleOrFemale);
             this.Controls.Add(this.phoneNumber);
             this.Controls.Add(this.dateOfBirth);
@@ -550,8 +527,6 @@
         private System.Windows.Forms.TextBox inputAddress;
         private System.Windows.Forms.TextBox inputPhoneNumber;
         private System.Windows.Forms.DateTimePicker inputDateBirth;
-        private System.Windows.Forms.DateTimePicker inputDateDeath;
-        private System.Windows.Forms.Label dateOfDeath;
         private System.Windows.Forms.Label maleOrFemale;
         private System.Windows.Forms.Label phoneNumber;
         private System.Windows.Forms.Label dateOfBirth;

@@ -12,8 +12,10 @@ namespace DrorCohen.Gui
 {
     public partial class frmOpen : Form
     {
-        public frmOpen()
+        frmLogIn parent;
+        public frmOpen(frmLogIn logIn)
         {
+            parent = logIn;
             InitializeComponent();
             vaccine f = new vaccine () { Dock = DockStyle.Fill };
             this.pContainer.Controls.Clear();
@@ -94,6 +96,12 @@ namespace DrorCohen.Gui
         private void iconButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Close();
         }
     }
 }

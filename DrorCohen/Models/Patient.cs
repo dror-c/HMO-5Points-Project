@@ -16,7 +16,6 @@ namespace DrorCohen.Models
         private string address;
         private string phoneNumber;
         private DateTime dateOfBirth;//string or dateTime
-        private DateTime dateOfDeath;//string or dateTime
         private string maleOrFemale;
         public string Id
         {
@@ -68,11 +67,6 @@ namespace DrorCohen.Models
             set { this.dateOfBirth = value; }
             get { return this.dateOfBirth; }
         }
-        public DateTime DateOfDeath
-        {
-            set { this.dateOfDeath = value; }
-            get { return this.dateOfDeath; }
-        }
         public string MaleOrFemale
         {
             set 
@@ -91,7 +85,6 @@ namespace DrorCohen.Models
             this.Address = dr["Address"].ToString();
             this.PhoneNumber = dr["PhoneNumber"].ToString();
             this.DateOfBirth =  Convert.ToDateTime(  dr["DateOfBirth"]);
-            this.DateOfDeath = Convert.ToDateTime(dr["DateOfDeath"]);
             this.MaleOrFemale = dr["MaleFemale"].ToString();
         }
         public virtual void Populate(DataRow dr)
@@ -102,7 +95,6 @@ namespace DrorCohen.Models
             dr["Address"] = Address;
             dr["PhoneNumber"] = PhoneNumber;
             dr["DateOfBirth"] = DateOfBirth;
-            dr["DateOfDeath"] = DateOfDeath;
             dr["MaleFemale"] = MaleOrFemale;
         }
     }

@@ -30,7 +30,6 @@ namespace DrorCohen.Models
             this.Address = dr["Address"].ToString();
             this.PhoneNumber = dr["PhoneNumber"].ToString();
             this.DateOfBirth = Convert.ToDateTime(dr["DateOfBirth"]);
-            this.DateOfDeath = Convert.ToDateTime(dr["DateOfDeath"]);
             this.MaleOrFemale = dr["MaleFemale"].ToString();
             this.IsDoctorOrNurse = dr["IsDoctorOrNurse"].ToString();
         }
@@ -42,7 +41,6 @@ namespace DrorCohen.Models
             dr["Address"] = Address;
             dr["PhoneNumber"] = PhoneNumber;
             dr["DateOfBirth"] = DateOfBirth;
-            dr["DateOfDeath"] = DateOfDeath;
             dr["MaleFemale"] = MaleOrFemale;
             dr["IsDoctorOrNurse"] = IsDoctorOrNurse;
         }
