@@ -91,8 +91,11 @@ namespace DrorCohen.Gui
                 
                 this.specificMeetingDoctorTableAdapter2.Fill(this.f.SpecificMeetingDoctor, idTherapy.ToString(), new System.Nullable<System.DateTime>(((System.DateTime)(System.Convert.ChangeType(d, typeof(System.DateTime))))));
                 if (Convert.ToInt32(f.SpecificMeetingDoctor.Rows[0][0].ToString()) == 0) {
-                    meeting.SpecificMeetingDoctor.AddSpecificMeetingDoctorRow(serial,idTherapy.ToString(),d,patientId);
-                    specificMeetingDoctorTableAdapter.Update(meeting.SpecificMeetingDoctor);
+                    meeting.SpecificMeetingDoctor.
+                        AddSpecificMeetingDoctorRow
+                        (serial,idTherapy.ToString(),d,patientId);
+                    specificMeetingDoctorTableAdapter.
+                        Update(meeting.SpecificMeetingDoctor);
                     MyMessage m = new MyMessage("your request to get therapy has been accepted and aprroved :)\n see you at "+d.ToShortDateString(),1);
                     m.applyCustomChange();
                     this.Close();

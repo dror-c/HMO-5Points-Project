@@ -161,6 +161,8 @@ namespace DrorCohen.Gui
 
         private void frmDepartment_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'createConnection.ConnectionDoctorDepartment' table. You can move, or remove it, as needed.
+   ////////         this.connectionDoctorDepartmentTableAdapter1.Fill(this.createConnection.ConnectionDoctorDepartment);
             // TODO: This line of code loads data into the 's.DoctorOrNurse' table. You can move, or remove it, as needed.
             this.doctorOrNurseTableAdapter1.Fill(this.s.DoctorOrNurse);
             // TODO: This line of code loads data into the 'doctorAndDepartmentConnection1.ConnectionDoctorDepartment' table. You can move, or remove it, as needed.
@@ -205,7 +207,8 @@ namespace DrorCohen.Gui
         {
             //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow(inputId.Text, comboBox1.SelectedItem.ToString())
             //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow
-                //(inputId.Text, comboBox1.SelectedItem.ToString());
+            //(inputId.Text, comboBox1.SelectedItem.ToString());
+            
             this.connectionDoctorDepartmentTableAdapter.Update(doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
         }
 

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DrorCohen.DB;
 using DrorCohen.Models;
+using DrorCohen.DATA;
 
 namespace DrorCohen.Gui
 {
@@ -156,13 +157,32 @@ namespace DrorCohen.Gui
             if (UpdateObject(s))
             {
                 if (state == AddState.ADDNEW)
-                    meetings.AddRow(s);
+                {
+                    string SQLadd = "INSERT INTO MeetingDoctor ( TherapyCode, WhoCanGiveTheTherapy, IdDoctor, [day], [hour] ) VALUES('" + s.TherapyCode+ "','" + s.WhoCanGiveTheTherapy+ "','" + s.IdDoctor+ "',[" + s.Day+ "],['" + s.Hour+ "'])";
+                    //string path = System.IO.Directory.GetCurrentDirectory();
+                    //int x = path.IndexOf("\\bin");
+                    //path = path.Substring(0, x) + "\\Data\\try.accdb";
+
+                    //string myConnectionStr = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='" + path + "';Persist Security Info=True");
+                    //con = new OleDbConnection(myConnectionStr);
+                    //con.Open();
+                    //OleDbCommand SQLCommand = new OleDbCommand();
+                    //SQLCommand.CommandText = SQLadd;
+                    //SQLCommand.Connection = con;
+                    int response1 = -1;
+                    //  response1 = SQLCommand.ExecuteNonQuery();
+                    response1 = DAL.GetInstance().ExecuteNonQuery(SQLadd);
+                   
+
+                }
+                //meetings.AddRow(s);
+
                 else
                     meetings.UpdateRow(s);
             }
             SetButtonStates(true);
             state = AddState.NAVIGATE;
-            meetings.Save();
+ //..           meetings.Save();
             label6.Visible = false;
         }
 
@@ -209,6 +229,11 @@ namespace DrorCohen.Gui
         {
             Populate(meetings.GetCurrentRow());
             SetButtonStates(true);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

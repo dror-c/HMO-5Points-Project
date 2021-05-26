@@ -55,18 +55,21 @@
             this.doctorOrNurseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorAndDepartmentConnection1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorAndDepartmentConnection1 = new DrorCohen.DoctorAndDepartmentConnection();
-            this.doctorOrNurseTableAdapter = new DrorCohen.DoctorAndDepartmentConnectionTableAdapters.DoctorOrNurseTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.doctorOrNurseBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.s = new DrorCohen.s();
             this.doctorOrNurseBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.doctorOrNurseConnectionDoctorDepartmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorOrNurseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.connectionDoctorDepartmentTableAdapter = new DrorCohen.DoctorAndDepartmentConnectionTableAdapters.ConnectionDoctorDepartmentTableAdapter();
-            this.doctorAndDepartmentConnection3 = new DrorCohen.DoctorAndDepartmentConnection();
             this.doctorOrNurseTableAdapter1 = new DrorCohen.sTableAdapters.DoctorOrNurseTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.doctorOrNurseTableAdapter = new DrorCohen.DoctorAndDepartmentConnectionTableAdapters.DoctorOrNurseTableAdapter();
+            this.connectionDoctorDepartmentTableAdapter = new DrorCohen.DoctorAndDepartmentConnectionTableAdapters.ConnectionDoctorDepartmentTableAdapter();
+            this.doctorAndDepartmentConnection3 = new DrorCohen.DoctorAndDepartmentConnection();
+            this.createConnection = new DrorCohen.createConnection();
+            this.connectionDoctorDepartmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new DrorCohen.createConnectionTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource)).BeginInit();
@@ -78,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseConnectionDoctorDepartmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorAndDepartmentConnection3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.createConnection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.connectionDoctorDepartmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -318,10 +323,6 @@
             this.doctorAndDepartmentConnection1.DataSetName = "DoctorAndDepartmentConnection";
             this.doctorAndDepartmentConnection1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // doctorOrNurseTableAdapter
-            // 
-            this.doctorOrNurseTableAdapter.ClearBeforeFill = true;
-            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -357,15 +358,6 @@
             this.doctorOrNurseBindingSource1.DataMember = "DoctorOrNurse";
             this.doctorOrNurseBindingSource1.DataSource = this.doctorAndDepartmentConnection1BindingSource;
             // 
-            // connectionDoctorDepartmentTableAdapter
-            // 
-            this.connectionDoctorDepartmentTableAdapter.ClearBeforeFill = true;
-            // 
-            // doctorAndDepartmentConnection3
-            // 
-            this.doctorAndDepartmentConnection3.DataSetName = "DoctorAndDepartmentConnection";
-            this.doctorAndDepartmentConnection3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // doctorOrNurseTableAdapter1
             // 
             this.doctorOrNurseTableAdapter1.ClearBeforeFill = true;
@@ -393,12 +385,40 @@
             this.label2.TabIndex = 65;
             this.label2.Text = "add worker into \r\nthe department";
             // 
+            // doctorOrNurseTableAdapter
+            // 
+            this.doctorOrNurseTableAdapter.ClearBeforeFill = true;
+            // 
+            // connectionDoctorDepartmentTableAdapter
+            // 
+            this.connectionDoctorDepartmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // doctorAndDepartmentConnection3
+            // 
+            this.doctorAndDepartmentConnection3.DataSetName = "DoctorAndDepartmentConnection";
+            this.doctorAndDepartmentConnection3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // createConnection
+            // 
+            this.createConnection.DataSetName = "createConnection";
+            this.createConnection.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // connectionDoctorDepartmentBindingSource
+            // 
+            this.connectionDoctorDepartmentBindingSource.DataMember = "ConnectionDoctorDepartment";
+            this.connectionDoctorDepartmentBindingSource.DataSource = this.createConnection;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = DrorCohen.createConnectionTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1150, 510);
+            this.ClientSize = new System.Drawing.Size(1153, 510);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -432,6 +452,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseConnectionDoctorDepartmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorOrNurseBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorAndDepartmentConnection3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.createConnection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.connectionDoctorDepartmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +501,8 @@
         private sTableAdapters.DoctorOrNurseTableAdapter doctorOrNurseTableAdapter1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private createConnection createConnection;
+        private System.Windows.Forms.BindingSource connectionDoctorDepartmentBindingSource;
+        private createConnectionTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

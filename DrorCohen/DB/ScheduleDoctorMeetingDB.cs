@@ -14,8 +14,8 @@ namespace DrorCohen.DB
         public ScheduleDoctorMeetingDB() : base("MeetingDoctor", "TherapyCode") { }
         public new ScheduleDoctorMeeting GetCurrentRow()
         {
-            DataRow dr = base.GetCurrentRow();
-            return new ScheduleDoctorMeeting(dr);
+           // DataRow dr = base.GetCurrentRow();
+            return new ScheduleDoctorMeeting(base.GetCurrentRow());
         }
         public DataView GetDataView()
         {

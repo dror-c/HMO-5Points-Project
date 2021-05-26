@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace DrorCohen {
     
     
@@ -635,6 +637,11 @@ namespace DrorCohen {
                 }
                 xs.Add(dsSchema);
                 return type;
+            }
+
+            internal void AddConnectionDoctorDepartmentRow(string text, Func<string> toString)
+            {
+                throw new NotImplementedException();
             }
         }
         

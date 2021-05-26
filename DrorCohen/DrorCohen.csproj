@@ -58,6 +58,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
     </Compile>
+    <Compile Include="createConnection.cs">
+      <DependentUpon>createConnection.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="createConnection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>createConnection.xsd</DependentUpon>
+    </Compile>
     <Compile Include="d.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +78,9 @@
     <Compile Include="DB\PatientDB.cs" />
     <Compile Include="DB\GeneralDB.cs" />
     <Compile Include="DB\IEntity.cs" />
+    <Compile Include="DoctorAndDepartmentConnection.cs">
+      <DependentUpon>DoctorAndDepartmentConnection.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DoctorAndDepartmentConnection.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,6 +275,17 @@
     </None>
     <None Include="CheckDuplicateMeetings.xss">
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
+    </None>
+    <None Include="createConnection.xsc">
+      <DependentUpon>createConnection.xsd</DependentUpon>
+    </None>
+    <None Include="createConnection.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>createConnection.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="createConnection.xss">
+      <DependentUpon>createConnection.xsd</DependentUpon>
     </None>
     <None Include="d.xsc">
       <DependentUpon>d.xsd</DependentUpon>
