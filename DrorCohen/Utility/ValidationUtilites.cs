@@ -8,6 +8,44 @@ namespace DrorCohen.Utility
 {
     public static class ValidationUtilites
     {
+        public static bool isHour(string s)
+        {
+            if (s.Length != 5)
+                return false;
+            if (s[2] != ':')
+                return false;
+            for(int i = 0; i < 5; i++)
+            {
+                if (i == 2)
+                    continue;
+                if (s[i] < '0' || s[i] > '9')
+                    return false;
+            }
+            int x = int.Parse(s[0] + "" + s[1]);
+            if (x < 0 || x > 23)
+                return false;
+            x = int.Parse(s[3] + "" + s[4]);
+            if (x < 0 || x > 59)
+                return false;
+            return true;
+        }
+        public static bool isDay(string s)
+        {
+            return s.Equals("Sun") ||
+                s.Equals("Mon") ||
+                s.Equals("Tue") ||
+                s.Equals("Wed") ||
+                s.Equals("Thu") ||
+                s.Equals("Fri") ||
+                s.Equals("Sat");
+        }
+        public static bool isNumber(string s)
+        {
+            foreach (char c in s)
+                if (c < '0' || c > '9')
+                    return false;
+            return true;
+        }
         public static bool IsLegalHour(string hour)
         {
             if (hour.Length != 5)

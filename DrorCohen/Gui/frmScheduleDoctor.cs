@@ -235,5 +235,81 @@ namespace DrorCohen.Gui
         {
 
         }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationUtilites.isNumber(textBox1.Text))
+            {
+                e.Cancel = true;
+                textBox1.Focus();
+                errorProvider1.SetError(textBox1, "not valid code");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox1, null);
+            }
+        }
+
+        private void comboBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (!(comboBox2.Text.Equals("Doctor") || comboBox2.Equals("Nurse")))
+            {
+                e.Cancel = true;
+                comboBox2.Focus();
+                errorProvider1.SetError(comboBox2, "not valid role");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(comboBox2, null);
+            }
+        }
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationUtilites.CheckIdNumber(textBox2.Text))
+            {
+                e.Cancel = true;
+                textBox2.Focus();
+                errorProvider1.SetError(textBox2, "not valid id");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(textBox2, null);
+            }
+        }
+
+        private void comboBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationUtilites.isDay(comboBox1.Text))
+            {
+                e.Cancel = true;
+                comboBox1.Focus();
+                errorProvider1.SetError(comboBox1, "this day format is wrong");
+            }
+            else
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(comboBox1, null);
+            }
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationUtilites.isHour(textBox3.Text))
+            {
+                e.Cancel = false;
+                textBox3.Focus();
+                errorProvider1.SetError(textBox3, "not valid hour!" +
+                    " please adhere to the format");
+            }
+            else
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(textBox3, null);
+            }
+        }
     }
 }

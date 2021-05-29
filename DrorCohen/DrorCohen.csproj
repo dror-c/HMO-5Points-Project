@@ -276,6 +276,7 @@
     <None Include="CheckDuplicateMeetings.xss">
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram2.cd" />
     <None Include="createConnection.xsc">
       <DependentUpon>createConnection.xsd</DependentUpon>
     </None>

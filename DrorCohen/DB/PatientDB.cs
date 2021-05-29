@@ -59,36 +59,6 @@ namespace DrorCohen.DB
         //{
         //    DAL d = DAL.GetInstance();
         //    DataTable a = d.GetDisplayTable("customers", "Select customer_ID, first_name,last_name From customers");
-        //    return new DataView(table);
-
-        //}
-       
-
-       
+        //    return new DataView(table);      
     }
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
