@@ -87,17 +87,26 @@ namespace DrorCohen.Gui
 
         private void save_Click(object sender, EventArgs e)
         {
-            Department d = new Department();
-            if (UpdateObject(d))
+            try
             {
-                if (state == AddState.ADDNEW)
-                    departments.AddRow(d);
-                else
-                    departments.UpdateRow(d);
+                Department d = new Department();
+                if (UpdateObject(d))
+                {
+                    if (state == AddState.ADDNEW)
+                        departments.AddRow(d);
+                    else
+                        departments.UpdateRow(d);
+                }
+                SetButtonStates(true);
+                state = AddState.NAVIGATE;
+                departments.Save();
             }
-            SetButtonStates(true);
-            state = AddState.NAVIGATE;
-            departments.Save();
+            catch
+            {
+                MyMessage m = new MyMessage("the department is already exist", 2);
+                m.applyCustomChange();
+                m.ShowDialog();
+            }
         }
 
         private void next_Click(object sender, EventArgs e)
@@ -161,8 +170,10 @@ namespace DrorCohen.Gui
 
         private void frmDepartment_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'connectionDoctorDepartment.MyConnectionDoctorDepartment' table. You can move, or remove it, as needed.
+            this.myConnectionDoctorDepartmentTableAdapter.Fill(this.connectionDoctorDepartment.MyConnectionDoctorDepartment);
             // TODO: This line of code loads data into the 'createConnection.ConnectionDoctorDepartment' table. You can move, or remove it, as needed.
-   ////////         this.connectionDoctorDepartmentTableAdapter1.Fill(this.createConnection.ConnectionDoctorDepartment);
+            ////////         this.connectionDoctorDepartmentTableAdapter1.Fill(this.createConnection.ConnectionDoctorDepartment);
             // TODO: This line of code loads data into the 's.DoctorOrNurse' table. You can move, or remove it, as needed.
             this.doctorOrNurseTableAdapter1.Fill(this.s.DoctorOrNurse);
             // TODO: This line of code loads data into the 'doctorAndDepartmentConnection1.ConnectionDoctorDepartment' table. You can move, or remove it, as needed.
@@ -202,14 +213,33 @@ namespace DrorCohen.Gui
         {
 
         }
-
+        public void MyRefresh()
+        {
+            departments.MoveNext();
+            Populate(departments.GetCurrentRow());
+            departments.MovePrev();
+            Populate(departments.GetCurrentRow());
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow(inputId.Text, comboBox1.SelectedItem.ToString())
             //doctorAndDepartmentConnection1.ConnectionDoctorDepartment.AddConnectionDoctorDepartmentRow
             //(inputId.Text, comboBox1.SelectedItem.ToString());
-            
-            this.connectionDoctorDepartmentTableAdapter.Update(doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
+            try
+            {
+                this.myConnectionDoctorDepartmentTableAdapter.createConnection(inputId.Text, comboBox1.SelectedValue.ToString());
+                MyMessage m = new MyMessage("the worker has successfuly registred to the department", 1);
+                m.applyCustomChange();
+                m.ShowDialog();
+                MyRefresh();
+            }
+            catch
+            {
+                MyMessage m = new MyMessage("this worker is already exist in the department", 2);
+                m.applyCustomChange();               
+                m.ShowDialog();
+            }
+            //this.connectionDoctorDepartmentTableAdapter.Update(doctorAndDepartmentConnection1.ConnectionDoctorDepartment);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

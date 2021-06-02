@@ -48,7 +48,13 @@ namespace DrorCohen.Gui
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.scheduleMeeting = new DrorCohen.ScheduleMeeting();
+            this.myMeetingDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.myMeetingDoctorTableAdapter = new DrorCohen.ScheduleMeetingTableAdapters.MyMeetingDoctorTableAdapter();
+            this.tableAdapterManager = new DrorCohen.ScheduleMeetingTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleMeeting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myMeetingDoctorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -167,7 +173,7 @@ namespace DrorCohen.Gui
             this.save.BackColor = System.Drawing.Color.Lime;
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Location = new System.Drawing.Point(621, 254);
-            this.save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(284, 39);
             this.save.TabIndex = 36;
@@ -180,7 +186,7 @@ namespace DrorCohen.Gui
             this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Location = new System.Drawing.Point(621, 181);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(100, 31);
             this.cancel.TabIndex = 35;
@@ -192,7 +198,7 @@ namespace DrorCohen.Gui
             // 
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Location = new System.Drawing.Point(621, 68);
-            this.Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Add.Margin = new System.Windows.Forms.Padding(4);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(100, 32);
             this.Add.TabIndex = 34;
@@ -204,7 +210,7 @@ namespace DrorCohen.Gui
             // 
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.update.Location = new System.Drawing.Point(621, 128);
-            this.update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(100, 38);
             this.update.TabIndex = 33;
@@ -216,7 +222,7 @@ namespace DrorCohen.Gui
             // 
             this.prev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prev.Location = new System.Drawing.Point(95, 343);
-            this.prev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prev.Margin = new System.Windows.Forms.Padding(4);
             this.prev.Name = "prev";
             this.prev.Size = new System.Drawing.Size(124, 28);
             this.prev.TabIndex = 38;
@@ -228,7 +234,7 @@ namespace DrorCohen.Gui
             // 
             this.next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.next.Location = new System.Drawing.Point(343, 343);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(124, 28);
             this.next.TabIndex = 37;
@@ -243,6 +249,7 @@ namespace DrorCohen.Gui
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 22);
             this.textBox3.TabIndex = 39;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // errorProvider1
@@ -262,12 +269,32 @@ namespace DrorCohen.Gui
             this.label6.Text = "OOPS!\r\nYou didn\'t set any time to get patients.\r\nYou have to do it right now";
             this.label6.Visible = false;
             // 
+            // scheduleMeeting
+            // 
+            this.scheduleMeeting.DataSetName = "ScheduleMeeting";
+            this.scheduleMeeting.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // myMeetingDoctorBindingSource
+            // 
+            this.myMeetingDoctorBindingSource.DataMember = "MyMeetingDoctor";
+            this.myMeetingDoctorBindingSource.DataSource = this.scheduleMeeting;
+            // 
+            // myMeetingDoctorTableAdapter
+            // 
+            this.myMeetingDoctorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MyMeetingDoctorTableAdapter = this.myMeetingDoctorTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DrorCohen.ScheduleMeetingTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmScheduleDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 384);
+            this.ClientSize = new System.Drawing.Size(1414, 496);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.prev);
@@ -290,6 +317,8 @@ namespace DrorCohen.Gui
             this.Text = "frmScheduleDoctor";
             this.Load += new System.EventHandler(this.frmScheduleDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleMeeting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myMeetingDoctorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +343,9 @@ namespace DrorCohen.Gui
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource myMeetingDoctorBindingSource;
+        private ScheduleMeeting scheduleMeeting;
+        private ScheduleMeetingTableAdapters.MyMeetingDoctorTableAdapter myMeetingDoctorTableAdapter;
+        private ScheduleMeetingTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

@@ -162,23 +162,25 @@ namespace DrorCohen.Gui
 
         private void save_Click(object sender, EventArgs e)
         {
-            Patient p = new Patient();
-            if (UpdateObject(p))
-            {
-                if (state == AddState.ADDNEW)
-                    patients.AddRow(p);
-                else
-                    patients.UpdateRow(p);
-            }
-            SetButtonStates(true);
-            state = AddState.NAVIGATE;
             try
             {
+                Patient p = new Patient();
+                if (UpdateObject(p))
+                {
+                    if (state == AddState.ADDNEW)
+                        patients.AddRow(p);
+                    else
+                        patients.UpdateRow(p);
+                }
+                SetButtonStates(true);
+                state = AddState.NAVIGATE;
                 patients.Save();
             }
-            catch 
+            catch
             {
-
+                MyMessage m = new MyMessage("the patient is already exist in the database", 2);
+                m.applyCustomChange();
+                m.ShowDialog();
             }
         }
 

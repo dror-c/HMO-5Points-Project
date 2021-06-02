@@ -29,6 +29,7 @@ namespace DrorCohen.Gui
             if (x>0)
             {
                 frmOpen f = new frmOpen(this);
+                f.Width = 1500;
                 f.Show();
                 this.Hide();
             }

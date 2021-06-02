@@ -186,18 +186,26 @@ namespace DrorCohen.Gui
         }
         private void save_Click(object sender, EventArgs e)
         {
-            DoctorOrNurse dn = new DoctorOrNurse();
-            if (UpdateObject(dn))
+            try
             {
-                if (state == AddState.ADDNEW)
-                    doctorsOrNurses.AddRow(dn);
-                else
-                    doctorsOrNurses.UpdateRow(dn);
+                DoctorOrNurse dn = new DoctorOrNurse();
+                if (UpdateObject(dn))
+                {
+                    if (state == AddState.ADDNEW)
+                        doctorsOrNurses.AddRow(dn);
+                    else
+                        doctorsOrNurses.UpdateRow(dn);
+                }
+                SetButtonStates(true);
+                state = AddState.NAVIGATE;
+                doctorsOrNurses.Save();
             }
-            SetButtonStates(true);
-            state = AddState.NAVIGATE;
-            doctorsOrNurses.Save();
-            
+            catch
+            {
+                MyMessage m = new MyMessage("this worker is already exist in the department", 2);
+                m.applyCustomChange();
+                m.ShowDialog();
+            }
         }
 
         private void Add_Click(object sender, EventArgs e)

@@ -58,6 +58,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
     </Compile>
+    <Compile Include="connectionDoctorDepartment.cs">
+      <DependentUpon>connectionDoctorDepartment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="connectionDoctorDepartment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>connectionDoctorDepartment.xsd</DependentUpon>
+    </Compile>
     <Compile Include="createConnection.cs">
       <DependentUpon>createConnection.xsd</DependentUpon>
     </Compile>
@@ -215,6 +223,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scedule.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleMeeting.cs">
+      <DependentUpon>ScheduleMeeting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleMeeting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleMeeting.xsd</DependentUpon>
+    </Compile>
     <Compile Include="showDoctors.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -277,6 +293,17 @@
       <DependentUpon>CheckDuplicateMeetings.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram2.cd" />
+    <None Include="connectionDoctorDepartment.xsc">
+      <DependentUpon>connectionDoctorDepartment.xsd</DependentUpon>
+    </None>
+    <None Include="connectionDoctorDepartment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>connectionDoctorDepartment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="connectionDoctorDepartment.xss">
+      <DependentUpon>connectionDoctorDepartment.xsd</DependentUpon>
+    </None>
     <None Include="createConnection.xsc">
       <DependentUpon>createConnection.xsd</DependentUpon>
     </None>
@@ -462,6 +489,17 @@
     </None>
     <None Include="Scedule.xss">
       <DependentUpon>Scedule.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleMeeting.xsc">
+      <DependentUpon>ScheduleMeeting.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleMeeting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleMeeting.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleMeeting.xss">
+      <DependentUpon>ScheduleMeeting.xsd</DependentUpon>
     </None>
     <None Include="showDoctors.xsc">
       <DependentUpon>showDoctors.xsd</DependentUpon>

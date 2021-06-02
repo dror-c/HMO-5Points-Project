@@ -59,6 +59,8 @@ namespace DrorCohen.Gui
 
         private void frmScheduleDoctor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'scheduleMeeting.MyMeetingDoctor' table. You can move, or remove it, as needed.
+            this.myMeetingDoctorTableAdapter.Fill(this.scheduleMeeting.MyMeetingDoctor);
             // TODO: This line of code loads data into the 'scedule.MeetingDoctor' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'hMODataSet1.MeetingDoctor' table. You can move, or remove it, as needed.
             //this.meetingDoctorTableAdapter.Fill(this.hMODataSet1.MeetingDoctor);
@@ -152,38 +154,47 @@ namespace DrorCohen.Gui
         }
         private void save_Click(object sender, EventArgs e)
         {
-            ScheduleDoctorMeeting s = new ScheduleDoctorMeeting();
-            //s.Day = comboBox1.SelectedIndex + 1;
-            if (UpdateObject(s))
+            try
             {
-                if (state == AddState.ADDNEW)
+                ScheduleDoctorMeeting s = new ScheduleDoctorMeeting();
+                //s.Day = comboBox1.SelectedIndex + 1;
+                if (UpdateObject(s))
                 {
-                    string SQLadd = "INSERT INTO MeetingDoctor ( TherapyCode, WhoCanGiveTheTherapy, IdDoctor, [day], [hour] ) VALUES('" + s.TherapyCode+ "','" + s.WhoCanGiveTheTherapy+ "','" + s.IdDoctor+ "',[" + s.Day+ "],['" + s.Hour+ "'])";
-                    //string path = System.IO.Directory.GetCurrentDirectory();
-                    //int x = path.IndexOf("\\bin");
-                    //path = path.Substring(0, x) + "\\Data\\try.accdb";
+                    if (state == AddState.ADDNEW)
+                    {
+                        //string SQLadd = "INSERT INTO MeetingDoctor ( TherapyCode, WhoCanGiveTheTherapy, IdDoctor, [day], [hour] ) VALUES('" + s.TherapyCode + "','" + s.WhoCanGiveTheTherapy + "','" + s.IdDoctor + "',[" + s.Day + "],['" + s.Hour + "'])";
+                        //string path = System.IO.Directory.GetCurrentDirectory();
+                        //int x = path.IndexOf("\\bin");
+                        //path = path.Substring(0, x) + "\\Data\\try.accdb";
 
-                    //string myConnectionStr = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='" + path + "';Persist Security Info=True");
-                    //con = new OleDbConnection(myConnectionStr);
-                    //con.Open();
-                    //OleDbCommand SQLCommand = new OleDbCommand();
-                    //SQLCommand.CommandText = SQLadd;
-                    //SQLCommand.Connection = con;
-                    int response1 = -1;
-                    //  response1 = SQLCommand.ExecuteNonQuery();
-                    response1 = DAL.GetInstance().ExecuteNonQuery(SQLadd);
-                   
-
+                        //string myConnectionStr = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='" + path + "';Persist Security Info=True");
+                        //con = new OleDbConnection(myConnectionStr);
+                        //con.Open();
+                        //OleDbCommand SQLCommand = new OleDbCommand();
+                        //SQLCommand.CommandText = SQLadd;
+                        //SQLCommand.Connection = con;
+                        //int response1 = -1;
+                        //  response1 = SQLCommand.ExecuteNonQuery();
+                        //response1 = DAL.GetInstance().ExecuteNonQuery(SQLadd);
+                        myMeetingDoctorTableAdapter.MyInsert(s.TherapyCode, s.WhoCanGiveTheTherapy, s.IdDoctor, s.Day, s.Hour);
+                    }
+                    else
+                    {
+                        ScheduleDoctorMeeting orginal = meetings.GetCurrentRow();
+                        myMeetingDoctorTableAdapter.MyUpdate(s.WhoCanGiveTheTherapy, s.IdDoctor, s.Day, s.Hour, orginal.TherapyCode);
+                    }
                 }
-                //meetings.AddRow(s);
-
-                else
-                    meetings.UpdateRow(s);
+                SetButtonStates(true);
+                state = AddState.NAVIGATE;
+                //..           meetings.Save();
+                label6.Visible = false;
             }
-            SetButtonStates(true);
-            state = AddState.NAVIGATE;
- //..           meetings.Save();
-            label6.Visible = false;
+            catch
+            {
+                MyMessage m = new MyMessage("the data is already exist in the database", 2);
+                m.applyCustomChange();
+                m.ShowDialog();
+            }
         }
 
         private void next_Click(object sender, EventArgs e)
@@ -291,7 +302,7 @@ namespace DrorCohen.Gui
             }
             else
             {
-                e.Cancel = true;
+                e.Cancel = false;
                 errorProvider1.SetError(comboBox1, null);
             }
         }
@@ -300,16 +311,29 @@ namespace DrorCohen.Gui
         {
             if (!ValidationUtilites.isHour(textBox3.Text))
             {
-                e.Cancel = false;
+                e.Cancel = true;
                 textBox3.Focus();
                 errorProvider1.SetError(textBox3, "not valid hour!" +
                     " please adhere to the format");
             }
             else
             {
-                e.Cancel = true;
+                e.Cancel = false;
                 errorProvider1.SetError(textBox3, null);
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myMeetingDoctorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.myMeetingDoctorBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.scheduleMeeting);
+
         }
     }
 }
